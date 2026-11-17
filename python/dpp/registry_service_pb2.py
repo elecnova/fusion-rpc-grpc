@@ -22,12 +22,12 @@ _runtime_version.ValidateProtobufRuntimeVersion(
 _sym_db = _symbol_database.Default()
 
 
+from dpp import registry_message_pb2 as dpp_dot_registry__message__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.api import client_pb2 as google_dot_api_dot_client__pb2
-from dpp import registry_message_pb2 as dpp_dot_registry__message__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1a\x64pp/registry_service.proto\x12\x14\x66usion.rpc.proto.dpp\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1a\x64pp/registry_message.proto2\xc0\x01\n\x12\x44PPRegistryService\x12\xa9\x01\n\x0e\x43reatePassport\x12+.fusion.rpc.proto.dpp.CreatePassportRequest\x1a,.fusion.rpc.proto.dpp.CreatePassportResponse\"<\xda\x41\x1fsn,date,batch,code,model,cab_sn\x82\xd3\xe4\x93\x02\x14\"\x0f/3rd-api/v2/dpp:\x01*B\xbe\x01\n\x18\x63om.fusion.rpc.proto.dppB\x14RegistryServiceProtoP\x01Z\x18\x66usion.rpc.proto.dpp;dpp\xa2\x02\x04\x46RPD\xaa\x02\x14\x46usion.Rpc.Proto.Dpp\xca\x02\x14\x46usion\\Rpc\\Proto\\Dpp\xe2\x02 Fusion\\Rpc\\Proto\\Dpp\\GPBMetadata\xea\x02\x17\x46usion::Rpc::Proto::Dppb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1a\x64pp/registry_service.proto\x12\x14\x66usion.rpc.proto.dpp\x1a\x1a\x64pp/registry_message.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto2\xc0\x01\n\x12\x44PPRegistryService\x12\xa9\x01\n\x0e\x43reatePassport\x12+.fusion.rpc.proto.dpp.CreatePassportRequest\x1a,.fusion.rpc.proto.dpp.CreatePassportResponse\"<\xda\x41\x1fsn,date,batch,code,model,cab_sn\x82\xd3\xe4\x93\x02\x14\"\x0f/3rd-api/v2/dpp:\x01*B\xbe\x01\n\x18\x63om.fusion.rpc.proto.dppB\x14RegistryServiceProtoP\x01Z\x18\x66usion.rpc.proto.dpp;dpp\xa2\x02\x04\x46RPD\xaa\x02\x14\x46usion.Rpc.Proto.Dpp\xca\x02\x14\x46usion\\Rpc\\Proto\\Dpp\xe2\x02 Fusion\\Rpc\\Proto\\Dpp\\GPBMetadata\xea\x02\x17\x46usion::Rpc::Proto::Dppb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)

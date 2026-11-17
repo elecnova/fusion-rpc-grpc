@@ -36,9 +36,9 @@ public final class RegistryServiceProto extends com.google.protobuf.GeneratedFil
   static {
     java.lang.String[] descriptorData = {
       "\n\032dpp/registry_service.proto\022\024fusion.rpc" +
-      ".proto.dpp\032\034google/api/annotations.proto" +
-      "\032\027google/api/client.proto\032\032dpp/registry_" +
-      "message.proto2\300\001\n\022DPPRegistryService\022\251\001\n" +
+      ".proto.dpp\032\032dpp/registry_message.proto\032\034" +
+      "google/api/annotations.proto\032\027google/api" +
+      "/client.proto2\300\001\n\022DPPRegistryService\022\251\001\n" +
       "\016CreatePassport\022+.fusion.rpc.proto.dpp.C" +
       "reatePassportRequest\032,.fusion.rpc.proto." +
       "dpp.CreatePassportResponse\"<\332A\037sn,date,b" +
@@ -53,14 +53,14 @@ public final class RegistryServiceProto extends com.google.protobuf.GeneratedFil
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.fusion.rpc.proto.dpp.RegistryMessageProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-          com.fusion.rpc.proto.dpp.RegistryMessageProto.getDescriptor(),
         });
     descriptor.resolveAllFeaturesImmutable();
+    com.fusion.rpc.proto.dpp.RegistryMessageProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
-    com.fusion.rpc.proto.dpp.RegistryMessageProto.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
