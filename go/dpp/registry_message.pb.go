@@ -19,7 +19,6 @@ import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	_ "google.golang.org/protobuf/types/known/timestamppb"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
@@ -35,18 +34,8 @@ const (
 // Package message DPP平台-创建电池护照请求消息定义
 type CreatePassportRequest struct {
 	state protoimpl.MessageState `protogen:"open.v1"`
-	// 电池簇sn
-	Sn string `protobuf:"bytes,1,opt,name=sn,proto3" json:"sn,omitempty"`
-	// 储能柜sn
-	CabSn string `protobuf:"bytes,2,opt,name=cab_sn,proto3" json:"cab_sn,omitempty"`
-	// 储能柜型号
-	CabModel string `protobuf:"bytes,3,opt,name=cab_model,proto3" json:"cab_model,omitempty"`
-	// 储能柜EMS标识
-	CabCode string `protobuf:"bytes,4,opt,name=cab_code,proto3" json:"cab_code,omitempty"`
-	// 电池簇生产批次号
-	Batch string `protobuf:"bytes,5,opt,name=batch,proto3" json:"batch,omitempty"`
-	// 电池簇生产日期
-	Date          string `protobuf:"bytes,6,opt,name=date,proto3" json:"date,omitempty"`
+	// 请求列表
+	Data          []*CreatePassportRequest_Data `protobuf:"bytes,1,rep,name=data,proto3" json:"data,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -81,55 +70,18 @@ func (*CreatePassportRequest) Descriptor() ([]byte, []int) {
 	return file_dpp_registry_message_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *CreatePassportRequest) GetSn() string {
+func (x *CreatePassportRequest) GetData() []*CreatePassportRequest_Data {
 	if x != nil {
-		return x.Sn
+		return x.Data
 	}
-	return ""
-}
-
-func (x *CreatePassportRequest) GetCabSn() string {
-	if x != nil {
-		return x.CabSn
-	}
-	return ""
-}
-
-func (x *CreatePassportRequest) GetCabModel() string {
-	if x != nil {
-		return x.CabModel
-	}
-	return ""
-}
-
-func (x *CreatePassportRequest) GetCabCode() string {
-	if x != nil {
-		return x.CabCode
-	}
-	return ""
-}
-
-func (x *CreatePassportRequest) GetBatch() string {
-	if x != nil {
-		return x.Batch
-	}
-	return ""
-}
-
-func (x *CreatePassportRequest) GetDate() string {
-	if x != nil {
-		return x.Date
-	}
-	return ""
+	return nil
 }
 
 // Package message DPP平台-创建电池护照响应消息定义
 type CreatePassportResponse struct {
 	state protoimpl.MessageState `protogen:"open.v1"`
-	// 电池护照ID
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	// 电池护照UPI
-	Upi           string `protobuf:"bytes,2,opt,name=upi,proto3" json:"upi,omitempty"`
+	// 结果列表
+	Data          []*CreatePassportResponse_Data `protobuf:"bytes,1,rep,name=data,proto3" json:"data,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -164,14 +116,160 @@ func (*CreatePassportResponse) Descriptor() ([]byte, []int) {
 	return file_dpp_registry_message_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *CreatePassportResponse) GetId() string {
+func (x *CreatePassportResponse) GetData() []*CreatePassportResponse_Data {
+	if x != nil {
+		return x.Data
+	}
+	return nil
+}
+
+type CreatePassportRequest_Data struct {
+	state protoimpl.MessageState `protogen:"open.v1"`
+	// 电池簇sn
+	Sn string `protobuf:"bytes,1,opt,name=sn,proto3" json:"sn,omitempty"`
+	// 储能柜sn
+	CabSn string `protobuf:"bytes,2,opt,name=cab_sn,proto3" json:"cab_sn,omitempty"`
+	// 储能柜型号
+	CabModel string `protobuf:"bytes,3,opt,name=cab_model,proto3" json:"cab_model,omitempty"`
+	// 储能柜EMS标识
+	CabCode string `protobuf:"bytes,4,opt,name=cab_code,proto3" json:"cab_code,omitempty"`
+	// 电池簇生产批次号
+	Batch string `protobuf:"bytes,5,opt,name=batch,proto3" json:"batch,omitempty"`
+	// 电池簇生产日期
+	Date          string `protobuf:"bytes,6,opt,name=date,proto3" json:"date,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CreatePassportRequest_Data) Reset() {
+	*x = CreatePassportRequest_Data{}
+	mi := &file_dpp_registry_message_proto_msgTypes[2]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CreatePassportRequest_Data) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreatePassportRequest_Data) ProtoMessage() {}
+
+func (x *CreatePassportRequest_Data) ProtoReflect() protoreflect.Message {
+	mi := &file_dpp_registry_message_proto_msgTypes[2]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreatePassportRequest_Data.ProtoReflect.Descriptor instead.
+func (*CreatePassportRequest_Data) Descriptor() ([]byte, []int) {
+	return file_dpp_registry_message_proto_rawDescGZIP(), []int{0, 0}
+}
+
+func (x *CreatePassportRequest_Data) GetSn() string {
+	if x != nil {
+		return x.Sn
+	}
+	return ""
+}
+
+func (x *CreatePassportRequest_Data) GetCabSn() string {
+	if x != nil {
+		return x.CabSn
+	}
+	return ""
+}
+
+func (x *CreatePassportRequest_Data) GetCabModel() string {
+	if x != nil {
+		return x.CabModel
+	}
+	return ""
+}
+
+func (x *CreatePassportRequest_Data) GetCabCode() string {
+	if x != nil {
+		return x.CabCode
+	}
+	return ""
+}
+
+func (x *CreatePassportRequest_Data) GetBatch() string {
+	if x != nil {
+		return x.Batch
+	}
+	return ""
+}
+
+func (x *CreatePassportRequest_Data) GetDate() string {
+	if x != nil {
+		return x.Date
+	}
+	return ""
+}
+
+type CreatePassportResponse_Data struct {
+	state protoimpl.MessageState `protogen:"open.v1"`
+	// 电池簇sn
+	Sn string `protobuf:"bytes,1,opt,name=sn,proto3" json:"sn,omitempty"`
+	// 电池护照ID
+	Id string `protobuf:"bytes,2,opt,name=id,proto3" json:"id,omitempty"`
+	// 电池护照UPI
+	Upi           string `protobuf:"bytes,3,opt,name=upi,proto3" json:"upi,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CreatePassportResponse_Data) Reset() {
+	*x = CreatePassportResponse_Data{}
+	mi := &file_dpp_registry_message_proto_msgTypes[3]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CreatePassportResponse_Data) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreatePassportResponse_Data) ProtoMessage() {}
+
+func (x *CreatePassportResponse_Data) ProtoReflect() protoreflect.Message {
+	mi := &file_dpp_registry_message_proto_msgTypes[3]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreatePassportResponse_Data.ProtoReflect.Descriptor instead.
+func (*CreatePassportResponse_Data) Descriptor() ([]byte, []int) {
+	return file_dpp_registry_message_proto_rawDescGZIP(), []int{1, 0}
+}
+
+func (x *CreatePassportResponse_Data) GetSn() string {
+	if x != nil {
+		return x.Sn
+	}
+	return ""
+}
+
+func (x *CreatePassportResponse_Data) GetId() string {
 	if x != nil {
 		return x.Id
 	}
 	return ""
 }
 
-func (x *CreatePassportResponse) GetUpi() string {
+func (x *CreatePassportResponse_Data) GetUpi() string {
 	if x != nil {
 		return x.Upi
 	}
@@ -182,17 +280,22 @@ var File_dpp_registry_message_proto protoreflect.FileDescriptor
 
 const file_dpp_registry_message_proto_rawDesc = "" +
 	"\n" +
-	"\x1adpp/registry_message.proto\x12\x14fusion.rpc.proto.dpp\x1a\x1bbuf/validate/validate.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xe1\x01\n" +
-	"\x15CreatePassportRequest\x12\x19\n" +
+	"\x1adpp/registry_message.proto\x12\x14fusion.rpc.proto.dpp\x1a\x1bbuf/validate/validate.proto\"\xb0\x02\n" +
+	"\x15CreatePassportRequest\x12D\n" +
+	"\x04data\x18\x01 \x03(\v20.fusion.rpc.proto.dpp.CreatePassportRequest.DataR\x04data\x1a\xd0\x01\n" +
+	"\x04Data\x12\x19\n" +
 	"\x02sn\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x02sn\x12!\n" +
 	"\x06cab_sn\x18\x02 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x06cab_sn\x12'\n" +
 	"\tcab_model\x18\x03 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\tcab_model\x12%\n" +
 	"\bcab_code\x18\x04 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\bcab_code\x12\x1d\n" +
 	"\x05batch\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x18dR\x05batch\x12\x1b\n" +
-	"\x04date\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x18dR\x04date\":\n" +
-	"\x16CreatePassportResponse\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\tR\x02id\x12\x10\n" +
-	"\x03upi\x18\x02 \x01(\tR\x03upiB\xbe\x01\n" +
+	"\x04date\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x18dR\x04date\"\x99\x01\n" +
+	"\x16CreatePassportResponse\x12E\n" +
+	"\x04data\x18\x01 \x03(\v21.fusion.rpc.proto.dpp.CreatePassportResponse.DataR\x04data\x1a8\n" +
+	"\x04Data\x12\x0e\n" +
+	"\x02sn\x18\x01 \x01(\tR\x02sn\x12\x0e\n" +
+	"\x02id\x18\x02 \x01(\tR\x02id\x12\x10\n" +
+	"\x03upi\x18\x03 \x01(\tR\x03upiB\xbe\x01\n" +
 	"\x18com.fusion.rpc.proto.dppB\x14RegistryMessageProtoP\x01Z\x18fusion.rpc.proto.dpp;dpp\xa2\x02\x04FRPD\xaa\x02\x14Fusion.Rpc.Proto.Dpp\xca\x02\x14Fusion\\Rpc\\Proto\\Dpp\xe2\x02 Fusion\\Rpc\\Proto\\Dpp\\GPBMetadata\xea\x02\x17Fusion::Rpc::Proto::Dppb\x06proto3"
 
 var (
@@ -207,17 +310,21 @@ func file_dpp_registry_message_proto_rawDescGZIP() []byte {
 	return file_dpp_registry_message_proto_rawDescData
 }
 
-var file_dpp_registry_message_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_dpp_registry_message_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_dpp_registry_message_proto_goTypes = []any{
-	(*CreatePassportRequest)(nil),  // 0: fusion.rpc.proto.dpp.CreatePassportRequest
-	(*CreatePassportResponse)(nil), // 1: fusion.rpc.proto.dpp.CreatePassportResponse
+	(*CreatePassportRequest)(nil),       // 0: fusion.rpc.proto.dpp.CreatePassportRequest
+	(*CreatePassportResponse)(nil),      // 1: fusion.rpc.proto.dpp.CreatePassportResponse
+	(*CreatePassportRequest_Data)(nil),  // 2: fusion.rpc.proto.dpp.CreatePassportRequest.Data
+	(*CreatePassportResponse_Data)(nil), // 3: fusion.rpc.proto.dpp.CreatePassportResponse.Data
 }
 var file_dpp_registry_message_proto_depIdxs = []int32{
-	0, // [0:0] is the sub-list for method output_type
-	0, // [0:0] is the sub-list for method input_type
-	0, // [0:0] is the sub-list for extension type_name
-	0, // [0:0] is the sub-list for extension extendee
-	0, // [0:0] is the sub-list for field type_name
+	2, // 0: fusion.rpc.proto.dpp.CreatePassportRequest.data:type_name -> fusion.rpc.proto.dpp.CreatePassportRequest.Data
+	3, // 1: fusion.rpc.proto.dpp.CreatePassportResponse.data:type_name -> fusion.rpc.proto.dpp.CreatePassportResponse.Data
+	2, // [2:2] is the sub-list for method output_type
+	2, // [2:2] is the sub-list for method input_type
+	2, // [2:2] is the sub-list for extension type_name
+	2, // [2:2] is the sub-list for extension extendee
+	0, // [0:2] is the sub-list for field type_name
 }
 
 func init() { file_dpp_registry_message_proto_init() }
@@ -231,7 +338,7 @@ func file_dpp_registry_message_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_dpp_registry_message_proto_rawDesc), len(file_dpp_registry_message_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   2,
+			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

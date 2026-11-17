@@ -32,8 +32,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreatePassportResponse() {
-    id_ = "";
-    upi_ = "";
+    data_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -54,98 +53,986 @@ private static final long serialVersionUID = 0L;
             com.fusion.rpc.proto.dpp.CreatePassportResponse.class, com.fusion.rpc.proto.dpp.CreatePassportResponse.Builder.class);
   }
 
-  public static final int ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object id_ = "";
-  /**
-   * <pre>
-   * 电池护照ID
-   * </pre>
-   *
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
-   */
-  @java.lang.Override
-  public java.lang.String getId() {
-    java.lang.Object ref = id_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      id_ = s;
-      return s;
-    }
+  public interface DataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:fusion.rpc.proto.dpp.CreatePassportResponse.Data)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * 电池簇sn
+     * </pre>
+     *
+     * <code>string sn = 1 [json_name = "sn"];</code>
+     * @return The sn.
+     */
+    java.lang.String getSn();
+    /**
+     * <pre>
+     * 电池簇sn
+     * </pre>
+     *
+     * <code>string sn = 1 [json_name = "sn"];</code>
+     * @return The bytes for sn.
+     */
+    com.google.protobuf.ByteString
+        getSnBytes();
+
+    /**
+     * <pre>
+     * 电池护照ID
+     * </pre>
+     *
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * 电池护照ID
+     * </pre>
+     *
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * 电池护照UPI
+     * </pre>
+     *
+     * <code>string upi = 3 [json_name = "upi"];</code>
+     * @return The upi.
+     */
+    java.lang.String getUpi();
+    /**
+     * <pre>
+     * 电池护照UPI
+     * </pre>
+     *
+     * <code>string upi = 3 [json_name = "upi"];</code>
+     * @return The bytes for upi.
+     */
+    com.google.protobuf.ByteString
+        getUpiBytes();
   }
   /**
-   * <pre>
-   * 电池护照ID
-   * </pre>
-   *
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * Protobuf type {@code fusion.rpc.proto.dpp.CreatePassportResponse.Data}
    */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getIdBytes() {
-    java.lang.Object ref = id_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      id_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
+  public static final class Data extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:fusion.rpc.proto.dpp.CreatePassportResponse.Data)
+      DataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 36,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        "Data");
     }
+    // Use Data.newBuilder() to construct.
+    private Data(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private Data() {
+      sn_ = "";
+      id_ = "";
+      upi_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.fusion.rpc.proto.dpp.RegistryMessageProto.internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_Data_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return com.fusion.rpc.proto.dpp.RegistryMessageProto.internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_Data_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.fusion.rpc.proto.dpp.RegistryMessageProto.internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_Data_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.class, com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.Builder.class);
+    }
+
+    public static final int SN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sn_ = "";
+    /**
+     * <pre>
+     * 电池簇sn
+     * </pre>
+     *
+     * <code>string sn = 1 [json_name = "sn"];</code>
+     * @return The sn.
+     */
+    @java.lang.Override
+    public java.lang.String getSn() {
+      java.lang.Object ref = sn_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sn_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 电池簇sn
+     * </pre>
+     *
+     * <code>string sn = 1 [json_name = "sn"];</code>
+     * @return The bytes for sn.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSnBytes() {
+      java.lang.Object ref = sn_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sn_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <pre>
+     * 电池护照ID
+     * </pre>
+     *
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 电池护照ID
+     * </pre>
+     *
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPI_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object upi_ = "";
+    /**
+     * <pre>
+     * 电池护照UPI
+     * </pre>
+     *
+     * <code>string upi = 3 [json_name = "upi"];</code>
+     * @return The upi.
+     */
+    @java.lang.Override
+    public java.lang.String getUpi() {
+      java.lang.Object ref = upi_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        upi_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 电池护照UPI
+     * </pre>
+     *
+     * <code>string upi = 3 [json_name = "upi"];</code>
+     * @return The bytes for upi.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUpiBytes() {
+      java.lang.Object ref = upi_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        upi_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(sn_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, sn_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(upi_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, upi_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(sn_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, sn_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(upi_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, upi_);
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.fusion.rpc.proto.dpp.CreatePassportResponse.Data)) {
+        return super.equals(obj);
+      }
+      com.fusion.rpc.proto.dpp.CreatePassportResponse.Data other = (com.fusion.rpc.proto.dpp.CreatePassportResponse.Data) obj;
+
+      if (!getSn()
+          .equals(other.getSn())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getUpi()
+          .equals(other.getUpi())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SN_FIELD_NUMBER;
+      hash = (53 * hash) + getSn().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + UPI_FIELD_NUMBER;
+      hash = (53 * hash) + getUpi().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.fusion.rpc.proto.dpp.CreatePassportResponse.Data parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.fusion.rpc.proto.dpp.CreatePassportResponse.Data parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.fusion.rpc.proto.dpp.CreatePassportResponse.Data parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.fusion.rpc.proto.dpp.CreatePassportResponse.Data parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.fusion.rpc.proto.dpp.CreatePassportResponse.Data parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.fusion.rpc.proto.dpp.CreatePassportResponse.Data parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.fusion.rpc.proto.dpp.CreatePassportResponse.Data parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.fusion.rpc.proto.dpp.CreatePassportResponse.Data parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.fusion.rpc.proto.dpp.CreatePassportResponse.Data parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.fusion.rpc.proto.dpp.CreatePassportResponse.Data parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.fusion.rpc.proto.dpp.CreatePassportResponse.Data parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.fusion.rpc.proto.dpp.CreatePassportResponse.Data parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.fusion.rpc.proto.dpp.CreatePassportResponse.Data prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code fusion.rpc.proto.dpp.CreatePassportResponse.Data}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:fusion.rpc.proto.dpp.CreatePassportResponse.Data)
+        com.fusion.rpc.proto.dpp.CreatePassportResponse.DataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.fusion.rpc.proto.dpp.RegistryMessageProto.internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_Data_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.fusion.rpc.proto.dpp.RegistryMessageProto.internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_Data_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.class, com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.Builder.class);
+      }
+
+      // Construct using com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sn_ = "";
+        id_ = "";
+        upi_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.fusion.rpc.proto.dpp.RegistryMessageProto.internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_Data_descriptor;
+      }
+
+      @java.lang.Override
+      public com.fusion.rpc.proto.dpp.CreatePassportResponse.Data getDefaultInstanceForType() {
+        return com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.fusion.rpc.proto.dpp.CreatePassportResponse.Data build() {
+        com.fusion.rpc.proto.dpp.CreatePassportResponse.Data result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.fusion.rpc.proto.dpp.CreatePassportResponse.Data buildPartial() {
+        com.fusion.rpc.proto.dpp.CreatePassportResponse.Data result = new com.fusion.rpc.proto.dpp.CreatePassportResponse.Data(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.fusion.rpc.proto.dpp.CreatePassportResponse.Data result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sn_ = sn_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.upi_ = upi_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.fusion.rpc.proto.dpp.CreatePassportResponse.Data) {
+          return mergeFrom((com.fusion.rpc.proto.dpp.CreatePassportResponse.Data)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.fusion.rpc.proto.dpp.CreatePassportResponse.Data other) {
+        if (other == com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.getDefaultInstance()) return this;
+        if (!other.getSn().isEmpty()) {
+          sn_ = other.sn_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getUpi().isEmpty()) {
+          upi_ = other.upi_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        java.util.Objects.requireNonNull(extensionRegistry);
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sn_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                upi_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sn_ = "";
+      /**
+       * <pre>
+       * 电池簇sn
+       * </pre>
+       *
+       * <code>string sn = 1 [json_name = "sn"];</code>
+       * @return The sn.
+       */
+      public java.lang.String getSn() {
+        java.lang.Object ref = sn_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sn_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 电池簇sn
+       * </pre>
+       *
+       * <code>string sn = 1 [json_name = "sn"];</code>
+       * @return The bytes for sn.
+       */
+      public com.google.protobuf.ByteString
+          getSnBytes() {
+        java.lang.Object ref = sn_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sn_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 电池簇sn
+       * </pre>
+       *
+       * <code>string sn = 1 [json_name = "sn"];</code>
+       * @param value The sn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSn(
+          java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        sn_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 电池簇sn
+       * </pre>
+       *
+       * <code>string sn = 1 [json_name = "sn"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSn() {
+        sn_ = getDefaultInstance().getSn();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 电池簇sn
+       * </pre>
+       *
+       * <code>string sn = 1 [json_name = "sn"];</code>
+       * @param value The bytes for sn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSnBytes(
+          com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        checkByteStringIsUtf8(value);
+        sn_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * 电池护照ID
+       * </pre>
+       *
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 电池护照ID
+       * </pre>
+       *
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 电池护照ID
+       * </pre>
+       *
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 电池护照ID
+       * </pre>
+       *
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 电池护照ID
+       * </pre>
+       *
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object upi_ = "";
+      /**
+       * <pre>
+       * 电池护照UPI
+       * </pre>
+       *
+       * <code>string upi = 3 [json_name = "upi"];</code>
+       * @return The upi.
+       */
+      public java.lang.String getUpi() {
+        java.lang.Object ref = upi_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          upi_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 电池护照UPI
+       * </pre>
+       *
+       * <code>string upi = 3 [json_name = "upi"];</code>
+       * @return The bytes for upi.
+       */
+      public com.google.protobuf.ByteString
+          getUpiBytes() {
+        java.lang.Object ref = upi_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          upi_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 电池护照UPI
+       * </pre>
+       *
+       * <code>string upi = 3 [json_name = "upi"];</code>
+       * @param value The upi to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpi(
+          java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        upi_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 电池护照UPI
+       * </pre>
+       *
+       * <code>string upi = 3 [json_name = "upi"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUpi() {
+        upi_ = getDefaultInstance().getUpi();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 电池护照UPI
+       * </pre>
+       *
+       * <code>string upi = 3 [json_name = "upi"];</code>
+       * @param value The bytes for upi to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpiBytes(
+          com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        checkByteStringIsUtf8(value);
+        upi_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:fusion.rpc.proto.dpp.CreatePassportResponse.Data)
+    }
+
+    // @@protoc_insertion_point(class_scope:fusion.rpc.proto.dpp.CreatePassportResponse.Data)
+    private static final com.fusion.rpc.proto.dpp.CreatePassportResponse.Data DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.fusion.rpc.proto.dpp.CreatePassportResponse.Data();
+    }
+
+    public static com.fusion.rpc.proto.dpp.CreatePassportResponse.Data getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Data>
+        PARSER = new com.google.protobuf.AbstractParser<Data>() {
+      @java.lang.Override
+      public Data parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Data> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Data> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.fusion.rpc.proto.dpp.CreatePassportResponse.Data getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
-  public static final int UPI_FIELD_NUMBER = 2;
+  public static final int DATA_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object upi_ = "";
+  private java.util.List<com.fusion.rpc.proto.dpp.CreatePassportResponse.Data> data_;
   /**
    * <pre>
-   * 电池护照UPI
+   * 结果列表
    * </pre>
    *
-   * <code>string upi = 2 [json_name = "upi"];</code>
-   * @return The upi.
+   * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
    */
   @java.lang.Override
-  public java.lang.String getUpi() {
-    java.lang.Object ref = upi_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      upi_ = s;
-      return s;
-    }
+  public java.util.List<com.fusion.rpc.proto.dpp.CreatePassportResponse.Data> getDataList() {
+    return data_;
   }
   /**
    * <pre>
-   * 电池护照UPI
+   * 结果列表
    * </pre>
    *
-   * <code>string upi = 2 [json_name = "upi"];</code>
-   * @return The bytes for upi.
+   * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getUpiBytes() {
-    java.lang.Object ref = upi_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      upi_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public java.util.List<? extends com.fusion.rpc.proto.dpp.CreatePassportResponse.DataOrBuilder> 
+      getDataOrBuilderList() {
+    return data_;
+  }
+  /**
+   * <pre>
+   * 结果列表
+   * </pre>
+   *
+   * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+   */
+  @java.lang.Override
+  public int getDataCount() {
+    return data_.size();
+  }
+  /**
+   * <pre>
+   * 结果列表
+   * </pre>
+   *
+   * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+   */
+  @java.lang.Override
+  public com.fusion.rpc.proto.dpp.CreatePassportResponse.Data getData(int index) {
+    return data_.get(index);
+  }
+  /**
+   * <pre>
+   * 结果列表
+   * </pre>
+   *
+   * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+   */
+  @java.lang.Override
+  public com.fusion.rpc.proto.dpp.CreatePassportResponse.DataOrBuilder getDataOrBuilder(
+      int index) {
+    return data_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -162,22 +1049,22 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 1, id_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(upi_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 2, upi_);
+    for (int i = 0; i < data_.size(); i++) {
+      output.writeMessage(1, data_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
   private int computeSerializedSize_0() {
     int size = 0;
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, id_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(upi_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, upi_);
-    }
+
+        {
+          final int count = data_.size();
+          for (int i = 0; i < count; i++) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSizeNoTag(data_.get(i));
+          }
+          size += 1 * count;
+        }
     return size;
   }
   @java.lang.Override
@@ -202,10 +1089,8 @@ private static final long serialVersionUID = 0L;
     }
     com.fusion.rpc.proto.dpp.CreatePassportResponse other = (com.fusion.rpc.proto.dpp.CreatePassportResponse) obj;
 
-    if (!getId()
-        .equals(other.getId())) return false;
-    if (!getUpi()
-        .equals(other.getUpi())) return false;
+    if (!getDataList()
+        .equals(other.getDataList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -217,10 +1102,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ID_FIELD_NUMBER;
-    hash = (53 * hash) + getId().hashCode();
-    hash = (37 * hash) + UPI_FIELD_NUMBER;
-    hash = (53 * hash) + getUpi().hashCode();
+    if (getDataCount() > 0) {
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getDataList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -356,8 +1241,13 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      id_ = "";
-      upi_ = "";
+      if (dataBuilder_ == null) {
+        data_ = java.util.Collections.emptyList();
+      } else {
+        data_ = null;
+        dataBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -384,19 +1274,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.fusion.rpc.proto.dpp.CreatePassportResponse buildPartial() {
       com.fusion.rpc.proto.dpp.CreatePassportResponse result = new com.fusion.rpc.proto.dpp.CreatePassportResponse(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.fusion.rpc.proto.dpp.CreatePassportResponse result) {
+      if (dataBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          data_ = java.util.Collections.unmodifiableList(data_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.data_ = data_;
+      } else {
+        result.data_ = dataBuilder_.build();
+      }
+    }
+
     private void buildPartial0(com.fusion.rpc.proto.dpp.CreatePassportResponse result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.id_ = id_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.upi_ = upi_;
-      }
     }
 
     @java.lang.Override
@@ -411,15 +1308,31 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.fusion.rpc.proto.dpp.CreatePassportResponse other) {
       if (other == com.fusion.rpc.proto.dpp.CreatePassportResponse.getDefaultInstance()) return this;
-      if (!other.getId().isEmpty()) {
-        id_ = other.id_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
-      if (!other.getUpi().isEmpty()) {
-        upi_ = other.upi_;
-        bitField0_ |= 0x00000002;
-        onChanged();
+      if (dataBuilder_ == null) {
+        if (!other.data_.isEmpty()) {
+          if (data_.isEmpty()) {
+            data_ = other.data_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureDataIsMutable();
+            data_.addAll(other.data_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.data_.isEmpty()) {
+          if (dataBuilder_.isEmpty()) {
+            dataBuilder_.dispose();
+            dataBuilder_ = null;
+            data_ = other.data_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            dataBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 internalGetDataFieldBuilder() : null;
+          } else {
+            dataBuilder_.addAllMessages(other.data_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -446,15 +1359,18 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              id_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              com.fusion.rpc.proto.dpp.CreatePassportResponse.Data m =
+                  input.readMessage(
+                      com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.parser(),
+                      extensionRegistry);
+              if (dataBuilder_ == null) {
+                ensureDataIsMutable();
+                data_.add(m);
+              } else {
+                dataBuilder_.addMessage(m);
+              }
               break;
             } // case 10
-            case 18: {
-              upi_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -472,188 +1388,310 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object id_ = "";
-    /**
-     * <pre>
-     * 电池护照ID
-     * </pre>
-     *
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
-     */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * 电池护照ID
-     * </pre>
-     *
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
-     */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * 电池护照ID
-     * </pre>
-     *
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The id to set.
-     * @return This builder for chaining.
-     */
-    public Builder setId(
-        java.lang.String value) {
-      java.util.Objects.requireNonNull(value);
-      id_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * 电池护照ID
-     * </pre>
-     *
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearId() {
-      id_ = getDefaultInstance().getId();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * 电池护照ID
-     * </pre>
-     *
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The bytes for id to set.
-     * @return This builder for chaining.
-     */
-    public Builder setIdBytes(
-        com.google.protobuf.ByteString value) {
-      java.util.Objects.requireNonNull(value);
-      checkByteStringIsUtf8(value);
-      id_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
+    private java.util.List<com.fusion.rpc.proto.dpp.CreatePassportResponse.Data> data_ =
+      java.util.Collections.emptyList();
+    private void ensureDataIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        data_ = new java.util.ArrayList<com.fusion.rpc.proto.dpp.CreatePassportResponse.Data>(data_);
+        bitField0_ |= 0x00000001;
+       }
     }
 
-    private java.lang.Object upi_ = "";
+    private com.google.protobuf.RepeatedFieldBuilder<
+        com.fusion.rpc.proto.dpp.CreatePassportResponse.Data, com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.Builder, com.fusion.rpc.proto.dpp.CreatePassportResponse.DataOrBuilder> dataBuilder_;
+
     /**
      * <pre>
-     * 电池护照UPI
+     * 结果列表
      * </pre>
      *
-     * <code>string upi = 2 [json_name = "upi"];</code>
-     * @return The upi.
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
      */
-    public java.lang.String getUpi() {
-      java.lang.Object ref = upi_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        upi_ = s;
-        return s;
+    public java.util.List<com.fusion.rpc.proto.dpp.CreatePassportResponse.Data> getDataList() {
+      if (dataBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(data_);
       } else {
-        return (java.lang.String) ref;
+        return dataBuilder_.getMessageList();
       }
     }
     /**
      * <pre>
-     * 电池护照UPI
+     * 结果列表
      * </pre>
      *
-     * <code>string upi = 2 [json_name = "upi"];</code>
-     * @return The bytes for upi.
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
      */
-    public com.google.protobuf.ByteString
-        getUpiBytes() {
-      java.lang.Object ref = upi_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        upi_ = b;
-        return b;
+    public int getDataCount() {
+      if (dataBuilder_ == null) {
+        return data_.size();
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return dataBuilder_.getCount();
       }
     }
     /**
      * <pre>
-     * 电池护照UPI
+     * 结果列表
      * </pre>
      *
-     * <code>string upi = 2 [json_name = "upi"];</code>
-     * @param value The upi to set.
-     * @return This builder for chaining.
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
      */
-    public Builder setUpi(
-        java.lang.String value) {
-      java.util.Objects.requireNonNull(value);
-      upi_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
+    public com.fusion.rpc.proto.dpp.CreatePassportResponse.Data getData(int index) {
+      if (dataBuilder_ == null) {
+        return data_.get(index);
+      } else {
+        return dataBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * 结果列表
+     * </pre>
+     *
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+     */
+    public Builder setData(
+        int index, com.fusion.rpc.proto.dpp.CreatePassportResponse.Data value) {
+      if (dataBuilder_ == null) {
+        java.util.Objects.requireNonNull(value);
+        ensureDataIsMutable();
+        data_.set(index, value);
+        onChanged();
+      } else {
+        dataBuilder_.setMessage(index, value);
+      }
       return this;
     }
     /**
      * <pre>
-     * 电池护照UPI
+     * 结果列表
      * </pre>
      *
-     * <code>string upi = 2 [json_name = "upi"];</code>
-     * @return This builder for chaining.
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
      */
-    public Builder clearUpi() {
-      upi_ = getDefaultInstance().getUpi();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
+    public Builder setData(
+        int index, com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.Builder builderForValue) {
+      if (dataBuilder_ == null) {
+        ensureDataIsMutable();
+        data_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        dataBuilder_.setMessage(index, builderForValue.build());
+      }
       return this;
     }
     /**
      * <pre>
-     * 电池护照UPI
+     * 结果列表
      * </pre>
      *
-     * <code>string upi = 2 [json_name = "upi"];</code>
-     * @param value The bytes for upi to set.
-     * @return This builder for chaining.
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
      */
-    public Builder setUpiBytes(
-        com.google.protobuf.ByteString value) {
-      java.util.Objects.requireNonNull(value);
-      checkByteStringIsUtf8(value);
-      upi_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
+    public Builder addData(com.fusion.rpc.proto.dpp.CreatePassportResponse.Data value) {
+      if (dataBuilder_ == null) {
+        java.util.Objects.requireNonNull(value);
+        ensureDataIsMutable();
+        data_.add(value);
+        onChanged();
+      } else {
+        dataBuilder_.addMessage(value);
+      }
       return this;
+    }
+    /**
+     * <pre>
+     * 结果列表
+     * </pre>
+     *
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+     */
+    public Builder addData(
+        int index, com.fusion.rpc.proto.dpp.CreatePassportResponse.Data value) {
+      if (dataBuilder_ == null) {
+        java.util.Objects.requireNonNull(value);
+        ensureDataIsMutable();
+        data_.add(index, value);
+        onChanged();
+      } else {
+        dataBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * 结果列表
+     * </pre>
+     *
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+     */
+    public Builder addData(
+        com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.Builder builderForValue) {
+      if (dataBuilder_ == null) {
+        ensureDataIsMutable();
+        data_.add(builderForValue.build());
+        onChanged();
+      } else {
+        dataBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * 结果列表
+     * </pre>
+     *
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+     */
+    public Builder addData(
+        int index, com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.Builder builderForValue) {
+      if (dataBuilder_ == null) {
+        ensureDataIsMutable();
+        data_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        dataBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * 结果列表
+     * </pre>
+     *
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+     */
+    public Builder addAllData(
+        java.lang.Iterable<? extends com.fusion.rpc.proto.dpp.CreatePassportResponse.Data> values) {
+      if (dataBuilder_ == null) {
+        ensureDataIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, data_);
+        onChanged();
+      } else {
+        dataBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * 结果列表
+     * </pre>
+     *
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+     */
+    public Builder clearData() {
+      if (dataBuilder_ == null) {
+        data_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+      } else {
+        dataBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * 结果列表
+     * </pre>
+     *
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+     */
+    public Builder removeData(int index) {
+      if (dataBuilder_ == null) {
+        ensureDataIsMutable();
+        data_.remove(index);
+        onChanged();
+      } else {
+        dataBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * 结果列表
+     * </pre>
+     *
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+     */
+    public com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.Builder getDataBuilder(
+        int index) {
+      return internalGetDataFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * 结果列表
+     * </pre>
+     *
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+     */
+    public com.fusion.rpc.proto.dpp.CreatePassportResponse.DataOrBuilder getDataOrBuilder(
+        int index) {
+      if (dataBuilder_ == null) {
+        return data_.get(index);  } else {
+        return dataBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * 结果列表
+     * </pre>
+     *
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+     */
+    public java.util.List<? extends com.fusion.rpc.proto.dpp.CreatePassportResponse.DataOrBuilder> 
+         getDataOrBuilderList() {
+      if (dataBuilder_ != null) {
+        return dataBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(data_);
+      }
+    }
+    /**
+     * <pre>
+     * 结果列表
+     * </pre>
+     *
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+     */
+    public com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.Builder addDataBuilder() {
+      return internalGetDataFieldBuilder().addBuilder(
+          com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * 结果列表
+     * </pre>
+     *
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+     */
+    public com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.Builder addDataBuilder(
+        int index) {
+      return internalGetDataFieldBuilder().addBuilder(
+          index, com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * 结果列表
+     * </pre>
+     *
+     * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+     */
+    public java.util.List<com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.Builder> 
+         getDataBuilderList() {
+      return internalGetDataFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        com.fusion.rpc.proto.dpp.CreatePassportResponse.Data, com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.Builder, com.fusion.rpc.proto.dpp.CreatePassportResponse.DataOrBuilder> 
+        internalGetDataFieldBuilder() {
+      if (dataBuilder_ == null) {
+        dataBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.fusion.rpc.proto.dpp.CreatePassportResponse.Data, com.fusion.rpc.proto.dpp.CreatePassportResponse.Data.Builder, com.fusion.rpc.proto.dpp.CreatePassportResponse.DataOrBuilder>(
+                data_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
+        data_ = null;
+      }
+      return dataBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:fusion.rpc.proto.dpp.CreatePassportResponse)

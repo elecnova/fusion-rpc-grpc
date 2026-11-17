@@ -12,41 +12,45 @@ public interface CreatePassportResponseOrBuilder extends
 
   /**
    * <pre>
-   * 电池护照ID
+   * 结果列表
    * </pre>
    *
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
+   * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
    */
-  java.lang.String getId();
+  java.util.List<com.fusion.rpc.proto.dpp.CreatePassportResponse.Data> 
+      getDataList();
   /**
    * <pre>
-   * 电池护照ID
+   * 结果列表
    * </pre>
    *
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
    */
-  com.google.protobuf.ByteString
-      getIdBytes();
-
+  com.fusion.rpc.proto.dpp.CreatePassportResponse.Data getData(int index);
   /**
    * <pre>
-   * 电池护照UPI
+   * 结果列表
    * </pre>
    *
-   * <code>string upi = 2 [json_name = "upi"];</code>
-   * @return The upi.
+   * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
    */
-  java.lang.String getUpi();
+  int getDataCount();
   /**
    * <pre>
-   * 电池护照UPI
+   * 结果列表
    * </pre>
    *
-   * <code>string upi = 2 [json_name = "upi"];</code>
-   * @return The bytes for upi.
+   * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
    */
-  com.google.protobuf.ByteString
-      getUpiBytes();
+  java.util.List<? extends com.fusion.rpc.proto.dpp.CreatePassportResponse.DataOrBuilder> 
+      getDataOrBuilderList();
+  /**
+   * <pre>
+   * 结果列表
+   * </pre>
+   *
+   * <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+   */
+  com.fusion.rpc.proto.dpp.CreatePassportResponse.DataOrBuilder getDataOrBuilder(
+      int index);
 }

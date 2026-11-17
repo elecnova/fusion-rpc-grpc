@@ -12,121 +12,45 @@ public interface CreatePassportRequestOrBuilder extends
 
   /**
    * <pre>
-   * 电池簇sn
+   * 请求列表
    * </pre>
    *
-   * <code>string sn = 1 [json_name = "sn", (.buf.validate.field) = { ... }</code>
-   * @return The sn.
+   * <code>repeated .fusion.rpc.proto.dpp.CreatePassportRequest.Data data = 1 [json_name = "data"];</code>
    */
-  java.lang.String getSn();
+  java.util.List<com.fusion.rpc.proto.dpp.CreatePassportRequest.Data> 
+      getDataList();
   /**
    * <pre>
-   * 电池簇sn
+   * 请求列表
    * </pre>
    *
-   * <code>string sn = 1 [json_name = "sn", (.buf.validate.field) = { ... }</code>
-   * @return The bytes for sn.
+   * <code>repeated .fusion.rpc.proto.dpp.CreatePassportRequest.Data data = 1 [json_name = "data"];</code>
    */
-  com.google.protobuf.ByteString
-      getSnBytes();
-
+  com.fusion.rpc.proto.dpp.CreatePassportRequest.Data getData(int index);
   /**
    * <pre>
-   * 储能柜sn
+   * 请求列表
    * </pre>
    *
-   * <code>string cab_sn = 2 [json_name = "cab_sn", (.buf.validate.field) = { ... }</code>
-   * @return The cabSn.
+   * <code>repeated .fusion.rpc.proto.dpp.CreatePassportRequest.Data data = 1 [json_name = "data"];</code>
    */
-  java.lang.String getCabSn();
+  int getDataCount();
   /**
    * <pre>
-   * 储能柜sn
+   * 请求列表
    * </pre>
    *
-   * <code>string cab_sn = 2 [json_name = "cab_sn", (.buf.validate.field) = { ... }</code>
-   * @return The bytes for cabSn.
+   * <code>repeated .fusion.rpc.proto.dpp.CreatePassportRequest.Data data = 1 [json_name = "data"];</code>
    */
-  com.google.protobuf.ByteString
-      getCabSnBytes();
-
+  java.util.List<? extends com.fusion.rpc.proto.dpp.CreatePassportRequest.DataOrBuilder> 
+      getDataOrBuilderList();
   /**
    * <pre>
-   * 储能柜型号
+   * 请求列表
    * </pre>
    *
-   * <code>string cab_model = 3 [json_name = "cab_model", (.buf.validate.field) = { ... }</code>
-   * @return The cabModel.
+   * <code>repeated .fusion.rpc.proto.dpp.CreatePassportRequest.Data data = 1 [json_name = "data"];</code>
    */
-  java.lang.String getCabModel();
-  /**
-   * <pre>
-   * 储能柜型号
-   * </pre>
-   *
-   * <code>string cab_model = 3 [json_name = "cab_model", (.buf.validate.field) = { ... }</code>
-   * @return The bytes for cabModel.
-   */
-  com.google.protobuf.ByteString
-      getCabModelBytes();
-
-  /**
-   * <pre>
-   * 储能柜EMS标识
-   * </pre>
-   *
-   * <code>string cab_code = 4 [json_name = "cab_code", (.buf.validate.field) = { ... }</code>
-   * @return The cabCode.
-   */
-  java.lang.String getCabCode();
-  /**
-   * <pre>
-   * 储能柜EMS标识
-   * </pre>
-   *
-   * <code>string cab_code = 4 [json_name = "cab_code", (.buf.validate.field) = { ... }</code>
-   * @return The bytes for cabCode.
-   */
-  com.google.protobuf.ByteString
-      getCabCodeBytes();
-
-  /**
-   * <pre>
-   * 电池簇生产批次号
-   * </pre>
-   *
-   * <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
-   * @return The batch.
-   */
-  java.lang.String getBatch();
-  /**
-   * <pre>
-   * 电池簇生产批次号
-   * </pre>
-   *
-   * <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
-   * @return The bytes for batch.
-   */
-  com.google.protobuf.ByteString
-      getBatchBytes();
-
-  /**
-   * <pre>
-   * 电池簇生产日期
-   * </pre>
-   *
-   * <code>string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
-   * @return The date.
-   */
-  java.lang.String getDate();
-  /**
-   * <pre>
-   * 电池簇生产日期
-   * </pre>
-   *
-   * <code>string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
-   * @return The bytes for date.
-   */
-  com.google.protobuf.ByteString
-      getDateBytes();
+  com.fusion.rpc.proto.dpp.CreatePassportRequest.DataOrBuilder getDataOrBuilder(
+      int index);
 }

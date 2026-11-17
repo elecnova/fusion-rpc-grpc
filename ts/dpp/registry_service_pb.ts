@@ -15,7 +15,6 @@ import type { GenFile, GenService } from "@bufbuild/protobuf/codegenv2";
 import { fileDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
 import { file_google_api_annotations } from "../google/api/annotations_pb";
 import { file_google_api_client } from "../google/api/client_pb";
-import { file_google_protobuf_empty } from "@bufbuild/protobuf/wkt";
 import type { CreatePassportRequestSchema, CreatePassportResponseSchema } from "./registry_message_pb";
 import { file_dpp_registry_message } from "./registry_message_pb";
 
@@ -23,7 +22,7 @@ import { file_dpp_registry_message } from "./registry_message_pb";
  * Describes the file dpp/registry_service.proto.
  */
 export const file_dpp_registry_service: GenFile = /*@__PURE__*/
-  fileDesc("ChpkcHAvcmVnaXN0cnlfc2VydmljZS5wcm90bxIUZnVzaW9uLnJwYy5wcm90by5kcHAywAEKEkRQUFJlZ2lzdHJ5U2VydmljZRKpAQoOQ3JlYXRlUGFzc3BvcnQSKy5mdXNpb24ucnBjLnByb3RvLmRwcC5DcmVhdGVQYXNzcG9ydFJlcXVlc3QaLC5mdXNpb24ucnBjLnByb3RvLmRwcC5DcmVhdGVQYXNzcG9ydFJlc3BvbnNlIjzaQR9zbixkYXRlLGJhdGNoLGNvZGUsbW9kZWwsY2FiX3NugtPkkwIUOgEqIg8vM3JkLWFwaS92Mi9kcHBCvgEKGGNvbS5mdXNpb24ucnBjLnByb3RvLmRwcEIUUmVnaXN0cnlTZXJ2aWNlUHJvdG9QAVoYZnVzaW9uLnJwYy5wcm90by5kcHA7ZHBwogIERlJQRKoCFEZ1c2lvbi5ScGMuUHJvdG8uRHBwygIURnVzaW9uXFJwY1xQcm90b1xEcHDiAiBGdXNpb25cUnBjXFByb3RvXERwcFxHUEJNZXRhZGF0YeoCF0Z1c2lvbjo6UnBjOjpQcm90bzo6RHBwYgZwcm90bzM", [file_google_api_annotations, file_google_api_client, file_google_protobuf_empty, file_dpp_registry_message]);
+  fileDesc("ChpkcHAvcmVnaXN0cnlfc2VydmljZS5wcm90bxIUZnVzaW9uLnJwYy5wcm90by5kcHAywAEKEkRQUFJlZ2lzdHJ5U2VydmljZRKpAQoOQ3JlYXRlUGFzc3BvcnQSKy5mdXNpb24ucnBjLnByb3RvLmRwcC5DcmVhdGVQYXNzcG9ydFJlcXVlc3QaLC5mdXNpb24ucnBjLnByb3RvLmRwcC5DcmVhdGVQYXNzcG9ydFJlc3BvbnNlIjzaQR9zbixkYXRlLGJhdGNoLGNvZGUsbW9kZWwsY2FiX3NugtPkkwIUOgEqIg8vM3JkLWFwaS92Mi9kcHBCvgEKGGNvbS5mdXNpb24ucnBjLnByb3RvLmRwcEIUUmVnaXN0cnlTZXJ2aWNlUHJvdG9QAVoYZnVzaW9uLnJwYy5wcm90by5kcHA7ZHBwogIERlJQRKoCFEZ1c2lvbi5ScGMuUHJvdG8uRHBwygIURnVzaW9uXFJwY1xQcm90b1xEcHDiAiBGdXNpb25cUnBjXFByb3RvXERwcFxHUEJNZXRhZGF0YeoCF0Z1c2lvbjo6UnBjOjpQcm90bzo6RHBwYgZwcm90bzM", [file_google_api_annotations, file_google_api_client, file_dpp_registry_message]);
 
 /**
  * @generated from service fusion.rpc.proto.dpp.DPPRegistryService

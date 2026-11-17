@@ -17,41 +17,11 @@ use Google\Protobuf\RepeatedField;
 class CreatePassportRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * 电池簇sn
+     * 请求列表
      *
-     * Generated from protobuf field <code>string sn = 1 [json_name = "sn", (.buf.validate.field) = {</code>
+     * Generated from protobuf field <code>repeated .fusion.rpc.proto.dpp.CreatePassportRequest.Data data = 1 [json_name = "data"];</code>
      */
-    protected $sn = '';
-    /**
-     * 储能柜sn
-     *
-     * Generated from protobuf field <code>string cab_sn = 2 [json_name = "cab_sn", (.buf.validate.field) = {</code>
-     */
-    protected $cab_sn = '';
-    /**
-     * 储能柜型号
-     *
-     * Generated from protobuf field <code>string cab_model = 3 [json_name = "cab_model", (.buf.validate.field) = {</code>
-     */
-    protected $cab_model = '';
-    /**
-     * 储能柜EMS标识
-     *
-     * Generated from protobuf field <code>string cab_code = 4 [json_name = "cab_code", (.buf.validate.field) = {</code>
-     */
-    protected $cab_code = '';
-    /**
-     * 电池簇生产批次号
-     *
-     * Generated from protobuf field <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = {</code>
-     */
-    protected $batch = '';
-    /**
-     * 电池簇生产日期
-     *
-     * Generated from protobuf field <code>string date = 6 [json_name = "date", (.buf.validate.field) = {</code>
-     */
-    protected $date = '';
+    private $data;
 
     /**
      * Constructor.
@@ -59,18 +29,8 @@ class CreatePassportRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $sn
-     *           电池簇sn
-     *     @type string $cab_sn
-     *           储能柜sn
-     *     @type string $cab_model
-     *           储能柜型号
-     *     @type string $cab_code
-     *           储能柜EMS标识
-     *     @type string $batch
-     *           电池簇生产批次号
-     *     @type string $date
-     *           电池簇生产日期
+     *     @type \Fusion\Rpc\Proto\Dpp\CreatePassportRequest\Data[] $data
+     *           请求列表
      * }
      */
     public function __construct($data = null)
@@ -80,157 +40,27 @@ class CreatePassportRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 电池簇sn
+     * 请求列表
      *
-     * Generated from protobuf field <code>string sn = 1 [json_name = "sn", (.buf.validate.field) = {</code>
-     * @return string
+     * Generated from protobuf field <code>repeated .fusion.rpc.proto.dpp.CreatePassportRequest.Data data = 1 [json_name = "data"];</code>
+     * @return RepeatedField<\Fusion\Rpc\Proto\Dpp\CreatePassportRequest\Data>
      */
-    public function getSn()
+    public function getData()
     {
-        return $this->sn;
+        return $this->data;
     }
 
     /**
-     * 电池簇sn
+     * 请求列表
      *
-     * Generated from protobuf field <code>string sn = 1 [json_name = "sn", (.buf.validate.field) = {</code>
-     * @param string $var
+     * Generated from protobuf field <code>repeated .fusion.rpc.proto.dpp.CreatePassportRequest.Data data = 1 [json_name = "data"];</code>
+     * @param \Fusion\Rpc\Proto\Dpp\CreatePassportRequest\Data[] $var
      * @return $this
      */
-    public function setSn(string $var)
+    public function setData(array|RepeatedField $var)
     {
-        GPBUtil::checkString($var, true);
-        $this->sn = $var;
-
-        return $this;
-    }
-
-    /**
-     * 储能柜sn
-     *
-     * Generated from protobuf field <code>string cab_sn = 2 [json_name = "cab_sn", (.buf.validate.field) = {</code>
-     * @return string
-     */
-    public function getCabSn()
-    {
-        return $this->cab_sn;
-    }
-
-    /**
-     * 储能柜sn
-     *
-     * Generated from protobuf field <code>string cab_sn = 2 [json_name = "cab_sn", (.buf.validate.field) = {</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setCabSn(string $var)
-    {
-        GPBUtil::checkString($var, true);
-        $this->cab_sn = $var;
-
-        return $this;
-    }
-
-    /**
-     * 储能柜型号
-     *
-     * Generated from protobuf field <code>string cab_model = 3 [json_name = "cab_model", (.buf.validate.field) = {</code>
-     * @return string
-     */
-    public function getCabModel()
-    {
-        return $this->cab_model;
-    }
-
-    /**
-     * 储能柜型号
-     *
-     * Generated from protobuf field <code>string cab_model = 3 [json_name = "cab_model", (.buf.validate.field) = {</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setCabModel(string $var)
-    {
-        GPBUtil::checkString($var, true);
-        $this->cab_model = $var;
-
-        return $this;
-    }
-
-    /**
-     * 储能柜EMS标识
-     *
-     * Generated from protobuf field <code>string cab_code = 4 [json_name = "cab_code", (.buf.validate.field) = {</code>
-     * @return string
-     */
-    public function getCabCode()
-    {
-        return $this->cab_code;
-    }
-
-    /**
-     * 储能柜EMS标识
-     *
-     * Generated from protobuf field <code>string cab_code = 4 [json_name = "cab_code", (.buf.validate.field) = {</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setCabCode(string $var)
-    {
-        GPBUtil::checkString($var, true);
-        $this->cab_code = $var;
-
-        return $this;
-    }
-
-    /**
-     * 电池簇生产批次号
-     *
-     * Generated from protobuf field <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = {</code>
-     * @return string
-     */
-    public function getBatch()
-    {
-        return $this->batch;
-    }
-
-    /**
-     * 电池簇生产批次号
-     *
-     * Generated from protobuf field <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = {</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setBatch(string $var)
-    {
-        GPBUtil::checkString($var, true);
-        $this->batch = $var;
-
-        return $this;
-    }
-
-    /**
-     * 电池簇生产日期
-     *
-     * Generated from protobuf field <code>string date = 6 [json_name = "date", (.buf.validate.field) = {</code>
-     * @return string
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
-
-    /**
-     * 电池簇生产日期
-     *
-     * Generated from protobuf field <code>string date = 6 [json_name = "date", (.buf.validate.field) = {</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setDate(string $var)
-    {
-        GPBUtil::checkString($var, true);
-        $this->date = $var;
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Fusion\Rpc\Proto\Dpp\CreatePassportRequest\Data::class);
+        $this->data = $arr;
 
         return $this;
     }

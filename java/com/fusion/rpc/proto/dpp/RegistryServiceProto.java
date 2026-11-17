@@ -37,31 +37,29 @@ public final class RegistryServiceProto extends com.google.protobuf.GeneratedFil
     java.lang.String[] descriptorData = {
       "\n\032dpp/registry_service.proto\022\024fusion.rpc" +
       ".proto.dpp\032\034google/api/annotations.proto" +
-      "\032\027google/api/client.proto\032\033google/protob" +
-      "uf/empty.proto\032\032dpp/registry_message.pro" +
-      "to2\300\001\n\022DPPRegistryService\022\251\001\n\016CreatePass" +
-      "port\022+.fusion.rpc.proto.dpp.CreatePasspo" +
-      "rtRequest\032,.fusion.rpc.proto.dpp.CreateP" +
-      "assportResponse\"<\332A\037sn,date,batch,code,m" +
-      "odel,cab_sn\202\323\344\223\002\024\"\017/3rd-api/v2/dpp:\001*B\276\001" +
-      "\n\030com.fusion.rpc.proto.dppB\024RegistryServ" +
-      "iceProtoP\001Z\030fusion.rpc.proto.dpp;dpp\242\002\004F" +
-      "RPD\252\002\024Fusion.Rpc.Proto.Dpp\312\002\024Fusion\\Rpc\\" +
-      "Proto\\Dpp\342\002 Fusion\\Rpc\\Proto\\Dpp\\GPBMeta" +
-      "data\352\002\027Fusion::Rpc::Proto::Dppb\006proto3"
+      "\032\027google/api/client.proto\032\032dpp/registry_" +
+      "message.proto2\300\001\n\022DPPRegistryService\022\251\001\n" +
+      "\016CreatePassport\022+.fusion.rpc.proto.dpp.C" +
+      "reatePassportRequest\032,.fusion.rpc.proto." +
+      "dpp.CreatePassportResponse\"<\332A\037sn,date,b" +
+      "atch,code,model,cab_sn\202\323\344\223\002\024\"\017/3rd-api/v" +
+      "2/dpp:\001*B\276\001\n\030com.fusion.rpc.proto.dppB\024R" +
+      "egistryServiceProtoP\001Z\030fusion.rpc.proto." +
+      "dpp;dpp\242\002\004FRPD\252\002\024Fusion.Rpc.Proto.Dpp\312\002\024" +
+      "Fusion\\Rpc\\Proto\\Dpp\342\002 Fusion\\Rpc\\Proto\\" +
+      "Dpp\\GPBMetadata\352\002\027Fusion::Rpc::Proto::Dp" +
+      "pb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-          com.google.protobuf.EmptyProto.getDescriptor(),
           com.fusion.rpc.proto.dpp.RegistryMessageProto.getDescriptor(),
         });
     descriptor.resolveAllFeaturesImmutable();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
-    com.google.protobuf.EmptyProto.getDescriptor();
     com.fusion.rpc.proto.dpp.RegistryMessageProto.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

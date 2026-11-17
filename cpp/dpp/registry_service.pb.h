@@ -29,7 +29,6 @@
 #include "google/protobuf/extension_set.h"  // IWYU pragma: export
 #include "google/api/annotations.pb.h"
 #include "google/api/client.pb.h"
-#include "google/protobuf/empty.pb.h"
 #include "dpp/registry_message.pb.h"
 // @@protoc_insertion_point(includes)
 

@@ -17,17 +17,11 @@ use Google\Protobuf\RepeatedField;
 class CreatePassportResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * 电池护照ID
+     * 结果列表
      *
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
+     * Generated from protobuf field <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
      */
-    protected $id = '';
-    /**
-     * 电池护照UPI
-     *
-     * Generated from protobuf field <code>string upi = 2 [json_name = "upi"];</code>
-     */
-    protected $upi = '';
+    private $data;
 
     /**
      * Constructor.
@@ -35,10 +29,8 @@ class CreatePassportResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $id
-     *           电池护照ID
-     *     @type string $upi
-     *           电池护照UPI
+     *     @type \Fusion\Rpc\Proto\Dpp\CreatePassportResponse\Data[] $data
+     *           结果列表
      * }
      */
     public function __construct($data = null)
@@ -48,53 +40,27 @@ class CreatePassportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 电池护照ID
+     * 结果列表
      *
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
-     * @return string
+     * Generated from protobuf field <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+     * @return RepeatedField<\Fusion\Rpc\Proto\Dpp\CreatePassportResponse\Data>
      */
-    public function getId()
+    public function getData()
     {
-        return $this->id;
+        return $this->data;
     }
 
     /**
-     * 电池护照ID
+     * 结果列表
      *
-     * Generated from protobuf field <code>string id = 1 [json_name = "id"];</code>
-     * @param string $var
+     * Generated from protobuf field <code>repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];</code>
+     * @param \Fusion\Rpc\Proto\Dpp\CreatePassportResponse\Data[] $var
      * @return $this
      */
-    public function setId(string $var)
+    public function setData(array|RepeatedField $var)
     {
-        GPBUtil::checkString($var, true);
-        $this->id = $var;
-
-        return $this;
-    }
-
-    /**
-     * 电池护照UPI
-     *
-     * Generated from protobuf field <code>string upi = 2 [json_name = "upi"];</code>
-     * @return string
-     */
-    public function getUpi()
-    {
-        return $this->upi;
-    }
-
-    /**
-     * 电池护照UPI
-     *
-     * Generated from protobuf field <code>string upi = 2 [json_name = "upi"];</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setUpi(string $var)
-    {
-        GPBUtil::checkString($var, true);
-        $this->upi = $var;
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Fusion\Rpc\Proto\Dpp\CreatePassportResponse\Data::class);
+        $this->data = $arr;
 
         return $this;
     }

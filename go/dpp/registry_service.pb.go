@@ -19,7 +19,6 @@ import (
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	_ "google.golang.org/protobuf/types/known/emptypb"
 	reflect "reflect"
 	unsafe "unsafe"
 )
@@ -35,7 +34,7 @@ var File_dpp_registry_service_proto protoreflect.FileDescriptor
 
 const file_dpp_registry_service_proto_rawDesc = "" +
 	"\n" +
-	"\x1adpp/registry_service.proto\x12\x14fusion.rpc.proto.dpp\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1adpp/registry_message.proto2\xc0\x01\n" +
+	"\x1adpp/registry_service.proto\x12\x14fusion.rpc.proto.dpp\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1adpp/registry_message.proto2\xc0\x01\n" +
 	"\x12DPPRegistryService\x12\xa9\x01\n" +
 	"\x0eCreatePassport\x12+.fusion.rpc.proto.dpp.CreatePassportRequest\x1a,.fusion.rpc.proto.dpp.CreatePassportResponse\"<\xdaA\x1fsn,date,batch,code,model,cab_sn\x82\xd3\xe4\x93\x02\x14:\x01*\"\x0f/3rd-api/v2/dppB\xbe\x01\n" +
 	"\x18com.fusion.rpc.proto.dppB\x14RegistryServiceProtoP\x01Z\x18fusion.rpc.proto.dpp;dpp\xa2\x02\x04FRPD\xaa\x02\x14Fusion.Rpc.Proto.Dpp\xca\x02\x14Fusion\\Rpc\\Proto\\Dpp\xe2\x02 Fusion\\Rpc\\Proto\\Dpp\\GPBMetadata\xea\x02\x17Fusion::Rpc::Proto::Dppb\x06proto3"

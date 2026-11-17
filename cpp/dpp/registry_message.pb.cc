@@ -29,7 +29,11 @@ namespace _fl = ::google::protobuf::internal::field_layout;
 namespace {
 PROTOBUF_CONSTINIT ::google::protobuf::internal::ReflectionData
     file_reflection_data[] = {
+        // ::fusion::rpc::proto::dpp::CreatePassportRequest_Data
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_dpp_2fregistry_5fmessage_2eproto, /* tracker*/ nullptr,},
         // ::fusion::rpc::proto::dpp::CreatePassportRequest
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_dpp_2fregistry_5fmessage_2eproto, /* tracker*/ nullptr,},
+        // ::fusion::rpc::proto::dpp::CreatePassportResponse_Data
         {&::_pbi::kDescriptorMethods, &::descriptor_table_dpp_2fregistry_5fmessage_2eproto, /* tracker*/ nullptr,},
         // ::fusion::rpc::proto::dpp::CreatePassportResponse
         {&::_pbi::kDescriptorMethods, &::descriptor_table_dpp_2fregistry_5fmessage_2eproto, /* tracker*/ nullptr,},
@@ -40,6 +44,369 @@ namespace fusion {
 namespace rpc {
 namespace proto {
 namespace dpp {
+class CreatePassportResponse_Data::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<CreatePassportResponse_Data>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(CreatePassportResponse_Data, _impl_._has_bits_);
+};
+
+constexpr CreatePassportResponse_Data::ParseTableT_ CreatePassportResponse_Data::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(CreatePassportResponse_Data, _impl_._has_bits_),
+      0, // no _extensions_
+      3, 24,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967288,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      3,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::MpUnknownFields,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::fusion::rpc::proto::dpp::CreatePassportResponse_Data>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      {::_pbi::TcParser::MiniParse, {}},
+      // string sn = 1 [json_name = "sn"];
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(CreatePassportResponse_Data, _impl_.sn_)}},
+      // string id = 2 [json_name = "id"];
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(CreatePassportResponse_Data, _impl_.id_)}},
+      // string upi = 3 [json_name = "upi"];
+      {::_pbi::TcParser::FastUS1,
+       {26, 2, 0,
+        PROTOBUF_FIELD_OFFSET(CreatePassportResponse_Data, _impl_.upi_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string sn = 1 [json_name = "sn"];
+      {PROTOBUF_FIELD_OFFSET(CreatePassportResponse_Data, _impl_.sn_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string id = 2 [json_name = "id"];
+      {PROTOBUF_FIELD_OFFSET(CreatePassportResponse_Data, _impl_.id_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string upi = 3 [json_name = "upi"];
+      {PROTOBUF_FIELD_OFFSET(CreatePassportResponse_Data, _impl_.upi_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\60\2\2\3\0\0\0\0"
+      "fusion.rpc.proto.dpp.CreatePassportResponse.Data"
+      "sn"
+      "id"
+      "upi"
+    }},
+  };
+}
+
+
+inline constexpr CreatePassportResponse_Data::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : sn_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        upi_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+constexpr CreatePassportResponse_Data::CreatePassportResponse_Data(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : Super_(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL CreatePassportResponse_Data::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) CreatePassportResponse_Data(arena);
+}
+constexpr auto CreatePassportResponse_Data::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(CreatePassportResponse_Data), alignof(CreatePassportResponse_Data));
+}
+constexpr auto CreatePassportResponse_Data::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &CreatePassportResponse_Data::MergeImpl,
+          Super_::GetNewImpl<CreatePassportResponse_Data>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &CreatePassportResponse_Data::SharedDtor,
+          Super_::GetClearImpl<CreatePassportResponse_Data>(), &CreatePassportResponse_Data::ByteSizeLong,
+              &CreatePassportResponse_Data::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(CreatePassportResponse_Data, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[2],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_dpp_2fregistry_5fmessage_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct CreatePassportResponse_DataGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr CreatePassportResponse_DataGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 CreatePassportResponse_Data_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(CreatePassportResponse_Data::InternalGenerateClassData_(
+            _default, &CreatePassportResponse_Data_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<CreatePassportResponse_Data>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~CreatePassportResponse_DataGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) CreatePassportResponse_Data _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<CreatePassportResponse_Data>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(CreatePassportResponse_DataGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST CreatePassportResponse_DataGlobalsTypeInternal CreatePassportResponse_Data_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* CreatePassportResponse_Data_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return CreatePassportResponse_Data_globals_.GetClassData();
+#else
+  return CreatePassportResponse_Data_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class CreatePassportRequest_Data::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<CreatePassportRequest_Data>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(CreatePassportRequest_Data, _impl_._has_bits_);
+};
+
+constexpr CreatePassportRequest_Data::ParseTableT_ CreatePassportRequest_Data::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(CreatePassportRequest_Data, _impl_._has_bits_),
+      0, // no _extensions_
+      6, 56,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967232,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      6,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::MpUnknownFields,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::fusion::rpc::proto::dpp::CreatePassportRequest_Data>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      {::_pbi::TcParser::MiniParse, {}},
+      // string sn = 1 [json_name = "sn", (.buf.validate.field) = {
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(CreatePassportRequest_Data, _impl_.sn_)}},
+      // string cab_sn = 2 [json_name = "cab_sn", (.buf.validate.field) = {
+      {::_pbi::TcParser::FastUS1,
+       {18, 1, 0,
+        PROTOBUF_FIELD_OFFSET(CreatePassportRequest_Data, _impl_.cab_sn_)}},
+      // string cab_model = 3 [json_name = "cab_model", (.buf.validate.field) = {
+      {::_pbi::TcParser::FastUS1,
+       {26, 2, 0,
+        PROTOBUF_FIELD_OFFSET(CreatePassportRequest_Data, _impl_.cab_model_)}},
+      // string cab_code = 4 [json_name = "cab_code", (.buf.validate.field) = {
+      {::_pbi::TcParser::FastUS1,
+       {34, 3, 0,
+        PROTOBUF_FIELD_OFFSET(CreatePassportRequest_Data, _impl_.cab_code_)}},
+      // string batch = 5 [json_name = "batch", (.buf.validate.field) = {
+      {::_pbi::TcParser::FastUS1,
+       {42, 4, 0,
+        PROTOBUF_FIELD_OFFSET(CreatePassportRequest_Data, _impl_.batch_)}},
+      // string date = 6 [json_name = "date", (.buf.validate.field) = {
+      {::_pbi::TcParser::FastUS1,
+       {50, 5, 0,
+        PROTOBUF_FIELD_OFFSET(CreatePassportRequest_Data, _impl_.date_)}},
+      {::_pbi::TcParser::MiniParse, {}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string sn = 1 [json_name = "sn", (.buf.validate.field) = {
+      {PROTOBUF_FIELD_OFFSET(CreatePassportRequest_Data, _impl_.sn_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string cab_sn = 2 [json_name = "cab_sn", (.buf.validate.field) = {
+      {PROTOBUF_FIELD_OFFSET(CreatePassportRequest_Data, _impl_.cab_sn_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string cab_model = 3 [json_name = "cab_model", (.buf.validate.field) = {
+      {PROTOBUF_FIELD_OFFSET(CreatePassportRequest_Data, _impl_.cab_model_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string cab_code = 4 [json_name = "cab_code", (.buf.validate.field) = {
+      {PROTOBUF_FIELD_OFFSET(CreatePassportRequest_Data, _impl_.cab_code_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string batch = 5 [json_name = "batch", (.buf.validate.field) = {
+      {PROTOBUF_FIELD_OFFSET(CreatePassportRequest_Data, _impl_.batch_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // string date = 6 [json_name = "date", (.buf.validate.field) = {
+      {PROTOBUF_FIELD_OFFSET(CreatePassportRequest_Data, _impl_.date_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\57\2\6\11\10\5\4\0"
+      "fusion.rpc.proto.dpp.CreatePassportRequest.Data"
+      "sn"
+      "cab_sn"
+      "cab_model"
+      "cab_code"
+      "batch"
+      "date"
+    }},
+  };
+}
+
+
+inline constexpr CreatePassportRequest_Data::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : sn_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        cab_sn_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        cab_model_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        cab_code_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        batch_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        date_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+constexpr CreatePassportRequest_Data::CreatePassportRequest_Data(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : Super_(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL CreatePassportRequest_Data::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) CreatePassportRequest_Data(arena);
+}
+constexpr auto CreatePassportRequest_Data::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(CreatePassportRequest_Data), alignof(CreatePassportRequest_Data));
+}
+constexpr auto CreatePassportRequest_Data::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &CreatePassportRequest_Data::MergeImpl,
+          Super_::GetNewImpl<CreatePassportRequest_Data>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &CreatePassportRequest_Data::SharedDtor,
+          Super_::GetClearImpl<CreatePassportRequest_Data>(), &CreatePassportRequest_Data::ByteSizeLong,
+              &CreatePassportRequest_Data::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(CreatePassportRequest_Data, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[0],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_dpp_2fregistry_5fmessage_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct CreatePassportRequest_DataGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr CreatePassportRequest_DataGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 CreatePassportRequest_Data_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(CreatePassportRequest_Data::InternalGenerateClassData_(
+            _default, &CreatePassportRequest_Data_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<CreatePassportRequest_Data>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~CreatePassportRequest_DataGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) CreatePassportRequest_Data _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<CreatePassportRequest_Data>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(CreatePassportRequest_DataGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST CreatePassportRequest_DataGlobalsTypeInternal CreatePassportRequest_Data_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* CreatePassportRequest_Data_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return CreatePassportRequest_Data_globals_.GetClassData();
+#else
+  return CreatePassportRequest_Data_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
 class CreatePassportResponse::_Internal {
  public:
   using HasBits = decltype(::std::declval<CreatePassportResponse>()._impl_._has_bits_);
@@ -52,13 +419,13 @@ constexpr CreatePassportResponse::ParseTableT_ CreatePassportResponse::InternalG
     {
       PROTOBUF_FIELD_OFFSET(CreatePassportResponse, _impl_._has_bits_),
       0, // no _extensions_
-      2, 8,  // max_field_number, fast_idx_mask
+      1, 0,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967292,  // skipmap
+      4294967294,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      2,  // num_field_entries
-      0,  // num_aux_entries
-      offsetof(ParseTableT_, field_names),  // no aux_entries
+      1,  // num_field_entries
+      1,  // num_aux_entries
+      offsetof(ParseTableT_, aux_entries),
       class_data,
       nullptr,  // post_loop_handler
       ::_pbi::TcParser::MpUnknownFields,  // fallback
@@ -66,28 +433,24 @@ constexpr CreatePassportResponse::ParseTableT_ CreatePassportResponse::InternalG
       ::_pbi::TcParser::GetTable<::fusion::rpc::proto::dpp::CreatePassportResponse>(),  // to_prefetch
       #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
     }, {{
-      // string upi = 2 [json_name = "upi"];
-      {::_pbi::TcParser::FastUS1,
-       {18, 1, 0,
-        PROTOBUF_FIELD_OFFSET(CreatePassportResponse, _impl_.upi_)}},
-      // string id = 1 [json_name = "id"];
-      {::_pbi::TcParser::FastUS1,
+      // repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];
+      {::_pbi::TcParser::FastMtR1,
        {10, 0, 0,
-        PROTOBUF_FIELD_OFFSET(CreatePassportResponse, _impl_.id_)}},
+        PROTOBUF_FIELD_OFFSET(CreatePassportResponse, _impl_.data_)}},
     }}, {{
       65535, 65535
     }}, {{
-      // string id = 1 [json_name = "id"];
-      {PROTOBUF_FIELD_OFFSET(CreatePassportResponse, _impl_.id_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string upi = 2 [json_name = "upi"];
-      {PROTOBUF_FIELD_OFFSET(CreatePassportResponse, _impl_.upi_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];
+      {PROTOBUF_FIELD_OFFSET(CreatePassportResponse, _impl_.data_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
     }},
-    // no aux_entries
     {{
-      "\53\2\3\0\0\0\0\0"
-      "fusion.rpc.proto.dpp.CreatePassportResponse"
-      "id"
-      "upi"
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::fusion::rpc::proto::dpp::CreatePassportResponse_Data>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::fusion::rpc::proto::dpp::CreatePassportResponse_Data_globals_},
+        #endif
+    }},
+    {{
     }},
   };
 }
@@ -96,12 +459,11 @@ constexpr CreatePassportResponse::ParseTableT_ CreatePassportResponse::InternalG
 inline constexpr CreatePassportResponse::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
     ::_pbi::ConstantInitialized) noexcept
-      : id_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        upi_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()) {}
+      : data_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::fusion::rpc::proto::dpp::CreatePassportResponse,
+            PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportResponse, _impl_.data_)>()
+         }
+     {}
 
 template <typename>
 constexpr CreatePassportResponse::CreatePassportResponse(::_pbi::ConstantInitialized,
@@ -144,7 +506,7 @@ constexpr auto CreatePassportResponse::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[1],
+      &file_reflection_data[3],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_dpp_2fregistry_5fmessage_2eproto,
@@ -207,13 +569,13 @@ constexpr CreatePassportRequest::ParseTableT_ CreatePassportRequest::InternalGen
     {
       PROTOBUF_FIELD_OFFSET(CreatePassportRequest, _impl_._has_bits_),
       0, // no _extensions_
-      6, 56,  // max_field_number, fast_idx_mask
+      1, 0,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967232,  // skipmap
+      4294967294,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      6,  // num_field_entries
-      0,  // num_aux_entries
-      offsetof(ParseTableT_, field_names),  // no aux_entries
+      1,  // num_field_entries
+      1,  // num_aux_entries
+      offsetof(ParseTableT_, aux_entries),
       class_data,
       nullptr,  // post_loop_handler
       ::_pbi::TcParser::MpUnknownFields,  // fallback
@@ -221,58 +583,24 @@ constexpr CreatePassportRequest::ParseTableT_ CreatePassportRequest::InternalGen
       ::_pbi::TcParser::GetTable<::fusion::rpc::proto::dpp::CreatePassportRequest>(),  // to_prefetch
       #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
     }, {{
-      {::_pbi::TcParser::MiniParse, {}},
-      // string sn = 1 [json_name = "sn", (.buf.validate.field) = {
-      {::_pbi::TcParser::FastUS1,
+      // repeated .fusion.rpc.proto.dpp.CreatePassportRequest.Data data = 1 [json_name = "data"];
+      {::_pbi::TcParser::FastMtR1,
        {10, 0, 0,
-        PROTOBUF_FIELD_OFFSET(CreatePassportRequest, _impl_.sn_)}},
-      // string cab_sn = 2 [json_name = "cab_sn", (.buf.validate.field) = {
-      {::_pbi::TcParser::FastUS1,
-       {18, 1, 0,
-        PROTOBUF_FIELD_OFFSET(CreatePassportRequest, _impl_.cab_sn_)}},
-      // string cab_model = 3 [json_name = "cab_model", (.buf.validate.field) = {
-      {::_pbi::TcParser::FastUS1,
-       {26, 2, 0,
-        PROTOBUF_FIELD_OFFSET(CreatePassportRequest, _impl_.cab_model_)}},
-      // string cab_code = 4 [json_name = "cab_code", (.buf.validate.field) = {
-      {::_pbi::TcParser::FastUS1,
-       {34, 3, 0,
-        PROTOBUF_FIELD_OFFSET(CreatePassportRequest, _impl_.cab_code_)}},
-      // string batch = 5 [json_name = "batch", (.buf.validate.field) = {
-      {::_pbi::TcParser::FastUS1,
-       {42, 4, 0,
-        PROTOBUF_FIELD_OFFSET(CreatePassportRequest, _impl_.batch_)}},
-      // string date = 6 [json_name = "date", (.buf.validate.field) = {
-      {::_pbi::TcParser::FastUS1,
-       {50, 5, 0,
-        PROTOBUF_FIELD_OFFSET(CreatePassportRequest, _impl_.date_)}},
-      {::_pbi::TcParser::MiniParse, {}},
+        PROTOBUF_FIELD_OFFSET(CreatePassportRequest, _impl_.data_)}},
     }}, {{
       65535, 65535
     }}, {{
-      // string sn = 1 [json_name = "sn", (.buf.validate.field) = {
-      {PROTOBUF_FIELD_OFFSET(CreatePassportRequest, _impl_.sn_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string cab_sn = 2 [json_name = "cab_sn", (.buf.validate.field) = {
-      {PROTOBUF_FIELD_OFFSET(CreatePassportRequest, _impl_.cab_sn_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string cab_model = 3 [json_name = "cab_model", (.buf.validate.field) = {
-      {PROTOBUF_FIELD_OFFSET(CreatePassportRequest, _impl_.cab_model_), _Internal::kHasBitsOffset + 2, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string cab_code = 4 [json_name = "cab_code", (.buf.validate.field) = {
-      {PROTOBUF_FIELD_OFFSET(CreatePassportRequest, _impl_.cab_code_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string batch = 5 [json_name = "batch", (.buf.validate.field) = {
-      {PROTOBUF_FIELD_OFFSET(CreatePassportRequest, _impl_.batch_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-      // string date = 6 [json_name = "date", (.buf.validate.field) = {
-      {PROTOBUF_FIELD_OFFSET(CreatePassportRequest, _impl_.date_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+      // repeated .fusion.rpc.proto.dpp.CreatePassportRequest.Data data = 1 [json_name = "data"];
+      {PROTOBUF_FIELD_OFFSET(CreatePassportRequest, _impl_.data_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
     }},
-    // no aux_entries
     {{
-      "\52\2\6\11\10\5\4\0"
-      "fusion.rpc.proto.dpp.CreatePassportRequest"
-      "sn"
-      "cab_sn"
-      "cab_model"
-      "cab_code"
-      "batch"
-      "date"
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::fusion::rpc::proto::dpp::CreatePassportRequest_Data>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::fusion::rpc::proto::dpp::CreatePassportRequest_Data_globals_},
+        #endif
+    }},
+    {{
     }},
   };
 }
@@ -281,24 +609,11 @@ constexpr CreatePassportRequest::ParseTableT_ CreatePassportRequest::InternalGen
 inline constexpr CreatePassportRequest::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
     ::_pbi::ConstantInitialized) noexcept
-      : sn_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        cab_sn_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        cab_model_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        cab_code_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        batch_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        date_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()) {}
+      : data_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::fusion::rpc::proto::dpp::CreatePassportRequest,
+            PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest, _impl_.data_)>()
+         }
+     {}
 
 template <typename>
 constexpr CreatePassportRequest::CreatePassportRequest(::_pbi::ConstantInitialized,
@@ -341,7 +656,7 @@ constexpr auto CreatePassportRequest::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[0],
+      &file_reflection_data[1],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_dpp_2fregistry_5fmessage_2eproto,
@@ -404,14 +719,14 @@ const ::uint32_t
     TableStruct_dpp_2fregistry_5fmessage_2eproto::offsets[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
         protodesc_cold) = {
         0x081, // bitmap
-        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest_Data, _impl_._has_bits_),
         9, // hasbit index offset
-        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest, _impl_.sn_),
-        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest, _impl_.cab_sn_),
-        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest, _impl_.cab_model_),
-        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest, _impl_.cab_code_),
-        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest, _impl_.batch_),
-        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest, _impl_.date_),
+        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest_Data, _impl_.sn_),
+        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest_Data, _impl_.cab_sn_),
+        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest_Data, _impl_.cab_model_),
+        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest_Data, _impl_.cab_code_),
+        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest_Data, _impl_.batch_),
+        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest_Data, _impl_.date_),
         0,
         1,
         2,
@@ -419,59 +734,77 @@ const ::uint32_t
         4,
         5,
         0x081, // bitmap
-        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportResponse, _impl_._has_bits_),
-        5, // hasbit index offset
-        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportResponse, _impl_.id_),
-        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportResponse, _impl_.upi_),
+        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest, _impl_._has_bits_),
+        4, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest, _impl_.data_),
+        0,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportResponse_Data, _impl_._has_bits_),
+        6, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportResponse_Data, _impl_.sn_),
+        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportResponse_Data, _impl_.id_),
+        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportResponse_Data, _impl_.upi_),
         0,
         1,
+        2,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportResponse, _impl_._has_bits_),
+        4, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportResponse, _impl_.data_),
+        0,
 };
 
 static const ::_pbi::MigrationSchema
     schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-        {0, sizeof(::fusion::rpc::proto::dpp::CreatePassportRequest)},
-        {15, sizeof(::fusion::rpc::proto::dpp::CreatePassportResponse)},
+        {0, sizeof(::fusion::rpc::proto::dpp::CreatePassportRequest_Data)},
+        {15, sizeof(::fusion::rpc::proto::dpp::CreatePassportRequest)},
+        {20, sizeof(::fusion::rpc::proto::dpp::CreatePassportResponse_Data)},
+        {29, sizeof(::fusion::rpc::proto::dpp::CreatePassportResponse)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
     file_message_globals[] = {
+        &::fusion::rpc::proto::dpp::CreatePassportRequest_Data_globals_,
         &::fusion::rpc::proto::dpp::CreatePassportRequest_globals_,
+        &::fusion::rpc::proto::dpp::CreatePassportResponse_Data_globals_,
         &::fusion::rpc::proto::dpp::CreatePassportResponse_globals_,
 };
 const char descriptor_table_protodef_dpp_2fregistry_5fmessage_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
     "\n\032dpp/registry_message.proto\022\024fusion.rpc"
-    ".proto.dpp\032\033buf/validate/validate.proto\032"
-    "\037google/protobuf/timestamp.proto\"\341\001\n\025Cre"
-    "atePassportRequest\022\031\n\002sn\030\001 \001(\tB\t\272H\006r\004\020\001\030"
-    "dR\002sn\022!\n\006cab_sn\030\002 \001(\tB\t\272H\006r\004\020\001\030dR\006cab_sn"
-    "\022\'\n\tcab_model\030\003 \001(\tB\t\272H\006r\004\020\001\030dR\tcab_mode"
-    "l\022%\n\010cab_code\030\004 \001(\tB\t\272H\006r\004\020\001\030dR\010cab_code"
-    "\022\035\n\005batch\030\005 \001(\tB\007\272H\004r\002\030dR\005batch\022\033\n\004date\030"
-    "\006 \001(\tB\007\272H\004r\002\030dR\004date\":\n\026CreatePassportRe"
-    "sponse\022\016\n\002id\030\001 \001(\tR\002id\022\020\n\003upi\030\002 \001(\tR\003upi"
-    "B\276\001\n\030com.fusion.rpc.proto.dppB\024RegistryM"
-    "essageProtoP\001Z\030fusion.rpc.proto.dpp;dpp\242"
-    "\002\004FRPD\252\002\024Fusion.Rpc.Proto.Dpp\312\002\024Fusion\\R"
-    "pc\\Proto\\Dpp\342\002 Fusion\\Rpc\\Proto\\Dpp\\GPBM"
-    "etadata\352\002\027Fusion::Rpc::Proto::Dppb\006proto"
-    "3"
+    ".proto.dpp\032\033buf/validate/validate.proto\""
+    "\260\002\n\025CreatePassportRequest\022D\n\004data\030\001 \003(\0132"
+    "0.fusion.rpc.proto.dpp.CreatePassportReq"
+    "uest.DataR\004data\032\320\001\n\004Data\022\031\n\002sn\030\001 \001(\tB\t\272H"
+    "\006r\004\020\001\030dR\002sn\022!\n\006cab_sn\030\002 \001(\tB\t\272H\006r\004\020\001\030dR\006"
+    "cab_sn\022\'\n\tcab_model\030\003 \001(\tB\t\272H\006r\004\020\001\030dR\tca"
+    "b_model\022%\n\010cab_code\030\004 \001(\tB\t\272H\006r\004\020\001\030dR\010ca"
+    "b_code\022\035\n\005batch\030\005 \001(\tB\007\272H\004r\002\030dR\005batch\022\033\n"
+    "\004date\030\006 \001(\tB\007\272H\004r\002\030dR\004date\"\231\001\n\026CreatePas"
+    "sportResponse\022E\n\004data\030\001 \003(\01321.fusion.rpc"
+    ".proto.dpp.CreatePassportResponse.DataR\004"
+    "data\0328\n\004Data\022\016\n\002sn\030\001 \001(\tR\002sn\022\016\n\002id\030\002 \001(\t"
+    "R\002id\022\020\n\003upi\030\003 \001(\tR\003upiB\276\001\n\030com.fusion.rp"
+    "c.proto.dppB\024RegistryMessageProtoP\001Z\030fus"
+    "ion.rpc.proto.dpp;dpp\242\002\004FRPD\252\002\024Fusion.Rp"
+    "c.Proto.Dpp\312\002\024Fusion\\Rpc\\Proto\\Dpp\342\002 Fus"
+    "ion\\Rpc\\Proto\\Dpp\\GPBMetadata\352\002\027Fusion::"
+    "Rpc::Proto::Dppb\006proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
-    descriptor_table_dpp_2fregistry_5fmessage_2eproto_deps[2] = {
+    descriptor_table_dpp_2fregistry_5fmessage_2eproto_deps[1] = {
         &::descriptor_table_buf_2fvalidate_2fvalidate_2eproto,
-        &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::absl::once_flag descriptor_table_dpp_2fregistry_5fmessage_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_dpp_2fregistry_5fmessage_2eproto = {
     false,
     false,
-    601,
+    743,
     descriptor_table_protodef_dpp_2fregistry_5fmessage_2eproto,
     "dpp/registry_message.proto",
     &descriptor_table_dpp_2fregistry_5fmessage_2eproto_once,
     descriptor_table_dpp_2fregistry_5fmessage_2eproto_deps,
-    2,
-    2,
+    1,
+    4,
     schemas,
     file_message_globals,
     TableStruct_dpp_2fregistry_5fmessage_2eproto::offsets,
@@ -484,19 +817,19 @@ namespace proto {
 namespace dpp {
 // ===================================================================
 
-CreatePassportRequest::CreatePassportRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+CreatePassportRequest_Data::CreatePassportRequest_Data(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : Super_(arena, CreatePassportRequest_get_class_data()) {
+    : Super_(arena, CreatePassportRequest_Data_get_class_data()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : Super_(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:fusion.rpc.proto.dpp.CreatePassportRequest)
+  // @@protoc_insertion_point(arena_constructor:fusion.rpc.proto.dpp.CreatePassportRequest.Data)
 }
-PROTOBUF_NDEBUG_INLINE CreatePassportRequest::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE CreatePassportRequest_Data::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
     [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-    [[maybe_unused]] const ::fusion::rpc::proto::dpp::CreatePassportRequest& from_msg)
+    [[maybe_unused]] const ::fusion::rpc::proto::dpp::CreatePassportRequest_Data& from_msg)
       : _has_bits_{from._has_bits_},
         sn_(arena, from.sn_),
         cab_sn_(arena, from.cab_sn_),
@@ -505,24 +838,24 @@ PROTOBUF_NDEBUG_INLINE CreatePassportRequest::Impl_::Impl_(
         batch_(arena, from.batch_),
         date_(arena, from.date_) {}
 
-CreatePassportRequest::CreatePassportRequest(
+CreatePassportRequest_Data::CreatePassportRequest_Data(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
-    const CreatePassportRequest& from)
+    const CreatePassportRequest_Data& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : Super_(arena, CreatePassportRequest_get_class_data()) {
+    : Super_(arena, CreatePassportRequest_Data_get_class_data()) {
 
 #else   // PROTOBUF_CUSTOM_VTABLE
     : Super_(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  CreatePassportRequest* const _this = this;
+  CreatePassportRequest_Data* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:fusion.rpc.proto.dpp.CreatePassportRequest)
+  // @@protoc_insertion_point(copy_constructor:fusion.rpc.proto.dpp.CreatePassportRequest.Data)
 }
-PROTOBUF_NDEBUG_INLINE CreatePassportRequest::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE CreatePassportRequest_Data::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
     [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : sn_(arena),
@@ -532,15 +865,15 @@ PROTOBUF_NDEBUG_INLINE CreatePassportRequest::Impl_::Impl_(
         batch_(arena),
         date_(arena) {}
 
-inline void CreatePassportRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+inline void CreatePassportRequest_Data::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
-CreatePassportRequest::~CreatePassportRequest() {
-  // @@protoc_insertion_point(destructor:fusion.rpc.proto.dpp.CreatePassportRequest)
+CreatePassportRequest_Data::~CreatePassportRequest_Data() {
+  // @@protoc_insertion_point(destructor:fusion.rpc.proto.dpp.CreatePassportRequest.Data)
   SharedDtor(*this);
 }
-inline void CreatePassportRequest::SharedDtor(MessageLite& self) {
-  CreatePassportRequest& this_ = static_cast<CreatePassportRequest&>(self);
+inline void CreatePassportRequest_Data::SharedDtor(MessageLite& self) {
+  CreatePassportRequest_Data& this_ = static_cast<CreatePassportRequest_Data&>(self);
   if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
     this_.CheckHasBitConsistency();
   }
@@ -557,33 +890,33 @@ inline void CreatePassportRequest::SharedDtor(MessageLite& self) {
 
 #ifndef PROTOBUF_MESSAGE_GLOBALS
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
-    ::google::protobuf::internal::ClassDataFull CreatePassportRequest_class_data_ =
-        CreatePassportRequest::InternalGenerateClassData_(CreatePassportRequest_globals_._default);
+    ::google::protobuf::internal::ClassDataFull CreatePassportRequest_Data_class_data_ =
+        CreatePassportRequest_Data::InternalGenerateClassData_(CreatePassportRequest_Data_globals_._default);
 
 PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
-CreatePassportRequest::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&CreatePassportRequest_class_data_);
-  ::google::protobuf::internal::PrefetchToLocalCache(CreatePassportRequest_class_data_.tc_table);
-  return CreatePassportRequest_class_data_.base();
+CreatePassportRequest_Data::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&CreatePassportRequest_Data_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(CreatePassportRequest_Data_class_data_.tc_table);
+  return CreatePassportRequest_Data_class_data_.base();
 }
 #else
 PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
-CreatePassportRequest::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&CreatePassportRequest_globals_);
+CreatePassportRequest_Data::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&CreatePassportRequest_Data_globals_);
   ::google::protobuf::internal::PrefetchToLocalCache(
-      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&CreatePassportRequest_globals_));
-  return CreatePassportRequest_globals_.GetClassData();
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&CreatePassportRequest_Data_globals_));
+  return CreatePassportRequest_Data_globals_.GetClassData();
 }
 #endif  // !PROTOBUF_MESSAGE_GLOBALS
 #ifndef PROTOBUF_MESSAGE_GLOBALS
 PROTOBUF_CONSTINIT
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const CreatePassportRequest::ParseTableT_
-    CreatePassportRequest::_table_ =
-        CreatePassportRequest::InternalGenerateParseTable_(CreatePassportRequest_class_data_.base());
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const CreatePassportRequest_Data::ParseTableT_
+    CreatePassportRequest_Data::_table_ =
+        CreatePassportRequest_Data::InternalGenerateParseTable_(CreatePassportRequest_Data_class_data_.base());
 #endif  // !PROTOBUF_MESSAGE_GLOBALS
-PROTOBUF_NOINLINE void CreatePassportRequest::Clear() {
+PROTOBUF_NOINLINE void CreatePassportRequest_Data::Clear() {
   auto& this_ [[maybe_unused]] = *this;
-  // @@protoc_insertion_point(message_clear_start:fusion.rpc.proto.dpp.CreatePassportRequest)
+  // @@protoc_insertion_point(message_clear_start:fusion.rpc.proto.dpp.CreatePassportRequest.Data)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits [[maybe_unused]] = 0;
 
@@ -613,20 +946,20 @@ PROTOBUF_NOINLINE void CreatePassportRequest::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::uint8_t* PROTOBUF_NONNULL CreatePassportRequest::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL CreatePassportRequest_Data::_InternalSerialize(
     const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
-  const CreatePassportRequest& this_ = static_cast<const CreatePassportRequest&>(base);
+  const CreatePassportRequest_Data& this_ = static_cast<const CreatePassportRequest_Data&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::uint8_t* PROTOBUF_NONNULL CreatePassportRequest::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL CreatePassportRequest_Data::_InternalSerialize(
     ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-  const CreatePassportRequest& this_ = *this;
+  const CreatePassportRequest_Data& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
   if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
     this_.CheckHasBitConsistency();
   }
-  // @@protoc_insertion_point(serialize_to_array_start:fusion.rpc.proto.dpp.CreatePassportRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:fusion.rpc.proto.dpp.CreatePassportRequest.Data)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
@@ -636,7 +969,7 @@ PROTOBUF_NOINLINE void CreatePassportRequest::Clear() {
     if (!this_._internal_sn().empty()) {
       const ::std::string& _s = this_._internal_sn();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportRequest.sn");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportRequest.Data.sn");
       target = stream->WriteStringMaybeAliased(1, _s, target);
     }
   }
@@ -646,7 +979,7 @@ PROTOBUF_NOINLINE void CreatePassportRequest::Clear() {
     if (!this_._internal_cab_sn().empty()) {
       const ::std::string& _s = this_._internal_cab_sn();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportRequest.cab_sn");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportRequest.Data.cab_sn");
       target = stream->WriteStringMaybeAliased(2, _s, target);
     }
   }
@@ -656,7 +989,7 @@ PROTOBUF_NOINLINE void CreatePassportRequest::Clear() {
     if (!this_._internal_cab_model().empty()) {
       const ::std::string& _s = this_._internal_cab_model();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportRequest.cab_model");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportRequest.Data.cab_model");
       target = stream->WriteStringMaybeAliased(3, _s, target);
     }
   }
@@ -666,7 +999,7 @@ PROTOBUF_NOINLINE void CreatePassportRequest::Clear() {
     if (!this_._internal_cab_code().empty()) {
       const ::std::string& _s = this_._internal_cab_code();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportRequest.cab_code");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportRequest.Data.cab_code");
       target = stream->WriteStringMaybeAliased(4, _s, target);
     }
   }
@@ -676,7 +1009,7 @@ PROTOBUF_NOINLINE void CreatePassportRequest::Clear() {
     if (!this_._internal_batch().empty()) {
       const ::std::string& _s = this_._internal_batch();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportRequest.batch");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportRequest.Data.batch");
       target = stream->WriteStringMaybeAliased(5, _s, target);
     }
   }
@@ -686,7 +1019,7 @@ PROTOBUF_NOINLINE void CreatePassportRequest::Clear() {
     if (!this_._internal_date().empty()) {
       const ::std::string& _s = this_._internal_date();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportRequest.date");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportRequest.Data.date");
       target = stream->WriteStringMaybeAliased(6, _s, target);
     }
   }
@@ -696,18 +1029,18 @@ PROTOBUF_NOINLINE void CreatePassportRequest::Clear() {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:fusion.rpc.proto.dpp.CreatePassportRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:fusion.rpc.proto.dpp.CreatePassportRequest.Data)
   return target;
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::size_t CreatePassportRequest::ByteSizeLong(const MessageLite& base) {
-  const CreatePassportRequest& this_ = static_cast<const CreatePassportRequest&>(base);
+::size_t CreatePassportRequest_Data::ByteSizeLong(const MessageLite& base) {
+  const CreatePassportRequest_Data& this_ = static_cast<const CreatePassportRequest_Data&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::size_t CreatePassportRequest::ByteSizeLong() const {
-  const CreatePassportRequest& this_ = *this;
+::size_t CreatePassportRequest_Data::ByteSizeLong() const {
+  const CreatePassportRequest_Data& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(message_byte_size_start:fusion.rpc.proto.dpp.CreatePassportRequest)
+  // @@protoc_insertion_point(message_byte_size_start:fusion.rpc.proto.dpp.CreatePassportRequest.Data)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits [[maybe_unused]] = 0;
@@ -762,14 +1095,14 @@ PROTOBUF_NOINLINE void CreatePassportRequest::Clear() {
                                              &this_._impl_._cached_size_);
 }
 
-void CreatePassportRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
+void CreatePassportRequest_Data::MergeImpl(::google::protobuf::MessageLite& to_msg,
                       const ::google::protobuf::MessageLite& from_msg) {
-   auto* const _this = static_cast<CreatePassportRequest*>(&to_msg);
-  auto& from = static_cast<const CreatePassportRequest&>(from_msg);
+   auto* const _this = static_cast<CreatePassportRequest_Data*>(&to_msg);
+  auto& from = static_cast<const CreatePassportRequest_Data&>(from_msg);
   if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
     from.CheckHasBitConsistency();
   }
-  // @@protoc_insertion_point(class_specific_merge_from_start:fusion.rpc.proto.dpp.CreatePassportRequest)
+  // @@protoc_insertion_point(class_specific_merge_from_start:fusion.rpc.proto.dpp.CreatePassportRequest.Data)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
@@ -836,15 +1169,15 @@ void CreatePassportRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
       from._internal_metadata_);
 }
 
-void CreatePassportRequest::CopyFrom(const CreatePassportRequest& from) {
-  // @@protoc_insertion_point(class_specific_copy_from_start:fusion.rpc.proto.dpp.CreatePassportRequest)
+void CreatePassportRequest_Data::CopyFrom(const CreatePassportRequest_Data& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:fusion.rpc.proto.dpp.CreatePassportRequest.Data)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void CreatePassportRequest::InternalSwap(CreatePassportRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+void CreatePassportRequest_Data::InternalSwap(CreatePassportRequest_Data* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
   using ::std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -858,7 +1191,503 @@ void CreatePassportRequest::InternalSwap(CreatePassportRequest* PROTOBUF_RESTRIC
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.date_, &other->_impl_.date_, arena);
 }
 
+::google::protobuf::Metadata CreatePassportRequest_Data::GetMetadata() const {
+  return Super_::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+CreatePassportRequest::CreatePassportRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : Super_(arena, CreatePassportRequest_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : Super_(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:fusion.rpc.proto.dpp.CreatePassportRequest)
+}
+PROTOBUF_NDEBUG_INLINE CreatePassportRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::fusion::rpc::proto::dpp::CreatePassportRequest& from_msg)
+      : _has_bits_{from._has_bits_},
+        data_ {
+          visibility, ::_pbi::InternalMetadataOffset::Build<
+              ::fusion::rpc::proto::dpp::CreatePassportRequest,
+              PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest, _impl_.data_)>()
+          , arena, from.data_
+        }
+     {}
+
+CreatePassportRequest::CreatePassportRequest(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const CreatePassportRequest& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : Super_(arena, CreatePassportRequest_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : Super_(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  CreatePassportRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:fusion.rpc.proto.dpp.CreatePassportRequest)
+}
+PROTOBUF_NDEBUG_INLINE CreatePassportRequest::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : data_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::fusion::rpc::proto::dpp::CreatePassportRequest,
+            PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportRequest, _impl_.data_)>()
+         }
+     {}
+
+inline void CreatePassportRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+CreatePassportRequest::~CreatePassportRequest() {
+  // @@protoc_insertion_point(destructor:fusion.rpc.proto.dpp.CreatePassportRequest)
+  SharedDtor(*this);
+}
+inline void CreatePassportRequest::SharedDtor(MessageLite& self) {
+  CreatePassportRequest& this_ = static_cast<CreatePassportRequest&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull CreatePassportRequest_class_data_ =
+        CreatePassportRequest::InternalGenerateClassData_(CreatePassportRequest_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+CreatePassportRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&CreatePassportRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(CreatePassportRequest_class_data_.tc_table);
+  return CreatePassportRequest_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+CreatePassportRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&CreatePassportRequest_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&CreatePassportRequest_globals_));
+  return CreatePassportRequest_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const CreatePassportRequest::ParseTableT_
+    CreatePassportRequest::_table_ =
+        CreatePassportRequest::InternalGenerateParseTable_(CreatePassportRequest_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void CreatePassportRequest::Clear() {
+  auto& this_ [[maybe_unused]] = *this;
+  // @@protoc_insertion_point(message_clear_start:fusion.rpc.proto.dpp.CreatePassportRequest)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits [[maybe_unused]] = 0;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    _impl_.data_.Clear();
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL CreatePassportRequest::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const CreatePassportRequest& this_ = static_cast<const CreatePassportRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL CreatePassportRequest::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const CreatePassportRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:fusion.rpc.proto.dpp.CreatePassportRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // repeated .fusion.rpc.proto.dpp.CreatePassportRequest.Data data = 1 [json_name = "data"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    for (unsigned i = 0, n = static_cast<unsigned>(
+                             this_._internal_data_size());
+         i < n; i++) {
+      const auto& repfield = this_._internal_data().Get(i);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          1, repfield, repfield.GetCachedSize(), target,
+          stream);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:fusion.rpc.proto.dpp.CreatePassportRequest)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t CreatePassportRequest::ByteSizeLong(const MessageLite& base) {
+  const CreatePassportRequest& this_ = static_cast<const CreatePassportRequest&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t CreatePassportRequest::ByteSizeLong() const {
+  const CreatePassportRequest& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:fusion.rpc.proto.dpp.CreatePassportRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits [[maybe_unused]] = 0;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+   {
+    // repeated .fusion.rpc.proto.dpp.CreatePassportRequest.Data data = 1 [json_name = "data"];
+    cached_has_bits = this_._impl_._has_bits_[0];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      total_size += 1UL * this_._internal_data_size();
+      for (const auto& msg : this_._internal_data()) {
+        total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void CreatePassportRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<CreatePassportRequest*>(&to_msg);
+  auto& from = static_cast<const CreatePassportRequest&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  ::google::protobuf::Arena* arena = _this->GetArena();
+  // @@protoc_insertion_point(class_specific_merge_from_start:fusion.rpc.proto.dpp.CreatePassportRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    _this->_internal_mutable_data()->InternalMergeFromWithArena(
+        ::google::protobuf::MessageLite::internal_visibility(), arena,
+        from._internal_data());
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void CreatePassportRequest::CopyFrom(const CreatePassportRequest& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:fusion.rpc.proto.dpp.CreatePassportRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void CreatePassportRequest::InternalSwap(CreatePassportRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.data_.InternalSwap(&other->_impl_.data_);
+}
+
 ::google::protobuf::Metadata CreatePassportRequest::GetMetadata() const {
+  return Super_::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+CreatePassportResponse_Data::CreatePassportResponse_Data(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : Super_(arena, CreatePassportResponse_Data_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : Super_(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:fusion.rpc.proto.dpp.CreatePassportResponse.Data)
+}
+PROTOBUF_NDEBUG_INLINE CreatePassportResponse_Data::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::fusion::rpc::proto::dpp::CreatePassportResponse_Data& from_msg)
+      : _has_bits_{from._has_bits_},
+        sn_(arena, from.sn_),
+        id_(arena, from.id_),
+        upi_(arena, from.upi_) {}
+
+CreatePassportResponse_Data::CreatePassportResponse_Data(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const CreatePassportResponse_Data& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : Super_(arena, CreatePassportResponse_Data_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : Super_(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  CreatePassportResponse_Data* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:fusion.rpc.proto.dpp.CreatePassportResponse.Data)
+}
+PROTOBUF_NDEBUG_INLINE CreatePassportResponse_Data::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : sn_(arena),
+        id_(arena),
+        upi_(arena) {}
+
+inline void CreatePassportResponse_Data::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+CreatePassportResponse_Data::~CreatePassportResponse_Data() {
+  // @@protoc_insertion_point(destructor:fusion.rpc.proto.dpp.CreatePassportResponse.Data)
+  SharedDtor(*this);
+}
+inline void CreatePassportResponse_Data::SharedDtor(MessageLite& self) {
+  CreatePassportResponse_Data& this_ = static_cast<CreatePassportResponse_Data&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.sn_.Destroy();
+  this_._impl_.id_.Destroy();
+  this_._impl_.upi_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull CreatePassportResponse_Data_class_data_ =
+        CreatePassportResponse_Data::InternalGenerateClassData_(CreatePassportResponse_Data_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+CreatePassportResponse_Data::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&CreatePassportResponse_Data_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(CreatePassportResponse_Data_class_data_.tc_table);
+  return CreatePassportResponse_Data_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+CreatePassportResponse_Data::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&CreatePassportResponse_Data_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&CreatePassportResponse_Data_globals_));
+  return CreatePassportResponse_Data_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const CreatePassportResponse_Data::ParseTableT_
+    CreatePassportResponse_Data::_table_ =
+        CreatePassportResponse_Data::InternalGenerateParseTable_(CreatePassportResponse_Data_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void CreatePassportResponse_Data::Clear() {
+  auto& this_ [[maybe_unused]] = *this;
+  // @@protoc_insertion_point(message_clear_start:fusion.rpc.proto.dpp.CreatePassportResponse.Data)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits [[maybe_unused]] = 0;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      this_._impl_.sn_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      this_._impl_.id_.ClearNonDefaultToEmpty();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      this_._impl_.upi_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL CreatePassportResponse_Data::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const CreatePassportResponse_Data& this_ = static_cast<const CreatePassportResponse_Data&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL CreatePassportResponse_Data::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const CreatePassportResponse_Data& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:fusion.rpc.proto.dpp.CreatePassportResponse.Data)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string sn = 1 [json_name = "sn"];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_sn().empty()) {
+      const ::std::string& _s = this_._internal_sn();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportResponse.Data.sn");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  // string id = 2 [json_name = "id"];
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    if (!this_._internal_id().empty()) {
+      const ::std::string& _s = this_._internal_id();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportResponse.Data.id");
+      target = stream->WriteStringMaybeAliased(2, _s, target);
+    }
+  }
+
+  // string upi = 3 [json_name = "upi"];
+  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    if (!this_._internal_upi().empty()) {
+      const ::std::string& _s = this_._internal_upi();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportResponse.Data.upi");
+      target = stream->WriteStringMaybeAliased(3, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:fusion.rpc.proto.dpp.CreatePassportResponse.Data)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t CreatePassportResponse_Data::ByteSizeLong(const MessageLite& base) {
+  const CreatePassportResponse_Data& this_ = static_cast<const CreatePassportResponse_Data&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t CreatePassportResponse_Data::ByteSizeLong() const {
+  const CreatePassportResponse_Data& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:fusion.rpc.proto.dpp.CreatePassportResponse.Data)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits [[maybe_unused]] = 0;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    // string sn = 1 [json_name = "sn"];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_sn().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_sn());
+      }
+    }
+    // string id = 2 [json_name = "id"];
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!this_._internal_id().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_id());
+      }
+    }
+    // string upi = 3 [json_name = "upi"];
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!this_._internal_upi().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_upi());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void CreatePassportResponse_Data::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<CreatePassportResponse_Data*>(&to_msg);
+  auto& from = static_cast<const CreatePassportResponse_Data&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:fusion.rpc.proto.dpp.CreatePassportResponse.Data)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!from._internal_sn().empty()) {
+        _this->_internal_set_sn(from._internal_sn());
+      } else {
+        if (_this->_impl_.sn_.IsDefault()) {
+          _this->_internal_set_sn("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      if (!from._internal_id().empty()) {
+        _this->_internal_set_id(from._internal_id());
+      } else {
+        if (_this->_impl_.id_.IsDefault()) {
+          _this->_internal_set_id("");
+        }
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      if (!from._internal_upi().empty()) {
+        _this->_internal_set_upi(from._internal_upi());
+      } else {
+        if (_this->_impl_.upi_.IsDefault()) {
+          _this->_internal_set_upi("");
+        }
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void CreatePassportResponse_Data::CopyFrom(const CreatePassportResponse_Data& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:fusion.rpc.proto.dpp.CreatePassportResponse.Data)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void CreatePassportResponse_Data::InternalSwap(CreatePassportResponse_Data* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.sn_, &other->_impl_.sn_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.id_, &other->_impl_.id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.upi_, &other->_impl_.upi_, arena);
+}
+
+::google::protobuf::Metadata CreatePassportResponse_Data::GetMetadata() const {
   return Super_::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
@@ -877,8 +1706,13 @@ PROTOBUF_NDEBUG_INLINE CreatePassportResponse::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
     [[maybe_unused]] const ::fusion::rpc::proto::dpp::CreatePassportResponse& from_msg)
       : _has_bits_{from._has_bits_},
-        id_(arena, from.id_),
-        upi_(arena, from.upi_) {}
+        data_ {
+          visibility, ::_pbi::InternalMetadataOffset::Build<
+              ::fusion::rpc::proto::dpp::CreatePassportResponse,
+              PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportResponse, _impl_.data_)>()
+          , arena, from.data_
+        }
+     {}
 
 CreatePassportResponse::CreatePassportResponse(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
@@ -900,8 +1734,11 @@ CreatePassportResponse::CreatePassportResponse(
 PROTOBUF_NDEBUG_INLINE CreatePassportResponse::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
     [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
-      : id_(arena),
-        upi_(arena) {}
+      : data_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::fusion::rpc::proto::dpp::CreatePassportResponse,
+            PROTOBUF_FIELD_OFFSET(::fusion::rpc::proto::dpp::CreatePassportResponse, _impl_.data_)>()
+         }
+     {}
 
 inline void CreatePassportResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
@@ -917,8 +1754,6 @@ inline void CreatePassportResponse::SharedDtor(MessageLite& self) {
   }
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
-  this_._impl_.id_.Destroy();
-  this_._impl_.upi_.Destroy();
   this_._impl_.~Impl_();
 }
 
@@ -955,13 +1790,8 @@ PROTOBUF_NOINLINE void CreatePassportResponse::Clear() {
   ::uint32_t cached_has_bits [[maybe_unused]] = 0;
 
   cached_has_bits = this_._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
-    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
-      this_._impl_.id_.ClearNonDefaultToEmpty();
-    }
-    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
-      this_._impl_.upi_.ClearNonDefaultToEmpty();
-    }
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    _impl_.data_.Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
@@ -986,23 +1816,15 @@ PROTOBUF_NOINLINE void CreatePassportResponse::Clear() {
   (void)cached_has_bits;
 
   cached_has_bits = this_._impl_._has_bits_[0];
-  // string id = 1 [json_name = "id"];
+  // repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];
   if (CheckHasBit(cached_has_bits, 0x00000001U)) {
-    if (!this_._internal_id().empty()) {
-      const ::std::string& _s = this_._internal_id();
-      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportResponse.id");
-      target = stream->WriteStringMaybeAliased(1, _s, target);
-    }
-  }
-
-  // string upi = 2 [json_name = "upi"];
-  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
-    if (!this_._internal_upi().empty()) {
-      const ::std::string& _s = this_._internal_upi();
-      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "fusion.rpc.proto.dpp.CreatePassportResponse.upi");
-      target = stream->WriteStringMaybeAliased(2, _s, target);
+    for (unsigned i = 0, n = static_cast<unsigned>(
+                             this_._internal_data_size());
+         i < n; i++) {
+      const auto& repfield = this_._internal_data().Get(i);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          1, repfield, repfield.GetCachedSize(), target,
+          stream);
     }
   }
 
@@ -1028,20 +1850,13 @@ PROTOBUF_NOINLINE void CreatePassportResponse::Clear() {
   ::uint32_t cached_has_bits [[maybe_unused]] = 0;
 
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
-  cached_has_bits = this_._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
-    // string id = 1 [json_name = "id"];
+   {
+    // repeated .fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1 [json_name = "data"];
+    cached_has_bits = this_._impl_._has_bits_[0];
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
-      if (!this_._internal_id().empty()) {
-        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                        this_._internal_id());
-      }
-    }
-    // string upi = 2 [json_name = "upi"];
-    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
-      if (!this_._internal_upi().empty()) {
-        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                        this_._internal_upi());
+      total_size += 1UL * this_._internal_data_size();
+      for (const auto& msg : this_._internal_data()) {
+        total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
       }
     }
   }
@@ -1056,31 +1871,17 @@ void CreatePassportResponse::MergeImpl(::google::protobuf::MessageLite& to_msg,
   if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
     from.CheckHasBitConsistency();
   }
+  ::google::protobuf::Arena* arena = _this->GetArena();
   // @@protoc_insertion_point(class_specific_merge_from_start:fusion.rpc.proto.dpp.CreatePassportResponse)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000003U)) {
-    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
-      if (!from._internal_id().empty()) {
-        _this->_internal_set_id(from._internal_id());
-      } else {
-        if (_this->_impl_.id_.IsDefault()) {
-          _this->_internal_set_id("");
-        }
-      }
-    }
-    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
-      if (!from._internal_upi().empty()) {
-        _this->_internal_set_upi(from._internal_upi());
-      } else {
-        if (_this->_impl_.upi_.IsDefault()) {
-          _this->_internal_set_upi("");
-        }
-      }
-    }
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    _this->_internal_mutable_data()->InternalMergeFromWithArena(
+        ::google::protobuf::MessageLite::internal_visibility(), arena,
+        from._internal_data());
   }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
@@ -1097,12 +1898,9 @@ void CreatePassportResponse::CopyFrom(const CreatePassportResponse& from) {
 
 void CreatePassportResponse::InternalSwap(CreatePassportResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
   using ::std::swap;
-  auto* arena = GetArena();
-  ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.id_, &other->_impl_.id_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.upi_, &other->_impl_.upi_, arena);
+  _impl_.data_.InternalSwap(&other->_impl_.data_);
 }
 
 ::google::protobuf::Metadata CreatePassportResponse::GetMetadata() const {

@@ -32,10 +32,20 @@ public final class RegistryMessageProto extends com.google.protobuf.GeneratedFil
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_fusion_rpc_proto_dpp_CreatePassportRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_fusion_rpc_proto_dpp_CreatePassportRequest_Data_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_fusion_rpc_proto_dpp_CreatePassportRequest_Data_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_Data_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_Data_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -46,43 +56,56 @@ public final class RegistryMessageProto extends com.google.protobuf.GeneratedFil
   static {
     java.lang.String[] descriptorData = {
       "\n\032dpp/registry_message.proto\022\024fusion.rpc" +
-      ".proto.dpp\032\033buf/validate/validate.proto\032" +
-      "\037google/protobuf/timestamp.proto\"\341\001\n\025Cre" +
-      "atePassportRequest\022\031\n\002sn\030\001 \001(\tB\t\272H\006r\004\020\001\030" +
-      "dR\002sn\022!\n\006cab_sn\030\002 \001(\tB\t\272H\006r\004\020\001\030dR\006cab_sn" +
-      "\022\'\n\tcab_model\030\003 \001(\tB\t\272H\006r\004\020\001\030dR\tcab_mode" +
-      "l\022%\n\010cab_code\030\004 \001(\tB\t\272H\006r\004\020\001\030dR\010cab_code" +
-      "\022\035\n\005batch\030\005 \001(\tB\007\272H\004r\002\030dR\005batch\022\033\n\004date\030" +
-      "\006 \001(\tB\007\272H\004r\002\030dR\004date\":\n\026CreatePassportRe" +
-      "sponse\022\016\n\002id\030\001 \001(\tR\002id\022\020\n\003upi\030\002 \001(\tR\003upi" +
-      "B\276\001\n\030com.fusion.rpc.proto.dppB\024RegistryM" +
-      "essageProtoP\001Z\030fusion.rpc.proto.dpp;dpp\242" +
-      "\002\004FRPD\252\002\024Fusion.Rpc.Proto.Dpp\312\002\024Fusion\\R" +
-      "pc\\Proto\\Dpp\342\002 Fusion\\Rpc\\Proto\\Dpp\\GPBM" +
-      "etadata\352\002\027Fusion::Rpc::Proto::Dppb\006proto" +
-      "3"
+      ".proto.dpp\032\033buf/validate/validate.proto\"" +
+      "\260\002\n\025CreatePassportRequest\022D\n\004data\030\001 \003(\0132" +
+      "0.fusion.rpc.proto.dpp.CreatePassportReq" +
+      "uest.DataR\004data\032\320\001\n\004Data\022\031\n\002sn\030\001 \001(\tB\t\272H" +
+      "\006r\004\020\001\030dR\002sn\022!\n\006cab_sn\030\002 \001(\tB\t\272H\006r\004\020\001\030dR\006" +
+      "cab_sn\022\'\n\tcab_model\030\003 \001(\tB\t\272H\006r\004\020\001\030dR\tca" +
+      "b_model\022%\n\010cab_code\030\004 \001(\tB\t\272H\006r\004\020\001\030dR\010ca" +
+      "b_code\022\035\n\005batch\030\005 \001(\tB\007\272H\004r\002\030dR\005batch\022\033\n" +
+      "\004date\030\006 \001(\tB\007\272H\004r\002\030dR\004date\"\231\001\n\026CreatePas" +
+      "sportResponse\022E\n\004data\030\001 \003(\01321.fusion.rpc" +
+      ".proto.dpp.CreatePassportResponse.DataR\004" +
+      "data\0328\n\004Data\022\016\n\002sn\030\001 \001(\tR\002sn\022\016\n\002id\030\002 \001(\t" +
+      "R\002id\022\020\n\003upi\030\003 \001(\tR\003upiB\276\001\n\030com.fusion.rp" +
+      "c.proto.dppB\024RegistryMessageProtoP\001Z\030fus" +
+      "ion.rpc.proto.dpp;dpp\242\002\004FRPD\252\002\024Fusion.Rp" +
+      "c.Proto.Dpp\312\002\024Fusion\\Rpc\\Proto\\Dpp\342\002 Fus" +
+      "ion\\Rpc\\Proto\\Dpp\\GPBMetadata\352\002\027Fusion::" +
+      "Rpc::Proto::Dppb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.buf.validate.ValidateProto.getDescriptor(),
-          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_fusion_rpc_proto_dpp_CreatePassportRequest_descriptor =
       getDescriptor().getMessageType(0);
     internal_static_fusion_rpc_proto_dpp_CreatePassportRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_fusion_rpc_proto_dpp_CreatePassportRequest_descriptor,
+        new java.lang.String[] { "Data", });
+    internal_static_fusion_rpc_proto_dpp_CreatePassportRequest_Data_descriptor =
+      internal_static_fusion_rpc_proto_dpp_CreatePassportRequest_descriptor.getNestedType(0);
+    internal_static_fusion_rpc_proto_dpp_CreatePassportRequest_Data_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_fusion_rpc_proto_dpp_CreatePassportRequest_Data_descriptor,
         new java.lang.String[] { "Sn", "CabSn", "CabModel", "CabCode", "Batch", "Date", });
     internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_descriptor =
       getDescriptor().getMessageType(1);
     internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_descriptor,
-        new java.lang.String[] { "Id", "Upi", });
+        new java.lang.String[] { "Data", });
+    internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_Data_descriptor =
+      internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_descriptor.getNestedType(0);
+    internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_Data_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_Data_descriptor,
+        new java.lang.String[] { "Sn", "Id", "Upi", });
     descriptor.resolveAllFeaturesImmutable();
     com.buf.validate.ValidateProto.getDescriptor();
-    com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.buf.validate.ValidateProto.field);

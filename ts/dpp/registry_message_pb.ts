@@ -14,14 +14,13 @@
 import type { GenFile, GenMessage } from "@bufbuild/protobuf/codegenv2";
 import { fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv2";
 import { file_buf_validate_validate } from "../buf/validate/validate_pb";
-import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file dpp/registry_message.proto.
  */
 export const file_dpp_registry_message: GenFile = /*@__PURE__*/
-  fileDesc("ChpkcHAvcmVnaXN0cnlfbWVzc2FnZS5wcm90bxIUZnVzaW9uLnJwYy5wcm90by5kcHAi0AEKFUNyZWF0ZVBhc3Nwb3J0UmVxdWVzdBIVCgJzbhgBIAEoCUIJukgGcgQQARhkEiEKBmNhYl9zbhgCIAEoCUIJukgGcgQQARhkUgZjYWJfc24SJwoJY2FiX21vZGVsGAMgASgJQgm6SAZyBBABGGRSCWNhYl9tb2RlbBIlCghjYWJfY29kZRgEIAEoCUIJukgGcgQQARhkUghjYWJfY29kZRIWCgViYXRjaBgFIAEoCUIHukgEcgIYZBIVCgRkYXRlGAYgASgJQge6SARyAhhkIjEKFkNyZWF0ZVBhc3Nwb3J0UmVzcG9uc2USCgoCaWQYASABKAkSCwoDdXBpGAIgASgJQr4BChhjb20uZnVzaW9uLnJwYy5wcm90by5kcHBCFFJlZ2lzdHJ5TWVzc2FnZVByb3RvUAFaGGZ1c2lvbi5ycGMucHJvdG8uZHBwO2RwcKICBEZSUESqAhRGdXNpb24uUnBjLlByb3RvLkRwcMoCFEZ1c2lvblxScGNcUHJvdG9cRHBw4gIgRnVzaW9uXFJwY1xQcm90b1xEcHBcR1BCTWV0YWRhdGHqAhdGdXNpb246OlJwYzo6UHJvdG86OkRwcGIGcHJvdG8z", [file_buf_validate_validate, file_google_protobuf_timestamp]);
+  fileDesc("ChpkcHAvcmVnaXN0cnlfbWVzc2FnZS5wcm90bxIUZnVzaW9uLnJwYy5wcm90by5kcHAimQIKFUNyZWF0ZVBhc3Nwb3J0UmVxdWVzdBI+CgRkYXRhGAEgAygLMjAuZnVzaW9uLnJwYy5wcm90by5kcHAuQ3JlYXRlUGFzc3BvcnRSZXF1ZXN0LkRhdGEavwEKBERhdGESFQoCc24YASABKAlCCbpIBnIEEAEYZBIhCgZjYWJfc24YAiABKAlCCbpIBnIEEAEYZFIGY2FiX3NuEicKCWNhYl9tb2RlbBgDIAEoCUIJukgGcgQQARhkUgljYWJfbW9kZWwSJQoIY2FiX2NvZGUYBCABKAlCCbpIBnIEEAEYZFIIY2FiX2NvZGUSFgoFYmF0Y2gYBSABKAlCB7pIBHICGGQSFQoEZGF0ZRgGIAEoCUIHukgEcgIYZCKGAQoWQ3JlYXRlUGFzc3BvcnRSZXNwb25zZRI/CgRkYXRhGAEgAygLMjEuZnVzaW9uLnJwYy5wcm90by5kcHAuQ3JlYXRlUGFzc3BvcnRSZXNwb25zZS5EYXRhGisKBERhdGESCgoCc24YASABKAkSCgoCaWQYAiABKAkSCwoDdXBpGAMgASgJQr4BChhjb20uZnVzaW9uLnJwYy5wcm90by5kcHBCFFJlZ2lzdHJ5TWVzc2FnZVByb3RvUAFaGGZ1c2lvbi5ycGMucHJvdG8uZHBwO2RwcKICBEZSUESqAhRGdXNpb24uUnBjLlByb3RvLkRwcMoCFEZ1c2lvblxScGNcUHJvdG9cRHBw4gIgRnVzaW9uXFJwY1xQcm90b1xEcHBcR1BCTWV0YWRhdGHqAhdGdXNpb246OlJwYzo6UHJvdG86OkRwcGIGcHJvdG8z", [file_buf_validate_validate]);
 
 /**
  * Package message DPP平台-创建电池护照请求消息定义
@@ -29,6 +28,25 @@ export const file_dpp_registry_message: GenFile = /*@__PURE__*/
  * @generated from message fusion.rpc.proto.dpp.CreatePassportRequest
  */
 export type CreatePassportRequest = Message<"fusion.rpc.proto.dpp.CreatePassportRequest"> & {
+  /**
+   * 请求列表
+   *
+   * @generated from field: repeated fusion.rpc.proto.dpp.CreatePassportRequest.Data data = 1;
+   */
+  data: CreatePassportRequest_Data[];
+};
+
+/**
+ * Describes the message fusion.rpc.proto.dpp.CreatePassportRequest.
+ * Use `create(CreatePassportRequestSchema)` to create a new message.
+ */
+export const CreatePassportRequestSchema: GenMessage<CreatePassportRequest> = /*@__PURE__*/
+  messageDesc(file_dpp_registry_message, 0);
+
+/**
+ * @generated from message fusion.rpc.proto.dpp.CreatePassportRequest.Data
+ */
+export type CreatePassportRequest_Data = Message<"fusion.rpc.proto.dpp.CreatePassportRequest.Data"> & {
   /**
    * 电池簇sn
    *
@@ -73,11 +91,11 @@ export type CreatePassportRequest = Message<"fusion.rpc.proto.dpp.CreatePassport
 };
 
 /**
- * Describes the message fusion.rpc.proto.dpp.CreatePassportRequest.
- * Use `create(CreatePassportRequestSchema)` to create a new message.
+ * Describes the message fusion.rpc.proto.dpp.CreatePassportRequest.Data.
+ * Use `create(CreatePassportRequest_DataSchema)` to create a new message.
  */
-export const CreatePassportRequestSchema: GenMessage<CreatePassportRequest> = /*@__PURE__*/
-  messageDesc(file_dpp_registry_message, 0);
+export const CreatePassportRequest_DataSchema: GenMessage<CreatePassportRequest_Data> = /*@__PURE__*/
+  messageDesc(file_dpp_registry_message, 0, 0);
 
 /**
  * Package message DPP平台-创建电池护照响应消息定义
@@ -86,18 +104,11 @@ export const CreatePassportRequestSchema: GenMessage<CreatePassportRequest> = /*
  */
 export type CreatePassportResponse = Message<"fusion.rpc.proto.dpp.CreatePassportResponse"> & {
   /**
-   * 电池护照ID
+   * 结果列表
    *
-   * @generated from field: string id = 1;
+   * @generated from field: repeated fusion.rpc.proto.dpp.CreatePassportResponse.Data data = 1;
    */
-  id: string;
-
-  /**
-   * 电池护照UPI
-   *
-   * @generated from field: string upi = 2;
-   */
-  upi: string;
+  data: CreatePassportResponse_Data[];
 };
 
 /**
@@ -106,4 +117,37 @@ export type CreatePassportResponse = Message<"fusion.rpc.proto.dpp.CreatePasspor
  */
 export const CreatePassportResponseSchema: GenMessage<CreatePassportResponse> = /*@__PURE__*/
   messageDesc(file_dpp_registry_message, 1);
+
+/**
+ * @generated from message fusion.rpc.proto.dpp.CreatePassportResponse.Data
+ */
+export type CreatePassportResponse_Data = Message<"fusion.rpc.proto.dpp.CreatePassportResponse.Data"> & {
+  /**
+   * 电池簇sn
+   *
+   * @generated from field: string sn = 1;
+   */
+  sn: string;
+
+  /**
+   * 电池护照ID
+   *
+   * @generated from field: string id = 2;
+   */
+  id: string;
+
+  /**
+   * 电池护照UPI
+   *
+   * @generated from field: string upi = 3;
+   */
+  upi: string;
+};
+
+/**
+ * Describes the message fusion.rpc.proto.dpp.CreatePassportResponse.Data.
+ * Use `create(CreatePassportResponse_DataSchema)` to create a new message.
+ */
+export const CreatePassportResponse_DataSchema: GenMessage<CreatePassportResponse_Data> = /*@__PURE__*/
+  messageDesc(file_dpp_registry_message, 1, 0);
 
