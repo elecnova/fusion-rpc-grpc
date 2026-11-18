@@ -51,12 +51,12 @@ const char descriptor_table_protodef_dpp_2fregistry_5fservice_2eproto[] ABSL_ATT
     "reatePassportRequest\032,.fusion.rpc.proto."
     "dpp.CreatePassportResponse\"<\332A\037sn,date,b"
     "atch,code,model,cab_sn\202\323\344\223\002\024\"\017/3rd-api/v"
-    "2/dpp:\001*B\276\001\n\030com.fusion.rpc.proto.dppB\024R"
-    "egistryServiceProtoP\001Z\030fusion.rpc.proto."
-    "dpp;dpp\242\002\004FRPD\252\002\024Fusion.Rpc.Proto.Dpp\312\002\024"
-    "Fusion\\Rpc\\Proto\\Dpp\342\002 Fusion\\Rpc\\Proto\\"
-    "Dpp\\GPBMetadata\352\002\027Fusion::Rpc::Proto::Dp"
-    "pb\006proto3"
+    "2/dpp:\001*B\324\001\n\030com.fusion.rpc.proto.dppB\024R"
+    "egistryServiceProtoP\001Z.github.com/elecno"
+    "va/fusion-rpc-grpc/go/dpp;dpp\242\002\004FRPD\252\002\024F"
+    "usion.Rpc.Proto.Dpp\312\002\024Fusion\\Rpc\\Proto\\D"
+    "pp\342\002 Fusion\\Rpc\\Proto\\Dpp\\GPBMetadata\352\002\027"
+    "Fusion::Rpc::Proto::Dppb\006proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_dpp_2fregistry_5fservice_2eproto_deps[3] = {
@@ -68,7 +68,7 @@ static ::absl::once_flag descriptor_table_dpp_2fregistry_5fservice_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_dpp_2fregistry_5fservice_2eproto = {
     false,
     false,
-    529,
+    551,
     descriptor_table_protodef_dpp_2fregistry_5fservice_2eproto,
     "dpp/registry_service.proto",
     &descriptor_table_dpp_2fregistry_5fservice_2eproto_once,

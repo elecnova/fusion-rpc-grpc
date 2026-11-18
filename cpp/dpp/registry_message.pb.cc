@@ -783,12 +783,13 @@ const char descriptor_table_protodef_dpp_2fregistry_5fmessage_2eproto[] ABSL_ATT
     "sportResponse\022E\n\004data\030\001 \003(\01321.fusion.rpc"
     ".proto.dpp.CreatePassportResponse.DataR\004"
     "data\0328\n\004Data\022\016\n\002sn\030\001 \001(\tR\002sn\022\016\n\002id\030\002 \001(\t"
-    "R\002id\022\020\n\003upi\030\003 \001(\tR\003upiB\276\001\n\030com.fusion.rp"
-    "c.proto.dppB\024RegistryMessageProtoP\001Z\030fus"
-    "ion.rpc.proto.dpp;dpp\242\002\004FRPD\252\002\024Fusion.Rp"
-    "c.Proto.Dpp\312\002\024Fusion\\Rpc\\Proto\\Dpp\342\002 Fus"
-    "ion\\Rpc\\Proto\\Dpp\\GPBMetadata\352\002\027Fusion::"
-    "Rpc::Proto::Dppb\006proto3"
+    "R\002id\022\020\n\003upi\030\003 \001(\tR\003upiB\324\001\n\030com.fusion.rp"
+    "c.proto.dppB\024RegistryMessageProtoP\001Z.git"
+    "hub.com/elecnova/fusion-rpc-grpc/go/dpp;"
+    "dpp\242\002\004FRPD\252\002\024Fusion.Rpc.Proto.Dpp\312\002\024Fusi"
+    "on\\Rpc\\Proto\\Dpp\342\002 Fusion\\Rpc\\Proto\\Dpp\\"
+    "GPBMetadata\352\002\027Fusion::Rpc::Proto::Dppb\006p"
+    "roto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_dpp_2fregistry_5fmessage_2eproto_deps[1] = {
@@ -798,7 +799,7 @@ static ::absl::once_flag descriptor_table_dpp_2fregistry_5fmessage_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_dpp_2fregistry_5fmessage_2eproto = {
     false,
     false,
-    743,
+    765,
     descriptor_table_protodef_dpp_2fregistry_5fmessage_2eproto,
     "dpp/registry_message.proto",
     &descriptor_table_dpp_2fregistry_5fmessage_2eproto_once,

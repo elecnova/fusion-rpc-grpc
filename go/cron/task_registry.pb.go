@@ -540,8 +540,8 @@ const file_cron_task_registry_proto_rawDesc = "" +
 	"\x06Upsert\x12!.fusion.cron.v1.UpsertTaskRequest\x1a\".fusion.cron.v1.UpsertTaskResponse2V\n" +
 	"\fExecReporter\x12F\n" +
 	"\n" +
-	"ReportExec\x12!.fusion.cron.v1.ReportExecRequest\x1a\x15.fusion.cron.v1.EmptyB\xb8\x01\n" +
-	"\x12com.fusion.cron.v1B\x11TaskRegistryProtoP\x01Z5github.com/elecnova/fusion-rpc-grpc/go/cron/v1;cronpb\xa2\x02\x03FCX\xaa\x02\x0eFusion.Cron.V1\xca\x02\x0eFusion\\Cron\\V1\xe2\x02\x1aFusion\\Cron\\V1\\GPBMetadata\xea\x02\x10Fusion::Cron::V1b\x06proto3"
+	"ReportExec\x12!.fusion.cron.v1.ReportExecRequest\x1a\x15.fusion.cron.v1.EmptyB\xb5\x01\n" +
+	"\x12com.fusion.cron.v1B\x11TaskRegistryProtoP\x01Z2github.com/elecnova/fusion-rpc-grpc/go/cron;cronpb\xa2\x02\x03FCX\xaa\x02\x0eFusion.Cron.V1\xca\x02\x0eFusion\\Cron\\V1\xe2\x02\x1aFusion\\Cron\\V1\\GPBMetadata\xea\x02\x10Fusion::Cron::V1b\x06proto3"
 
 var (
 	file_cron_task_registry_proto_rawDescOnce sync.Once

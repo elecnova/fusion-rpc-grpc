@@ -19,7 +19,7 @@ class RegistryService
         \Google\Api\GPBMetadata\Annotations::initOnce();
         \Google\Api\GPBMetadata\Client::initOnce();
         $pool->internalAddGeneratedFile(
-            "\x0A\xF5\x03\x0A\x1Adpp/registry_service.proto\x12\x14fusion.rpc.proto.dpp\x1A\x1Cgoogle/api/annotations.proto\x1A\x17google/api/client.proto2\xC0\x01\x0A\x12DPPRegistryService\x12\xA9\x01\x0A\x0ECreatePassport\x12+.fusion.rpc.proto.dpp.CreatePassportRequest\x1A,.fusion.rpc.proto.dpp.CreatePassportResponse\"<\xDAA\x1Fsn,date,batch,code,model,cab_sn\x82\xD3\xE4\x93\x02\x14\"\x0F/3rd-api/v2/dpp:\x01*B\xBE\x01\x0A\x18com.fusion.rpc.proto.dppB\x14RegistryServiceProtoP\x01Z\x18fusion.rpc.proto.dpp;dpp\xA2\x02\x04FRPD\xAA\x02\x14Fusion.Rpc.Proto.Dpp\xCA\x02\x14Fusion\\Rpc\\Proto\\Dpp\xE2\x02 Fusion\\Rpc\\Proto\\Dpp\\GPBMetadata\xEA\x02\x17Fusion::Rpc::Proto::Dppb\x06proto3"
+            "\x0A\x8B\x04\x0A\x1Adpp/registry_service.proto\x12\x14fusion.rpc.proto.dpp\x1A\x1Cgoogle/api/annotations.proto\x1A\x17google/api/client.proto2\xC0\x01\x0A\x12DPPRegistryService\x12\xA9\x01\x0A\x0ECreatePassport\x12+.fusion.rpc.proto.dpp.CreatePassportRequest\x1A,.fusion.rpc.proto.dpp.CreatePassportResponse\"<\xDAA\x1Fsn,date,batch,code,model,cab_sn\x82\xD3\xE4\x93\x02\x14\"\x0F/3rd-api/v2/dpp:\x01*B\xD4\x01\x0A\x18com.fusion.rpc.proto.dppB\x14RegistryServiceProtoP\x01Z.github.com/elecnova/fusion-rpc-grpc/go/dpp;dpp\xA2\x02\x04FRPD\xAA\x02\x14Fusion.Rpc.Proto.Dpp\xCA\x02\x14Fusion\\Rpc\\Proto\\Dpp\xE2\x02 Fusion\\Rpc\\Proto\\Dpp\\GPBMetadata\xEA\x02\x17Fusion::Rpc::Proto::Dppb\x06proto3"
         , true);
 
         static::$is_initialized = true;

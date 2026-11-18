@@ -295,8 +295,8 @@ const file_dpp_registry_message_proto_rawDesc = "" +
 	"\x04Data\x12\x0e\n" +
 	"\x02sn\x18\x01 \x01(\tR\x02sn\x12\x0e\n" +
 	"\x02id\x18\x02 \x01(\tR\x02id\x12\x10\n" +
-	"\x03upi\x18\x03 \x01(\tR\x03upiB\xbe\x01\n" +
-	"\x18com.fusion.rpc.proto.dppB\x14RegistryMessageProtoP\x01Z\x18fusion.rpc.proto.dpp;dpp\xa2\x02\x04FRPD\xaa\x02\x14Fusion.Rpc.Proto.Dpp\xca\x02\x14Fusion\\Rpc\\Proto\\Dpp\xe2\x02 Fusion\\Rpc\\Proto\\Dpp\\GPBMetadata\xea\x02\x17Fusion::Rpc::Proto::Dppb\x06proto3"
+	"\x03upi\x18\x03 \x01(\tR\x03upiB\xd4\x01\n" +
+	"\x18com.fusion.rpc.proto.dppB\x14RegistryMessageProtoP\x01Z.github.com/elecnova/fusion-rpc-grpc/go/dpp;dpp\xa2\x02\x04FRPD\xaa\x02\x14Fusion.Rpc.Proto.Dpp\xca\x02\x14Fusion\\Rpc\\Proto\\Dpp\xe2\x02 Fusion\\Rpc\\Proto\\Dpp\\GPBMetadata\xea\x02\x17Fusion::Rpc::Proto::Dppb\x06proto3"
 
 var (
 	file_dpp_registry_message_proto_rawDescOnce sync.Once

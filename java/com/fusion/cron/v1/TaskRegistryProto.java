@@ -96,12 +96,12 @@ public final class TaskRegistryProto extends com.google.protobuf.GeneratedFile {
       "on.v1.UpsertTaskRequest\032\".fusion.cron.v1" +
       ".UpsertTaskResponse2V\n\014ExecReporter\022F\n\nR" +
       "eportExec\022!.fusion.cron.v1.ReportExecReq" +
-      "uest\032\025.fusion.cron.v1.EmptyB\270\001\n\022com.fusi" +
-      "on.cron.v1B\021TaskRegistryProtoP\001Z5github." +
-      "com/elecnova/fusion-rpc-grpc/go/cron/v1;" +
-      "cronpb\242\002\003FCX\252\002\016Fusion.Cron.V1\312\002\016Fusion\\C" +
-      "ron\\V1\342\002\032Fusion\\Cron\\V1\\GPBMetadata\352\002\020Fu" +
-      "sion::Cron::V1b\006proto3"
+      "uest\032\025.fusion.cron.v1.EmptyB\265\001\n\022com.fusi" +
+      "on.cron.v1B\021TaskRegistryProtoP\001Z2github." +
+      "com/elecnova/fusion-rpc-grpc/go/cron;cro" +
+      "npb\242\002\003FCX\252\002\016Fusion.Cron.V1\312\002\016Fusion\\Cron" +
+      "\\V1\342\002\032Fusion\\Cron\\V1\\GPBMetadata\352\002\020Fusio" +
+      "n::Cron::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
