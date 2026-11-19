@@ -20,7 +20,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file dpp/registry_message.proto.
  */
 export const file_dpp_registry_message: GenFile = /*@__PURE__*/
-  fileDesc("ChpkcHAvcmVnaXN0cnlfbWVzc2FnZS5wcm90bxIUZnVzaW9uLnJwYy5wcm90by5kcHAimQIKFUNyZWF0ZVBhc3Nwb3J0UmVxdWVzdBI+CgRkYXRhGAEgAygLMjAuZnVzaW9uLnJwYy5wcm90by5kcHAuQ3JlYXRlUGFzc3BvcnRSZXF1ZXN0LkRhdGEavwEKBERhdGESFQoCc24YASABKAlCCbpIBnIEEAEYZBIhCgZjYWJfc24YAiABKAlCCbpIBnIEEAEYZFIGY2FiX3NuEicKCWNhYl9tb2RlbBgDIAEoCUIJukgGcgQQARhkUgljYWJfbW9kZWwSJQoIY2FiX2NvZGUYBCABKAlCCbpIBnIEEAEYZFIIY2FiX2NvZGUSFgoFYmF0Y2gYBSABKAlCB7pIBHICGGQSFQoEZGF0ZRgGIAEoCUIHukgEcgIYZCKGAQoWQ3JlYXRlUGFzc3BvcnRSZXNwb25zZRI/CgRkYXRhGAEgAygLMjEuZnVzaW9uLnJwYy5wcm90by5kcHAuQ3JlYXRlUGFzc3BvcnRSZXNwb25zZS5EYXRhGisKBERhdGESCgoCc24YASABKAkSCgoCaWQYAiABKAkSCwoDdXBpGAMgASgJQtQBChhjb20uZnVzaW9uLnJwYy5wcm90by5kcHBCFFJlZ2lzdHJ5TWVzc2FnZVByb3RvUAFaLmdpdGh1Yi5jb20vZWxlY25vdmEvZnVzaW9uLXJwYy1ncnBjL2dvL2RwcDtkcHCiAgRGUlBEqgIURnVzaW9uLlJwYy5Qcm90by5EcHDKAhRGdXNpb25cUnBjXFByb3RvXERwcOICIEZ1c2lvblxScGNcUHJvdG9cRHBwXEdQQk1ldGFkYXRh6gIXRnVzaW9uOjpScGM6OlByb3RvOjpEcHBiBnByb3RvMw", [file_buf_validate_validate]);
+  fileDesc("ChpkcHAvcmVnaXN0cnlfbWVzc2FnZS5wcm90bxIUZnVzaW9uLnJwYy5wcm90by5kcHAitgIKFUNyZWF0ZVBhc3Nwb3J0UmVxdWVzdBI+CgRkYXRhGAEgAygLMjAuZnVzaW9uLnJwYy5wcm90by5kcHAuQ3JlYXRlUGFzc3BvcnRSZXF1ZXN0LkRhdGEa3AEKBERhdGESFQoCc24YASABKAlCCbpIBnIEEAEYZBIhCgZjYWJfc24YAiABKAlCCbpIBnIEEAEYZFIGY2FiX3NuEicKCWNhYl9tb2RlbBgDIAEoCUIJukgGcgQQARhkUgljYWJfbW9kZWwSJQoIY2FiX2NvZGUYBCABKAlCCbpIBnIEEAEYZFIIY2FiX2NvZGUSGwoFYmF0Y2gYBSABKAlCB7pIBHICGGRIAIgBARIaCgRkYXRlGAYgASgJQge6SARyAhhkSAGIAQFCCAoGX2JhdGNoQgcKBV9kYXRlIoYBChZDcmVhdGVQYXNzcG9ydFJlc3BvbnNlEj8KBGRhdGEYASADKAsyMS5mdXNpb24ucnBjLnByb3RvLmRwcC5DcmVhdGVQYXNzcG9ydFJlc3BvbnNlLkRhdGEaKwoERGF0YRIKCgJzbhgBIAEoCRIKCgJpZBgCIAEoCRILCgN1cGkYAyABKAlC1AEKGGNvbS5mdXNpb24ucnBjLnByb3RvLmRwcEIUUmVnaXN0cnlNZXNzYWdlUHJvdG9QAVouZ2l0aHViLmNvbS9lbGVjbm92YS9mdXNpb24tcnBjLWdycGMvZ28vZHBwO2RwcKICBEZSUESqAhRGdXNpb24uUnBjLlByb3RvLkRwcMoCFEZ1c2lvblxScGNcUHJvdG9cRHBw4gIgRnVzaW9uXFJwY1xQcm90b1xEcHBcR1BCTWV0YWRhdGHqAhdGdXNpb246OlJwYzo6UHJvdG86OkRwcGIGcHJvdG8z", [file_buf_validate_validate]);
 
 /**
  * Package message DPP平台-创建电池护照请求消息定义
@@ -78,16 +78,16 @@ export type CreatePassportRequest_Data = Message<"fusion.rpc.proto.dpp.CreatePas
   /**
    * 电池簇生产批次号
    *
-   * @generated from field: string batch = 5;
+   * @generated from field: optional string batch = 5;
    */
-  batch: string;
+  batch?: string | undefined;
 
   /**
    * 电池簇生产日期
    *
-   * @generated from field: string date = 6;
+   * @generated from field: optional string date = 6;
    */
-  date: string;
+  date?: string | undefined;
 };
 
 /**

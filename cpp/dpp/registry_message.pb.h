@@ -555,7 +555,8 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CreatePassportRequest_Data final : 
   ::std::string* PROTOBUF_NONNULL _internal_mutable_cab_code();
 
   public:
-  // string batch = 5 [json_name = "batch", (.buf.validate.field) = {
+  // optional string batch = 5 [json_name = "batch", (.buf.validate.field) = {
+  [[nodiscard]] bool has_batch() const;
   void clear_batch() ;
   [[nodiscard]] const ::std::string& batch() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -570,7 +571,8 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CreatePassportRequest_Data final : 
   ::std::string* PROTOBUF_NONNULL _internal_mutable_batch();
 
   public:
-  // string date = 6 [json_name = "date", (.buf.validate.field) = {
+  // optional string date = 6 [json_name = "date", (.buf.validate.field) = {
+  [[nodiscard]] bool has_date() const;
   void clear_date() ;
   [[nodiscard]] const ::std::string& date() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -1326,7 +1328,11 @@ inline void CreatePassportRequest_Data::set_allocated_cab_code(::std::string* PR
   // @@protoc_insertion_point(field_set_allocated:fusion.rpc.proto.dpp.CreatePassportRequest.Data.cab_code)
 }
 
-// string batch = 5 [json_name = "batch", (.buf.validate.field) = {
+// optional string batch = 5 [json_name = "batch", (.buf.validate.field) = {
+inline bool CreatePassportRequest_Data::has_batch() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000010U);
+  return value;
+}
 inline void CreatePassportRequest_Data::clear_batch() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.batch_.ClearToEmpty();
@@ -1390,7 +1396,11 @@ inline void CreatePassportRequest_Data::set_allocated_batch(::std::string* PROTO
   // @@protoc_insertion_point(field_set_allocated:fusion.rpc.proto.dpp.CreatePassportRequest.Data.batch)
 }
 
-// string date = 6 [json_name = "date", (.buf.validate.field) = {
+// optional string date = 6 [json_name = "date", (.buf.validate.field) = {
+inline bool CreatePassportRequest_Data::has_date() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000020U);
+  return value;
+}
 inline void CreatePassportRequest_Data::clear_date() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.date_.ClearToEmpty();

@@ -134,9 +134,9 @@ type CreatePassportRequest_Data struct {
 	// 储能柜EMS标识
 	CabCode string `protobuf:"bytes,4,opt,name=cab_code,proto3" json:"cab_code,omitempty"`
 	// 电池簇生产批次号
-	Batch string `protobuf:"bytes,5,opt,name=batch,proto3" json:"batch,omitempty"`
+	Batch *string `protobuf:"bytes,5,opt,name=batch,proto3,oneof" json:"batch,omitempty"`
 	// 电池簇生产日期
-	Date          string `protobuf:"bytes,6,opt,name=date,proto3" json:"date,omitempty"`
+	Date          *string `protobuf:"bytes,6,opt,name=date,proto3,oneof" json:"date,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -200,15 +200,15 @@ func (x *CreatePassportRequest_Data) GetCabCode() string {
 }
 
 func (x *CreatePassportRequest_Data) GetBatch() string {
-	if x != nil {
-		return x.Batch
+	if x != nil && x.Batch != nil {
+		return *x.Batch
 	}
 	return ""
 }
 
 func (x *CreatePassportRequest_Data) GetDate() string {
-	if x != nil {
-		return x.Date
+	if x != nil && x.Date != nil {
+		return *x.Date
 	}
 	return ""
 }
@@ -280,16 +280,18 @@ var File_dpp_registry_message_proto protoreflect.FileDescriptor
 
 const file_dpp_registry_message_proto_rawDesc = "" +
 	"\n" +
-	"\x1adpp/registry_message.proto\x12\x14fusion.rpc.proto.dpp\x1a\x1bbuf/validate/validate.proto\"\xb0\x02\n" +
+	"\x1adpp/registry_message.proto\x12\x14fusion.rpc.proto.dpp\x1a\x1bbuf/validate/validate.proto\"\xcd\x02\n" +
 	"\x15CreatePassportRequest\x12D\n" +
-	"\x04data\x18\x01 \x03(\v20.fusion.rpc.proto.dpp.CreatePassportRequest.DataR\x04data\x1a\xd0\x01\n" +
+	"\x04data\x18\x01 \x03(\v20.fusion.rpc.proto.dpp.CreatePassportRequest.DataR\x04data\x1a\xed\x01\n" +
 	"\x04Data\x12\x19\n" +
 	"\x02sn\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x02sn\x12!\n" +
 	"\x06cab_sn\x18\x02 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x06cab_sn\x12'\n" +
 	"\tcab_model\x18\x03 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\tcab_model\x12%\n" +
-	"\bcab_code\x18\x04 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\bcab_code\x12\x1d\n" +
-	"\x05batch\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x18dR\x05batch\x12\x1b\n" +
-	"\x04date\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x18dR\x04date\"\x99\x01\n" +
+	"\bcab_code\x18\x04 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\bcab_code\x12\"\n" +
+	"\x05batch\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x18dH\x00R\x05batch\x88\x01\x01\x12 \n" +
+	"\x04date\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x18dH\x01R\x04date\x88\x01\x01B\b\n" +
+	"\x06_batchB\a\n" +
+	"\x05_date\"\x99\x01\n" +
 	"\x16CreatePassportResponse\x12E\n" +
 	"\x04data\x18\x01 \x03(\v21.fusion.rpc.proto.dpp.CreatePassportResponse.DataR\x04data\x1a8\n" +
 	"\x04Data\x12\x0e\n" +
@@ -332,6 +334,7 @@ func file_dpp_registry_message_proto_init() {
 	if File_dpp_registry_message_proto != nil {
 		return
 	}
+	file_dpp_registry_message_proto_msgTypes[2].OneofWrappers = []any{}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{

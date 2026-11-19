@@ -41,15 +41,15 @@ class Data extends \Google\Protobuf\Internal\Message
     /**
      * 电池簇生产批次号
      *
-     * Generated from protobuf field <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = {</code>
+     * Generated from protobuf field <code>optional string batch = 5 [json_name = "batch", (.buf.validate.field) = {</code>
      */
-    protected $batch = '';
+    protected $batch = null;
     /**
      * 电池簇生产日期
      *
-     * Generated from protobuf field <code>string date = 6 [json_name = "date", (.buf.validate.field) = {</code>
+     * Generated from protobuf field <code>optional string date = 6 [json_name = "date", (.buf.validate.field) = {</code>
      */
-    protected $date = '';
+    protected $date = null;
 
     /**
      * Constructor.
@@ -184,18 +184,28 @@ class Data extends \Google\Protobuf\Internal\Message
     /**
      * 电池簇生产批次号
      *
-     * Generated from protobuf field <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = {</code>
+     * Generated from protobuf field <code>optional string batch = 5 [json_name = "batch", (.buf.validate.field) = {</code>
      * @return string
      */
     public function getBatch()
     {
-        return $this->batch;
+        return isset($this->batch) ? $this->batch : '';
+    }
+
+    public function hasBatch()
+    {
+        return isset($this->batch);
+    }
+
+    public function clearBatch()
+    {
+        unset($this->batch);
     }
 
     /**
      * 电池簇生产批次号
      *
-     * Generated from protobuf field <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = {</code>
+     * Generated from protobuf field <code>optional string batch = 5 [json_name = "batch", (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -210,18 +220,28 @@ class Data extends \Google\Protobuf\Internal\Message
     /**
      * 电池簇生产日期
      *
-     * Generated from protobuf field <code>string date = 6 [json_name = "date", (.buf.validate.field) = {</code>
+     * Generated from protobuf field <code>optional string date = 6 [json_name = "date", (.buf.validate.field) = {</code>
      * @return string
      */
     public function getDate()
     {
-        return $this->date;
+        return isset($this->date) ? $this->date : '';
+    }
+
+    public function hasDate()
+    {
+        return isset($this->date);
+    }
+
+    public function clearDate()
+    {
+        unset($this->date);
     }
 
     /**
      * 电池簇生产日期
      *
-     * Generated from protobuf field <code>string date = 6 [json_name = "date", (.buf.validate.field) = {</code>
+     * Generated from protobuf field <code>optional string date = 6 [json_name = "date", (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */

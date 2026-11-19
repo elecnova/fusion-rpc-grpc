@@ -142,7 +142,16 @@ private static final long serialVersionUID = 0L;
      * 电池簇生产批次号
      * </pre>
      *
-     * <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
+     * <code>optional string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
+     * @return Whether the batch field is set.
+     */
+    boolean hasBatch();
+    /**
+     * <pre>
+     * 电池簇生产批次号
+     * </pre>
+     *
+     * <code>optional string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
      * @return The batch.
      */
     java.lang.String getBatch();
@@ -151,7 +160,7 @@ private static final long serialVersionUID = 0L;
      * 电池簇生产批次号
      * </pre>
      *
-     * <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
+     * <code>optional string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
      * @return The bytes for batch.
      */
     com.google.protobuf.ByteString
@@ -162,7 +171,16 @@ private static final long serialVersionUID = 0L;
      * 电池簇生产日期
      * </pre>
      *
-     * <code>string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
+     * <code>optional string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
+     * @return Whether the date field is set.
+     */
+    boolean hasDate();
+    /**
+     * <pre>
+     * 电池簇生产日期
+     * </pre>
+     *
+     * <code>optional string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
      * @return The date.
      */
     java.lang.String getDate();
@@ -171,7 +189,7 @@ private static final long serialVersionUID = 0L;
      * 电池簇生产日期
      * </pre>
      *
-     * <code>string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
+     * <code>optional string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
      * @return The bytes for date.
      */
     com.google.protobuf.ByteString
@@ -225,6 +243,7 @@ private static final long serialVersionUID = 0L;
               com.fusion.rpc.proto.dpp.CreatePassportRequest.Data.class, com.fusion.rpc.proto.dpp.CreatePassportRequest.Data.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SN_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object sn_ = "";
@@ -421,7 +440,19 @@ private static final long serialVersionUID = 0L;
      * 电池簇生产批次号
      * </pre>
      *
-     * <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
+     * <code>optional string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
+     * @return Whether the batch field is set.
+     */
+    @java.lang.Override
+    public boolean hasBatch() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * 电池簇生产批次号
+     * </pre>
+     *
+     * <code>optional string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
      * @return The batch.
      */
     @java.lang.Override
@@ -442,7 +473,7 @@ private static final long serialVersionUID = 0L;
      * 电池簇生产批次号
      * </pre>
      *
-     * <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
+     * <code>optional string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
      * @return The bytes for batch.
      */
     @java.lang.Override
@@ -468,7 +499,19 @@ private static final long serialVersionUID = 0L;
      * 电池簇生产日期
      * </pre>
      *
-     * <code>string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
+     * <code>optional string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
+     * @return Whether the date field is set.
+     */
+    @java.lang.Override
+    public boolean hasDate() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * 电池簇生产日期
+     * </pre>
+     *
+     * <code>optional string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
      * @return The date.
      */
     @java.lang.Override
@@ -489,7 +532,7 @@ private static final long serialVersionUID = 0L;
      * 电池簇生产日期
      * </pre>
      *
-     * <code>string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
+     * <code>optional string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
      * @return The bytes for date.
      */
     @java.lang.Override
@@ -533,10 +576,10 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(cabCode_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 4, cabCode_);
       }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(batch_)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 5, batch_);
       }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(date_)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 6, date_);
       }
       getUnknownFields().writeTo(output);
@@ -555,10 +598,10 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(cabCode_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(4, cabCode_);
       }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(batch_)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(5, batch_);
       }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(date_)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(6, date_);
       }
       return size;
@@ -593,10 +636,16 @@ private static final long serialVersionUID = 0L;
           .equals(other.getCabModel())) return false;
       if (!getCabCode()
           .equals(other.getCabCode())) return false;
-      if (!getBatch()
-          .equals(other.getBatch())) return false;
-      if (!getDate()
-          .equals(other.getDate())) return false;
+      if (hasBatch() != other.hasBatch()) return false;
+      if (hasBatch()) {
+        if (!getBatch()
+            .equals(other.getBatch())) return false;
+      }
+      if (hasDate() != other.hasDate()) return false;
+      if (hasDate()) {
+        if (!getDate()
+            .equals(other.getDate())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -616,10 +665,14 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getCabModel().hashCode();
       hash = (37 * hash) + CAB_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getCabCode().hashCode();
-      hash = (37 * hash) + BATCH_FIELD_NUMBER;
-      hash = (53 * hash) + getBatch().hashCode();
-      hash = (37 * hash) + DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getDate().hashCode();
+      if (hasBatch()) {
+        hash = (37 * hash) + BATCH_FIELD_NUMBER;
+        hash = (53 * hash) + getBatch().hashCode();
+      }
+      if (hasDate()) {
+        hash = (37 * hash) + DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getDate().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -802,12 +855,16 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.cabCode_ = cabCode_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.batch_ = batch_;
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.date_ = date_;
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -842,12 +899,12 @@ private static final long serialVersionUID = 0L;
           bitField0_ |= 0x00000008;
           onChanged();
         }
-        if (!other.getBatch().isEmpty()) {
+        if (other.hasBatch()) {
           batch_ = other.batch_;
           bitField0_ |= 0x00000010;
           onChanged();
         }
-        if (!other.getDate().isEmpty()) {
+        if (other.hasDate()) {
           date_ = other.date_;
           bitField0_ |= 0x00000020;
           onChanged();
@@ -1297,7 +1354,18 @@ private static final long serialVersionUID = 0L;
        * 电池簇生产批次号
        * </pre>
        *
-       * <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
+       * <code>optional string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
+       * @return Whether the batch field is set.
+       */
+      public boolean hasBatch() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * 电池簇生产批次号
+       * </pre>
+       *
+       * <code>optional string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
        * @return The batch.
        */
       public java.lang.String getBatch() {
@@ -1317,7 +1385,7 @@ private static final long serialVersionUID = 0L;
        * 电池簇生产批次号
        * </pre>
        *
-       * <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
+       * <code>optional string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
        * @return The bytes for batch.
        */
       public com.google.protobuf.ByteString
@@ -1338,7 +1406,7 @@ private static final long serialVersionUID = 0L;
        * 电池簇生产批次号
        * </pre>
        *
-       * <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
+       * <code>optional string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
        * @param value The batch to set.
        * @return This builder for chaining.
        */
@@ -1355,7 +1423,7 @@ private static final long serialVersionUID = 0L;
        * 电池簇生产批次号
        * </pre>
        *
-       * <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
+       * <code>optional string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearBatch() {
@@ -1369,7 +1437,7 @@ private static final long serialVersionUID = 0L;
        * 电池簇生产批次号
        * </pre>
        *
-       * <code>string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
+       * <code>optional string batch = 5 [json_name = "batch", (.buf.validate.field) = { ... }</code>
        * @param value The bytes for batch to set.
        * @return This builder for chaining.
        */
@@ -1389,7 +1457,18 @@ private static final long serialVersionUID = 0L;
        * 电池簇生产日期
        * </pre>
        *
-       * <code>string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
+       * <code>optional string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
+       * @return Whether the date field is set.
+       */
+      public boolean hasDate() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * 电池簇生产日期
+       * </pre>
+       *
+       * <code>optional string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
        * @return The date.
        */
       public java.lang.String getDate() {
@@ -1409,7 +1488,7 @@ private static final long serialVersionUID = 0L;
        * 电池簇生产日期
        * </pre>
        *
-       * <code>string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
+       * <code>optional string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
        * @return The bytes for date.
        */
       public com.google.protobuf.ByteString
@@ -1430,7 +1509,7 @@ private static final long serialVersionUID = 0L;
        * 电池簇生产日期
        * </pre>
        *
-       * <code>string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
+       * <code>optional string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
        * @param value The date to set.
        * @return This builder for chaining.
        */
@@ -1447,7 +1526,7 @@ private static final long serialVersionUID = 0L;
        * 电池簇生产日期
        * </pre>
        *
-       * <code>string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
+       * <code>optional string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDate() {
@@ -1461,7 +1540,7 @@ private static final long serialVersionUID = 0L;
        * 电池簇生产日期
        * </pre>
        *
-       * <code>string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
+       * <code>optional string date = 6 [json_name = "date", (.buf.validate.field) = { ... }</code>
        * @param value The bytes for date to set.
        * @return This builder for chaining.
        */
