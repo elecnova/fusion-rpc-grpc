@@ -25,7 +25,7 @@ _sym_db = _symbol_database.Default()
 from buf.validate import validate_pb2 as buf_dot_validate_dot_validate__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1a\x64pp/registry_message.proto\x12\x14\x66usion.rpc.proto.dpp\x1a\x1b\x62uf/validate/validate.proto\"\xcd\x02\n\x15\x43reatePassportRequest\x12\x44\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32\x30.fusion.rpc.proto.dpp.CreatePassportRequest.DataR\x04\x64\x61ta\x1a\xed\x01\n\x04\x44\x61ta\x12\x19\n\x02sn\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18\x64R\x02sn\x12!\n\x06\x63\x61\x62_sn\x18\x02 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18\x64R\x06\x63\x61\x62_sn\x12\'\n\tcab_model\x18\x03 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18\x64R\tcab_model\x12%\n\x08\x63\x61\x62_code\x18\x04 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18\x64R\x08\x63\x61\x62_code\x12\"\n\x05\x62\x61tch\x18\x05 \x01(\tB\x07\xbaH\x04r\x02\x18\x64H\x00R\x05\x62\x61tch\x88\x01\x01\x12 \n\x04\x64\x61te\x18\x06 \x01(\tB\x07\xbaH\x04r\x02\x18\x64H\x01R\x04\x64\x61te\x88\x01\x01\x42\x08\n\x06_batchB\x07\n\x05_date\"\x99\x01\n\x16\x43reatePassportResponse\x12\x45\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32\x31.fusion.rpc.proto.dpp.CreatePassportResponse.DataR\x04\x64\x61ta\x1a\x38\n\x04\x44\x61ta\x12\x0e\n\x02sn\x18\x01 \x01(\tR\x02sn\x12\x0e\n\x02id\x18\x02 \x01(\tR\x02id\x12\x10\n\x03upi\x18\x03 \x01(\tR\x03upiB\xd4\x01\n\x18\x63om.fusion.rpc.proto.dppB\x14RegistryMessageProtoP\x01Z.github.com/elecnova/fusion-rpc-grpc/go/dpp;dpp\xa2\x02\x04\x46RPD\xaa\x02\x14\x46usion.Rpc.Proto.Dpp\xca\x02\x14\x46usion\\Rpc\\Proto\\Dpp\xe2\x02 Fusion\\Rpc\\Proto\\Dpp\\GPBMetadata\xea\x02\x17\x46usion::Rpc::Proto::Dppb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1a\x64pp/registry_message.proto\x12\x14\x66usion.rpc.proto.dpp\x1a\x1b\x62uf/validate/validate.proto\"\xe7\x02\n\x15\x43reatePassportRequest\x12\x44\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32\x30.fusion.rpc.proto.dpp.CreatePassportRequest.DataR\x04\x64\x61ta\x12\x18\n\x07user_id\x18\x02 \x01(\tR\x07user_id\x1a\xed\x01\n\x04\x44\x61ta\x12\x19\n\x02sn\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18\x64R\x02sn\x12!\n\x06\x63\x61\x62_sn\x18\x02 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18\x64R\x06\x63\x61\x62_sn\x12\'\n\tcab_model\x18\x03 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18\x64R\tcab_model\x12%\n\x08\x63\x61\x62_code\x18\x04 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18\x64R\x08\x63\x61\x62_code\x12\"\n\x05\x62\x61tch\x18\x05 \x01(\tB\x07\xbaH\x04r\x02\x18\x64H\x00R\x05\x62\x61tch\x88\x01\x01\x12 \n\x04\x64\x61te\x18\x06 \x01(\tB\x07\xbaH\x04r\x02\x18\x64H\x01R\x04\x64\x61te\x88\x01\x01\x42\x08\n\x06_batchB\x07\n\x05_date\"\x99\x01\n\x16\x43reatePassportResponse\x12\x45\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32\x31.fusion.rpc.proto.dpp.CreatePassportResponse.DataR\x04\x64\x61ta\x1a\x38\n\x04\x44\x61ta\x12\x0e\n\x02sn\x18\x01 \x01(\tR\x02sn\x12\x0e\n\x02id\x18\x02 \x01(\tR\x02id\x12\x10\n\x03upi\x18\x03 \x01(\tR\x03upiB\xd4\x01\n\x18\x63om.fusion.rpc.proto.dppB\x14RegistryMessageProtoP\x01Z.github.com/elecnova/fusion-rpc-grpc/go/dpp;dpp\xa2\x02\x04\x46RPD\xaa\x02\x14\x46usion.Rpc.Proto.Dpp\xca\x02\x14\x46usion\\Rpc\\Proto\\Dpp\xe2\x02 Fusion\\Rpc\\Proto\\Dpp\\GPBMetadata\xea\x02\x17\x46usion::Rpc::Proto::Dppb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -46,11 +46,11 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_CREATEPASSPORTREQUEST_DATA'].fields_by_name['date']._loaded_options = None
   _globals['_CREATEPASSPORTREQUEST_DATA'].fields_by_name['date']._serialized_options = b'\272H\004r\002\030d'
   _globals['_CREATEPASSPORTREQUEST']._serialized_start=82
-  _globals['_CREATEPASSPORTREQUEST']._serialized_end=415
-  _globals['_CREATEPASSPORTREQUEST_DATA']._serialized_start=178
-  _globals['_CREATEPASSPORTREQUEST_DATA']._serialized_end=415
-  _globals['_CREATEPASSPORTRESPONSE']._serialized_start=418
-  _globals['_CREATEPASSPORTRESPONSE']._serialized_end=571
-  _globals['_CREATEPASSPORTRESPONSE_DATA']._serialized_start=515
-  _globals['_CREATEPASSPORTRESPONSE_DATA']._serialized_end=571
+  _globals['_CREATEPASSPORTREQUEST']._serialized_end=441
+  _globals['_CREATEPASSPORTREQUEST_DATA']._serialized_start=204
+  _globals['_CREATEPASSPORTREQUEST_DATA']._serialized_end=441
+  _globals['_CREATEPASSPORTRESPONSE']._serialized_start=444
+  _globals['_CREATEPASSPORTRESPONSE']._serialized_end=597
+  _globals['_CREATEPASSPORTRESPONSE_DATA']._serialized_start=541
+  _globals['_CREATEPASSPORTRESPONSE_DATA']._serialized_end=597
 # @@protoc_insertion_point(module_scope)

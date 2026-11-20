@@ -53,4 +53,24 @@ public interface CreatePassportRequestOrBuilder extends
    */
   com.fusion.rpc.proto.dpp.CreatePassportRequest.DataOrBuilder getDataOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * 注册人ID
+   * </pre>
+   *
+   * <code>string user_id = 2 [json_name = "user_id"];</code>
+   * @return The userId.
+   */
+  java.lang.String getUserId();
+  /**
+   * <pre>
+   * 注册人ID
+   * </pre>
+   *
+   * <code>string user_id = 2 [json_name = "user_id"];</code>
+   * @return The bytes for userId.
+   */
+  com.google.protobuf.ByteString
+      getUserIdBytes();
 }

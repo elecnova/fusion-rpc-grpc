@@ -22,6 +22,12 @@ class CreatePassportRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .fusion.rpc.proto.dpp.CreatePassportRequest.Data data = 1 [json_name = "data"];</code>
      */
     private $data;
+    /**
+     * 注册人ID
+     *
+     * Generated from protobuf field <code>string user_id = 2 [json_name = "user_id"];</code>
+     */
+    protected $user_id = '';
 
     /**
      * Constructor.
@@ -31,6 +37,8 @@ class CreatePassportRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type \Fusion\Rpc\Proto\Dpp\CreatePassportRequest\Data[] $data
      *           请求列表
+     *     @type string $user_id
+     *           注册人ID
      * }
      */
     public function __construct($data = null)
@@ -61,6 +69,32 @@ class CreatePassportRequest extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Fusion\Rpc\Proto\Dpp\CreatePassportRequest\Data::class);
         $this->data = $arr;
+
+        return $this;
+    }
+
+    /**
+     * 注册人ID
+     *
+     * Generated from protobuf field <code>string user_id = 2 [json_name = "user_id"];</code>
+     * @return string
+     */
+    public function getUserId()
+    {
+        return $this->user_id;
+    }
+
+    /**
+     * 注册人ID
+     *
+     * Generated from protobuf field <code>string user_id = 2 [json_name = "user_id"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setUserId(string $var)
+    {
+        GPBUtil::checkString($var, true);
+        $this->user_id = $var;
 
         return $this;
     }

@@ -35,7 +35,9 @@ const (
 type CreatePassportRequest struct {
 	state protoimpl.MessageState `protogen:"open.v1"`
 	// 请求列表
-	Data          []*CreatePassportRequest_Data `protobuf:"bytes,1,rep,name=data,proto3" json:"data,omitempty"`
+	Data []*CreatePassportRequest_Data `protobuf:"bytes,1,rep,name=data,proto3" json:"data,omitempty"`
+	// 注册人ID
+	UserId        string `protobuf:"bytes,2,opt,name=user_id,proto3" json:"user_id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -75,6 +77,13 @@ func (x *CreatePassportRequest) GetData() []*CreatePassportRequest_Data {
 		return x.Data
 	}
 	return nil
+}
+
+func (x *CreatePassportRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
 }
 
 // Package message DPP平台-创建电池护照响应消息定义
@@ -280,9 +289,10 @@ var File_dpp_registry_message_proto protoreflect.FileDescriptor
 
 const file_dpp_registry_message_proto_rawDesc = "" +
 	"\n" +
-	"\x1adpp/registry_message.proto\x12\x14fusion.rpc.proto.dpp\x1a\x1bbuf/validate/validate.proto\"\xcd\x02\n" +
+	"\x1adpp/registry_message.proto\x12\x14fusion.rpc.proto.dpp\x1a\x1bbuf/validate/validate.proto\"\xe7\x02\n" +
 	"\x15CreatePassportRequest\x12D\n" +
-	"\x04data\x18\x01 \x03(\v20.fusion.rpc.proto.dpp.CreatePassportRequest.DataR\x04data\x1a\xed\x01\n" +
+	"\x04data\x18\x01 \x03(\v20.fusion.rpc.proto.dpp.CreatePassportRequest.DataR\x04data\x12\x18\n" +
+	"\auser_id\x18\x02 \x01(\tR\auser_id\x1a\xed\x01\n" +
 	"\x04Data\x12\x19\n" +
 	"\x02sn\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x02sn\x12!\n" +
 	"\x06cab_sn\x18\x02 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x06cab_sn\x12'\n" +
