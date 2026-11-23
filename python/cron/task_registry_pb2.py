@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18\x63ron/task_registry.proto\x12\x0e\x66usion.cron.v1\"F\n\x0b\x43\x61llContext\x12\x1a\n\x08operator\x18\x01 \x01(\tR\x08operator\x12\x1b\n\tclient_ip\x18\x02 \x01(\tR\x08\x63lientIp\"\x9b\x03\n\x08TaskSpec\x12\x17\n\x07job_key\x18\x01 \x01(\tR\x06jobKey\x12\x1b\n\ttask_type\x18\x02 \x01(\tR\x08taskType\x12\x18\n\x07service\x18\x03 \x01(\tR\x07service\x12\x12\n\x04mode\x18\x04 \x01(\tR\x04mode\x12\x12\n\x04\x63ron\x18\x05 \x01(\tR\x04\x63ron\x12\x0e\n\x02tz\x18\x06 \x01(\tR\x02tz\x12\x14\n\x05queue\x18\x07 \x01(\tR\x05queue\x12\x18\n\x07\x62\x61\x63koff\x18\x08 \x01(\tR\x07\x62\x61\x63koff\x12\x14\n\x05owner\x18\t \x01(\tR\x05owner\x12\x12\n\x04note\x18\n \x01(\tR\x04note\x12\x1f\n\x0bparams_json\x18\x0b \x01(\x0cR\nparamsJson\x12(\n\x10\x62\x61\x63koff_cfg_json\x18\x0c \x01(\x0cR\x0e\x62\x61\x63koffCfgJson\x12$\n\x0e\x64\x65lay_cfg_json\x18\r \x01(\x0cR\x0c\x64\x65layCfgJson\x12\x1f\n\x0btimeout_sec\x18\x0e \x01(\x05R\ntimeoutSec\x12\x1b\n\tmax_retry\x18\x0f \x01(\x05R\x08maxRetry\"\xed\x02\n\x11ReportExecRequest\x12-\n\x03\x63tx\x18\x01 \x01(\x0b\x32\x1b.fusion.cron.v1.CallContextR\x03\x63tx\x12\x19\n\x08\x61synq_id\x18\x02 \x01(\tR\x07\x61synqId\x12\x14\n\x05phase\x18\x03 \x01(\tR\x05phase\x12\x1d\n\x07success\x18\x04 \x01(\x08H\x00R\x07success\x88\x01\x01\x12$\n\x0b\x64uration_ms\x18\x05 \x01(\x03H\x01R\ndurationMs\x88\x01\x01\x12\x1b\n\terror_msg\x18\x06 \x01(\tR\x08\x65rrorMsg\x12\x19\n\x08start_at\x18\x07 \x01(\tR\x07startAt\x12\x15\n\x06\x65nd_at\x18\x08 \x01(\tR\x05\x65ndAt\x12\'\n\x0fworker_instance\x18\t \x01(\tR\x0eworkerInstance\x12\x1f\n\x0boutput_json\x18\n \x01(\x0cR\noutputJsonB\n\n\x08_successB\x0e\n\x0c_duration_ms\"p\n\x11UpsertTaskRequest\x12-\n\x03\x63tx\x18\x01 \x01(\x0b\x32\x1b.fusion.cron.v1.CallContextR\x03\x63tx\x12,\n\x04task\x18\x02 \x01(\x0b\x32\x18.fusion.cron.v1.TaskSpecR\x04task\"=\n\x12UpsertTaskResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x17\n\x07job_key\x18\x02 \x01(\tR\x06jobKey\"\x07\n\x05\x45mpty2_\n\x0cTaskRegistry\x12O\n\x06Upsert\x12!.fusion.cron.v1.UpsertTaskRequest\x1a\".fusion.cron.v1.UpsertTaskResponse2V\n\x0c\x45xecReporter\x12\x46\n\nReportExec\x12!.fusion.cron.v1.ReportExecRequest\x1a\x15.fusion.cron.v1.EmptyB\xb5\x01\n\x12\x63om.fusion.cron.v1B\x11TaskRegistryProtoP\x01Z2github.com/elecnova/fusion-rpc-grpc/go/cron;cronpb\xa2\x02\x03\x46\x43X\xaa\x02\x0e\x46usion.Cron.V1\xca\x02\x0e\x46usion\\Cron\\V1\xe2\x02\x1a\x46usion\\Cron\\V1\\GPBMetadata\xea\x02\x10\x46usion::Cron::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18\x63ron/task_registry.proto\x12\x0e\x66usion.cron.v1\"F\n\x0b\x43\x61llContext\x12\x1a\n\x08operator\x18\x01 \x01(\tR\x08operator\x12\x1b\n\tclient_ip\x18\x02 \x01(\tR\x08\x63lientIp\"\x9b\x03\n\x08TaskSpec\x12\x17\n\x07job_key\x18\x01 \x01(\tR\x06jobKey\x12\x1b\n\ttask_type\x18\x02 \x01(\tR\x08taskType\x12\x18\n\x07service\x18\x03 \x01(\tR\x07service\x12\x12\n\x04mode\x18\x04 \x01(\tR\x04mode\x12\x12\n\x04\x63ron\x18\x05 \x01(\tR\x04\x63ron\x12\x0e\n\x02tz\x18\x06 \x01(\tR\x02tz\x12\x14\n\x05queue\x18\x07 \x01(\tR\x05queue\x12\x18\n\x07\x62\x61\x63koff\x18\x08 \x01(\tR\x07\x62\x61\x63koff\x12\x14\n\x05owner\x18\t \x01(\tR\x05owner\x12\x12\n\x04note\x18\n \x01(\tR\x04note\x12\x1f\n\x0bparams_json\x18\x0b \x01(\x0cR\nparamsJson\x12(\n\x10\x62\x61\x63koff_cfg_json\x18\x0c \x01(\x0cR\x0e\x62\x61\x63koffCfgJson\x12$\n\x0e\x64\x65lay_cfg_json\x18\r \x01(\x0cR\x0c\x64\x65layCfgJson\x12\x1f\n\x0btimeout_sec\x18\x0e \x01(\x05R\ntimeoutSec\x12\x1b\n\tmax_retry\x18\x0f \x01(\x05R\x08maxRetry\"\xa3\x03\n\x11ReportExecRequest\x12-\n\x03\x63tx\x18\x01 \x01(\x0b\x32\x1b.fusion.cron.v1.CallContextR\x03\x63tx\x12\x19\n\x08\x61synq_id\x18\x02 \x01(\tR\x07\x61synqId\x12\x14\n\x05phase\x18\x03 \x01(\tR\x05phase\x12\x1d\n\x07success\x18\x04 \x01(\x08H\x00R\x07success\x88\x01\x01\x12$\n\x0b\x64uration_ms\x18\x05 \x01(\x03H\x01R\ndurationMs\x88\x01\x01\x12\x1b\n\terror_msg\x18\x06 \x01(\tR\x08\x65rrorMsg\x12\x19\n\x08start_at\x18\x07 \x01(\tR\x07startAt\x12\x15\n\x06\x65nd_at\x18\x08 \x01(\tR\x05\x65ndAt\x12\'\n\x0fworker_instance\x18\t \x01(\tR\x0eworkerInstance\x12\x1f\n\x0boutput_json\x18\n \x01(\x0cR\noutputJson\x12$\n\x0bretry_count\x18\x0b \x01(\x05H\x02R\nretryCount\x88\x01\x01\x42\n\n\x08_successB\x0e\n\x0c_duration_msB\x0e\n\x0c_retry_count\"p\n\x11UpsertTaskRequest\x12-\n\x03\x63tx\x18\x01 \x01(\x0b\x32\x1b.fusion.cron.v1.CallContextR\x03\x63tx\x12,\n\x04task\x18\x02 \x01(\x0b\x32\x18.fusion.cron.v1.TaskSpecR\x04task\"=\n\x12UpsertTaskResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x17\n\x07job_key\x18\x02 \x01(\tR\x06jobKey\"\x07\n\x05\x45mpty2_\n\x0cTaskRegistry\x12O\n\x06Upsert\x12!.fusion.cron.v1.UpsertTaskRequest\x1a\".fusion.cron.v1.UpsertTaskResponse2V\n\x0c\x45xecReporter\x12\x46\n\nReportExec\x12!.fusion.cron.v1.ReportExecRequest\x1a\x15.fusion.cron.v1.EmptyB\xb5\x01\n\x12\x63om.fusion.cron.v1B\x11TaskRegistryProtoP\x01Z2github.com/elecnova/fusion-rpc-grpc/go/cron;cronpb\xa2\x02\x03\x46\x43X\xaa\x02\x0e\x46usion.Cron.V1\xca\x02\x0e\x46usion\\Cron\\V1\xe2\x02\x1a\x46usion\\Cron\\V1\\GPBMetadata\xea\x02\x10\x46usion::Cron::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -37,15 +37,15 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_TASKSPEC']._serialized_start=117
   _globals['_TASKSPEC']._serialized_end=528
   _globals['_REPORTEXECREQUEST']._serialized_start=531
-  _globals['_REPORTEXECREQUEST']._serialized_end=896
-  _globals['_UPSERTTASKREQUEST']._serialized_start=898
-  _globals['_UPSERTTASKREQUEST']._serialized_end=1010
-  _globals['_UPSERTTASKRESPONSE']._serialized_start=1012
-  _globals['_UPSERTTASKRESPONSE']._serialized_end=1073
-  _globals['_EMPTY']._serialized_start=1075
-  _globals['_EMPTY']._serialized_end=1082
-  _globals['_TASKREGISTRY']._serialized_start=1084
-  _globals['_TASKREGISTRY']._serialized_end=1179
-  _globals['_EXECREPORTER']._serialized_start=1181
-  _globals['_EXECREPORTER']._serialized_end=1267
+  _globals['_REPORTEXECREQUEST']._serialized_end=950
+  _globals['_UPSERTTASKREQUEST']._serialized_start=952
+  _globals['_UPSERTTASKREQUEST']._serialized_end=1064
+  _globals['_UPSERTTASKRESPONSE']._serialized_start=1066
+  _globals['_UPSERTTASKRESPONSE']._serialized_end=1127
+  _globals['_EMPTY']._serialized_start=1129
+  _globals['_EMPTY']._serialized_end=1136
+  _globals['_TASKREGISTRY']._serialized_start=1138
+  _globals['_TASKREGISTRY']._serialized_end=1233
+  _globals['_EXECREPORTER']._serialized_start=1235
+  _globals['_EXECREPORTER']._serialized_end=1321
 # @@protoc_insertion_point(module_scope)

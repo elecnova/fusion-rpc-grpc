@@ -64,6 +64,12 @@ class ReportExecRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bytes output_json = 10 [json_name = "outputJson"];</code>
      */
     protected $output_json = '';
+    /**
+     * 当前已重试次数
+     *
+     * Generated from protobuf field <code>optional int32 retry_count = 11 [json_name = "retryCount"];</code>
+     */
+    protected $retry_count = null;
 
     /**
      * Constructor.
@@ -86,6 +92,8 @@ class ReportExecRequest extends \Google\Protobuf\Internal\Message
      *     @type string $worker_instance
      *     @type string $output_json
      *           业务结果
+     *     @type int $retry_count
+     *           当前已重试次数
      * }
      */
     public function __construct($data = null)
@@ -358,6 +366,42 @@ class ReportExecRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, false);
         $this->output_json = $var;
+
+        return $this;
+    }
+
+    /**
+     * 当前已重试次数
+     *
+     * Generated from protobuf field <code>optional int32 retry_count = 11 [json_name = "retryCount"];</code>
+     * @return int
+     */
+    public function getRetryCount()
+    {
+        return isset($this->retry_count) ? $this->retry_count : 0;
+    }
+
+    public function hasRetryCount()
+    {
+        return isset($this->retry_count);
+    }
+
+    public function clearRetryCount()
+    {
+        unset($this->retry_count);
+    }
+
+    /**
+     * 当前已重试次数
+     *
+     * Generated from protobuf field <code>optional int32 retry_count = 11 [json_name = "retryCount"];</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setRetryCount(int $var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->retry_count = $var;
 
         return $this;
     }

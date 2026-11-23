@@ -160,4 +160,23 @@ public interface ReportExecRequestOrBuilder extends
    * @return The outputJson.
    */
   com.google.protobuf.ByteString getOutputJson();
+
+  /**
+   * <pre>
+   * 当前已重试次数
+   * </pre>
+   *
+   * <code>optional int32 retry_count = 11 [json_name = "retryCount"];</code>
+   * @return Whether the retryCount field is set.
+   */
+  boolean hasRetryCount();
+  /**
+   * <pre>
+   * 当前已重试次数
+   * </pre>
+   *
+   * <code>optional int32 retry_count = 11 [json_name = "retryCount"];</code>
+   * @return The retryCount.
+   */
+  int getRetryCount();
 }

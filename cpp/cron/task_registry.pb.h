@@ -1512,6 +1512,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ReportExecRequest final : public ::
     kCtxFieldNumber = 1,
     kDurationMsFieldNumber = 5,
     kSuccessFieldNumber = 4,
+    kRetryCountFieldNumber = 11,
   };
   // string asynq_id = 2 [json_name = "asynqId"];
   void clear_asynq_id() ;
@@ -1655,11 +1656,22 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ReportExecRequest final : public ::
   void _internal_set_success(bool value);
 
   public:
+  // optional int32 retry_count = 11 [json_name = "retryCount"];
+  [[nodiscard]] bool has_retry_count() const;
+  void clear_retry_count() ;
+  [[nodiscard]] ::int32_t retry_count() const;
+  void set_retry_count(::int32_t value);
+
+  private:
+  ::int32_t _internal_retry_count() const;
+  void _internal_set_retry_count(::int32_t value);
+
+  public:
   // @@protoc_insertion_point(class_scope:fusion.cron.v1.ReportExecRequest)
  private:
   class _Internal;
   using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<4, 10,
+      ::google::protobuf::internal::TcParseTable<4, 11,
                           1, 100,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
@@ -1698,6 +1710,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED ReportExecRequest final : public ::
     ::fusion::cron::v1::CallContext* PROTOBUF_NULLABLE ctx_;
     ::int64_t duration_ms_;
     bool success_;
+    ::int32_t retry_count_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -3336,6 +3349,34 @@ inline void ReportExecRequest::set_allocated_output_json(::std::string* PROTOBUF
     _impl_.output_json_.Set("", GetArena());
   }
   // @@protoc_insertion_point(field_set_allocated:fusion.cron.v1.ReportExecRequest.output_json)
+}
+
+// optional int32 retry_count = 11 [json_name = "retryCount"];
+inline bool ReportExecRequest::has_retry_count() const {
+  bool value = CheckHasBit(_impl_._has_bits_[0], 0x00000400U);
+  return value;
+}
+inline void ReportExecRequest::clear_retry_count() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.retry_count_ = 0;
+  ClearHasBit(_impl_._has_bits_[0], 0x00000400U);
+}
+inline ::int32_t ReportExecRequest::retry_count() const {
+  // @@protoc_insertion_point(field_get:fusion.cron.v1.ReportExecRequest.retry_count)
+  return _internal_retry_count();
+}
+inline void ReportExecRequest::set_retry_count(::int32_t value) {
+  _internal_set_retry_count(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000400U);
+  // @@protoc_insertion_point(field_set:fusion.cron.v1.ReportExecRequest.retry_count)
+}
+inline ::int32_t ReportExecRequest::_internal_retry_count() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.retry_count_;
+}
+inline void ReportExecRequest::_internal_set_retry_count(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.retry_count_ = value;
 }
 
 // -------------------------------------------------------------------

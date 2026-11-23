@@ -401,6 +401,33 @@ private static final long serialVersionUID = 0L;
     return outputJson_;
   }
 
+  public static final int RETRY_COUNT_FIELD_NUMBER = 11;
+  private int retryCount_ = 0;
+  /**
+   * <pre>
+   * 当前已重试次数
+   * </pre>
+   *
+   * <code>optional int32 retry_count = 11 [json_name = "retryCount"];</code>
+   * @return Whether the retryCount field is set.
+   */
+  @java.lang.Override
+  public boolean hasRetryCount() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * 当前已重试次数
+   * </pre>
+   *
+   * <code>optional int32 retry_count = 11 [json_name = "retryCount"];</code>
+   * @return The retryCount.
+   */
+  @java.lang.Override
+  public int getRetryCount() {
+    return retryCount_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -445,6 +472,9 @@ private static final long serialVersionUID = 0L;
     if (!outputJson_.isEmpty()) {
       output.writeBytes(10, outputJson_);
     }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeInt32(11, retryCount_);
+    }
     getUnknownFields().writeTo(output);
   }
   private int computeSerializedSize_0() {
@@ -482,6 +512,10 @@ private static final long serialVersionUID = 0L;
     if (!outputJson_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
         .computeBytesSize(10, outputJson_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(11, retryCount_);
     }
     return size;
   }
@@ -536,6 +570,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getWorkerInstance())) return false;
     if (!getOutputJson()
         .equals(other.getOutputJson())) return false;
+    if (hasRetryCount() != other.hasRetryCount()) return false;
+    if (hasRetryCount()) {
+      if (getRetryCount()
+          != other.getRetryCount()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -575,6 +614,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getWorkerInstance().hashCode();
     hash = (37 * hash) + OUTPUT_JSON_FIELD_NUMBER;
     hash = (53 * hash) + getOutputJson().hashCode();
+    if (hasRetryCount()) {
+      hash = (37 * hash) + RETRY_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getRetryCount();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -726,6 +769,7 @@ private static final long serialVersionUID = 0L;
       endAt_ = "";
       workerInstance_ = "";
       outputJson_ = com.google.protobuf.ByteString.EMPTY;
+      retryCount_ = 0;
       return this;
     }
 
@@ -795,6 +839,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.outputJson_ = outputJson_;
       }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.retryCount_ = retryCount_;
+        to_bitField0_ |= 0x00000008;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -851,6 +899,9 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getOutputJson().isEmpty()) {
         setOutputJson(other.getOutputJson());
+      }
+      if (other.hasRetryCount()) {
+        setRetryCount(other.getRetryCount());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -928,6 +979,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 82
+            case 88: {
+              retryCount_ = input.readInt32();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 88
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1696,6 +1752,62 @@ private static final long serialVersionUID = 0L;
     public Builder clearOutputJson() {
       bitField0_ = (bitField0_ & ~0x00000200);
       outputJson_ = getDefaultInstance().getOutputJson();
+      onChanged();
+      return this;
+    }
+
+    private int retryCount_ ;
+    /**
+     * <pre>
+     * 当前已重试次数
+     * </pre>
+     *
+     * <code>optional int32 retry_count = 11 [json_name = "retryCount"];</code>
+     * @return Whether the retryCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasRetryCount() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * 当前已重试次数
+     * </pre>
+     *
+     * <code>optional int32 retry_count = 11 [json_name = "retryCount"];</code>
+     * @return The retryCount.
+     */
+    @java.lang.Override
+    public int getRetryCount() {
+      return retryCount_;
+    }
+    /**
+     * <pre>
+     * 当前已重试次数
+     * </pre>
+     *
+     * <code>optional int32 retry_count = 11 [json_name = "retryCount"];</code>
+     * @param value The retryCount to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRetryCount(int value) {
+
+      retryCount_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * 当前已重试次数
+     * </pre>
+     *
+     * <code>optional int32 retry_count = 11 [json_name = "retryCount"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRetryCount() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      retryCount_ = 0;
       onChanged();
       return this;
     }

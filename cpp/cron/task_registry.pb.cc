@@ -928,11 +928,11 @@ constexpr ReportExecRequest::ParseTableT_ ReportExecRequest::InternalGeneratePar
     {
       PROTOBUF_FIELD_OFFSET(ReportExecRequest, _impl_._has_bits_),
       0, // no _extensions_
-      10, 120,  // max_field_number, fast_idx_mask
+      11, 120,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294966272,  // skipmap
+      4294965248,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      10,  // num_field_entries
+      11,  // num_field_entries
       1,  // num_aux_entries
       offsetof(ParseTableT_, aux_entries),
       class_data,
@@ -983,7 +983,10 @@ constexpr ReportExecRequest::ParseTableT_ ReportExecRequest::InternalGeneratePar
       {::_pbi::TcParser::FastBS1,
        {82, 6, 0,
         PROTOBUF_FIELD_OFFSET(ReportExecRequest, _impl_.output_json_)}},
-      {::_pbi::TcParser::MiniParse, {}},
+      // optional int32 retry_count = 11 [json_name = "retryCount"];
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ReportExecRequest, _impl_.retry_count_), 10>(),
+       {88, 10, 0,
+        PROTOBUF_FIELD_OFFSET(ReportExecRequest, _impl_.retry_count_)}},
       {::_pbi::TcParser::MiniParse, {}},
       {::_pbi::TcParser::MiniParse, {}},
       {::_pbi::TcParser::MiniParse, {}},
@@ -1011,6 +1014,8 @@ constexpr ReportExecRequest::ParseTableT_ ReportExecRequest::InternalGeneratePar
       {PROTOBUF_FIELD_OFFSET(ReportExecRequest, _impl_.worker_instance_), _Internal::kHasBitsOffset + 5, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
       // bytes output_json = 10 [json_name = "outputJson"];
       {PROTOBUF_FIELD_OFFSET(ReportExecRequest, _impl_.output_json_), _Internal::kHasBitsOffset + 6, 0, (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+      // optional int32 retry_count = 11 [json_name = "retryCount"];
+      {PROTOBUF_FIELD_OFFSET(ReportExecRequest, _impl_.retry_count_), _Internal::kHasBitsOffset + 10, 0, (0 | ::_fl::kFcOptional | ::_fl::kInt32)},
     }},
     {{
         #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -1059,7 +1064,8 @@ inline constexpr ReportExecRequest::Impl_::Impl_(
             ::_pbi::ConstantInitialized()),
         ctx_{nullptr},
         duration_ms_{::int64_t{0}},
-        success_{false} {}
+        success_{false},
+        retry_count_{0} {}
 
 template <typename>
 constexpr ReportExecRequest::ReportExecRequest(::_pbi::ConstantInitialized,
@@ -1205,7 +1211,7 @@ const ::uint32_t
         14,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::fusion::cron::v1::ReportExecRequest, _impl_._has_bits_),
-        13, // hasbit index offset
+        14, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::fusion::cron::v1::ReportExecRequest, _impl_.ctx_),
         PROTOBUF_FIELD_OFFSET(::fusion::cron::v1::ReportExecRequest, _impl_.asynq_id_),
         PROTOBUF_FIELD_OFFSET(::fusion::cron::v1::ReportExecRequest, _impl_.phase_),
@@ -1216,6 +1222,7 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::fusion::cron::v1::ReportExecRequest, _impl_.end_at_),
         PROTOBUF_FIELD_OFFSET(::fusion::cron::v1::ReportExecRequest, _impl_.worker_instance_),
         PROTOBUF_FIELD_OFFSET(::fusion::cron::v1::ReportExecRequest, _impl_.output_json_),
+        PROTOBUF_FIELD_OFFSET(::fusion::cron::v1::ReportExecRequest, _impl_.retry_count_),
         7,
         0,
         1,
@@ -1226,6 +1233,7 @@ const ::uint32_t
         4,
         5,
         6,
+        10,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::fusion::cron::v1::UpsertTaskRequest, _impl_._has_bits_),
         5, // hasbit index offset
@@ -1248,9 +1256,9 @@ static const ::_pbi::MigrationSchema
         {0, sizeof(::fusion::cron::v1::CallContext)},
         {7, sizeof(::fusion::cron::v1::TaskSpec)},
         {40, sizeof(::fusion::cron::v1::ReportExecRequest)},
-        {63, sizeof(::fusion::cron::v1::UpsertTaskRequest)},
-        {70, sizeof(::fusion::cron::v1::UpsertTaskResponse)},
-        {77, sizeof(::fusion::cron::v1::Empty)},
+        {65, sizeof(::fusion::cron::v1::UpsertTaskRequest)},
+        {72, sizeof(::fusion::cron::v1::UpsertTaskResponse)},
+        {79, sizeof(::fusion::cron::v1::Empty)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
     file_message_globals[] = {
@@ -1276,7 +1284,7 @@ const char descriptor_table_protodef_cron_2ftask_5fregistry_2eproto[] ABSL_ATTRI
     "g_json\030\014 \001(\014R\016backoffCfgJson\022$\n\016delay_cf"
     "g_json\030\r \001(\014R\014delayCfgJson\022\037\n\013timeout_se"
     "c\030\016 \001(\005R\ntimeoutSec\022\033\n\tmax_retry\030\017 \001(\005R\010"
-    "maxRetry\"\355\002\n\021ReportExecRequest\022-\n\003ctx\030\001 "
+    "maxRetry\"\243\003\n\021ReportExecRequest\022-\n\003ctx\030\001 "
     "\001(\0132\033.fusion.cron.v1.CallContextR\003ctx\022\031\n"
     "\010asynq_id\030\002 \001(\tR\007asynqId\022\024\n\005phase\030\003 \001(\tR"
     "\005phase\022\035\n\007success\030\004 \001(\010H\000R\007success\210\001\001\022$\n"
@@ -1284,28 +1292,29 @@ const char descriptor_table_protodef_cron_2ftask_5fregistry_2eproto[] ABSL_ATTRI
     "rror_msg\030\006 \001(\tR\010errorMsg\022\031\n\010start_at\030\007 \001"
     "(\tR\007startAt\022\025\n\006end_at\030\010 \001(\tR\005endAt\022\'\n\017wo"
     "rker_instance\030\t \001(\tR\016workerInstance\022\037\n\013o"
-    "utput_json\030\n \001(\014R\noutputJsonB\n\n\010_success"
-    "B\016\n\014_duration_ms\"p\n\021UpsertTaskRequest\022-\n"
-    "\003ctx\030\001 \001(\0132\033.fusion.cron.v1.CallContextR"
-    "\003ctx\022,\n\004task\030\002 \001(\0132\030.fusion.cron.v1.Task"
-    "SpecR\004task\"=\n\022UpsertTaskResponse\022\016\n\002id\030\001"
-    " \001(\tR\002id\022\027\n\007job_key\030\002 \001(\tR\006jobKey\"\007\n\005Emp"
-    "ty2_\n\014TaskRegistry\022O\n\006Upsert\022!.fusion.cr"
-    "on.v1.UpsertTaskRequest\032\".fusion.cron.v1"
-    ".UpsertTaskResponse2V\n\014ExecReporter\022F\n\nR"
-    "eportExec\022!.fusion.cron.v1.ReportExecReq"
-    "uest\032\025.fusion.cron.v1.EmptyB\265\001\n\022com.fusi"
-    "on.cron.v1B\021TaskRegistryProtoP\001Z2github."
-    "com/elecnova/fusion-rpc-grpc/go/cron;cro"
-    "npb\242\002\003FCX\252\002\016Fusion.Cron.V1\312\002\016Fusion\\Cron"
-    "\\V1\342\002\032Fusion\\Cron\\V1\\GPBMetadata\352\002\020Fusio"
-    "n::Cron::V1b\006proto3"
+    "utput_json\030\n \001(\014R\noutputJson\022$\n\013retry_co"
+    "unt\030\013 \001(\005H\002R\nretryCount\210\001\001B\n\n\010_successB\016"
+    "\n\014_duration_msB\016\n\014_retry_count\"p\n\021Upsert"
+    "TaskRequest\022-\n\003ctx\030\001 \001(\0132\033.fusion.cron.v"
+    "1.CallContextR\003ctx\022,\n\004task\030\002 \001(\0132\030.fusio"
+    "n.cron.v1.TaskSpecR\004task\"=\n\022UpsertTaskRe"
+    "sponse\022\016\n\002id\030\001 \001(\tR\002id\022\027\n\007job_key\030\002 \001(\tR"
+    "\006jobKey\"\007\n\005Empty2_\n\014TaskRegistry\022O\n\006Upse"
+    "rt\022!.fusion.cron.v1.UpsertTaskRequest\032\"."
+    "fusion.cron.v1.UpsertTaskResponse2V\n\014Exe"
+    "cReporter\022F\n\nReportExec\022!.fusion.cron.v1"
+    ".ReportExecRequest\032\025.fusion.cron.v1.Empt"
+    "yB\265\001\n\022com.fusion.cron.v1B\021TaskRegistryPr"
+    "otoP\001Z2github.com/elecnova/fusion-rpc-gr"
+    "pc/go/cron;cronpb\242\002\003FCX\252\002\016Fusion.Cron.V1"
+    "\312\002\016Fusion\\Cron\\V1\342\002\032Fusion\\Cron\\V1\\GPBMe"
+    "tadata\352\002\020Fusion::Cron::V1b\006proto3"
 };
 static ::absl::once_flag descriptor_table_cron_2ftask_5fregistry_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_cron_2ftask_5fregistry_2eproto = {
     false,
     false,
-    1459,
+    1513,
     descriptor_table_protodef_cron_2ftask_5fregistry_2eproto,
     "cron/task_registry.proto",
     &descriptor_table_cron_2ftask_5fregistry_2eproto_once,
@@ -2292,9 +2301,9 @@ ReportExecRequest::ReportExecRequest(
                offsetof(Impl_, duration_ms_),
            reinterpret_cast<const char*>(&from._impl_) +
                offsetof(Impl_, duration_ms_),
-           offsetof(Impl_, success_) -
+           offsetof(Impl_, retry_count_) -
                offsetof(Impl_, duration_ms_) +
-               sizeof(Impl_::success_));
+               sizeof(Impl_::retry_count_));
 
   // @@protoc_insertion_point(copy_constructor:fusion.cron.v1.ReportExecRequest)
 }
@@ -2314,9 +2323,9 @@ inline void ReportExecRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena)
   ::memset(reinterpret_cast<char*>(&_impl_) +
                offsetof(Impl_, ctx_),
            0,
-           offsetof(Impl_, success_) -
+           offsetof(Impl_, retry_count_) -
                offsetof(Impl_, ctx_) +
-               sizeof(Impl_::success_));
+               sizeof(Impl_::retry_count_));
 }
 ReportExecRequest::~ReportExecRequest() {
   // @@protoc_insertion_point(destructor:fusion.cron.v1.ReportExecRequest)
@@ -2400,12 +2409,12 @@ PROTOBUF_NOINLINE void ReportExecRequest::Clear() {
       this_._impl_.ctx_->Clear();
     }
   }
-  if (BatchCheckHasBit(cached_has_bits, 0x00000300U)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x00000700U)) {
     ::memset(&this_._impl_.duration_ms_, 0,
              static_cast<::size_t>(
-                 reinterpret_cast<char*>(&this_._impl_.success_) -
+                 reinterpret_cast<char*>(&this_._impl_.retry_count_) -
                  reinterpret_cast<char*>(&this_._impl_.duration_ms_)) +
-                 sizeof(_impl_.success_));
+                 sizeof(_impl_.retry_count_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
@@ -2519,6 +2528,13 @@ PROTOBUF_NOINLINE void ReportExecRequest::Clear() {
     }
   }
 
+  // optional int32 retry_count = 11 [json_name = "retryCount"];
+  if (CheckHasBit(cached_has_bits, 0x00000400U)) {
+    target =
+        ::google::protobuf::internal::WireFormatLite::WriteInt32ToArrayWithField<11>(
+            stream, this_._internal_retry_count(), target);
+  }
+
   if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
     target =
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
@@ -2599,11 +2615,16 @@ PROTOBUF_NOINLINE void ReportExecRequest::Clear() {
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.ctx_);
     }
   }
-   {
+  if (BatchCheckHasBit(cached_has_bits, 0x00000500U)) {
     // optional int64 duration_ms = 5 [json_name = "durationMs"];
     if (CheckHasBit(cached_has_bits, 0x00000100U)) {
       total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
           this_._internal_duration_ms());
+    }
+    // optional int32 retry_count = 11 [json_name = "retryCount"];
+    if (CheckHasBit(cached_has_bits, 0x00000400U)) {
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+          this_._internal_retry_count());
     }
   }
   return this_.MaybeComputeUnknownFieldsSize(total_size,
@@ -2697,12 +2718,15 @@ void ReportExecRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
       }
     }
   }
-  if (BatchCheckHasBit(cached_has_bits, 0x00000300U)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x00000700U)) {
     if (CheckHasBit(cached_has_bits, 0x00000100U)) {
       _this->_impl_.duration_ms_ = from._impl_.duration_ms_;
     }
     if (CheckHasBit(cached_has_bits, 0x00000200U)) {
       _this->_impl_.success_ = from._impl_.success_;
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000400U)) {
+      _this->_impl_.retry_count_ = from._impl_.retry_count_;
     }
   }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
@@ -2732,8 +2756,8 @@ void ReportExecRequest::InternalSwap(ReportExecRequest* PROTOBUF_RESTRICT PROTOB
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.worker_instance_, &other->_impl_.worker_instance_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.output_json_, &other->_impl_.output_json_, arena);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ReportExecRequest, _impl_.success_)
-      + sizeof(ReportExecRequest::_impl_.success_)
+      PROTOBUF_FIELD_OFFSET(ReportExecRequest, _impl_.retry_count_)
+      + sizeof(ReportExecRequest::_impl_.retry_count_)
       - PROTOBUF_FIELD_OFFSET(ReportExecRequest, _impl_.ctx_)>(
           reinterpret_cast<char*>(&_impl_.ctx_),
           reinterpret_cast<char*>(&other->_impl_.ctx_));

@@ -240,7 +240,8 @@ type ReportExecRequest struct {
 	StartAt        string                 `protobuf:"bytes,7,opt,name=start_at,json=startAt,proto3" json:"start_at,omitempty"` // 开始时间
 	EndAt          string                 `protobuf:"bytes,8,opt,name=end_at,json=endAt,proto3" json:"end_at,omitempty"`       // 结束时间
 	WorkerInstance string                 `protobuf:"bytes,9,opt,name=worker_instance,json=workerInstance,proto3" json:"worker_instance,omitempty"`
-	OutputJson     []byte                 `protobuf:"bytes,10,opt,name=output_json,json=outputJson,proto3" json:"output_json,omitempty"` // 业务结果
+	OutputJson     []byte                 `protobuf:"bytes,10,opt,name=output_json,json=outputJson,proto3" json:"output_json,omitempty"`        // 业务结果
+	RetryCount     *int32                 `protobuf:"varint,11,opt,name=retry_count,json=retryCount,proto3,oneof" json:"retry_count,omitempty"` // 当前已重试次数
 	unknownFields  protoimpl.UnknownFields
 	sizeCache      protoimpl.SizeCache
 }
@@ -343,6 +344,13 @@ func (x *ReportExecRequest) GetOutputJson() []byte {
 		return x.OutputJson
 	}
 	return nil
+}
+
+func (x *ReportExecRequest) GetRetryCount() int32 {
+	if x != nil && x.RetryCount != nil {
+		return *x.RetryCount
+	}
+	return 0
 }
 
 type UpsertTaskRequest struct {
@@ -511,7 +519,7 @@ const file_cron_task_registry_proto_rawDesc = "" +
 	"\x0edelay_cfg_json\x18\r \x01(\fR\fdelayCfgJson\x12\x1f\n" +
 	"\vtimeout_sec\x18\x0e \x01(\x05R\n" +
 	"timeoutSec\x12\x1b\n" +
-	"\tmax_retry\x18\x0f \x01(\x05R\bmaxRetry\"\xed\x02\n" +
+	"\tmax_retry\x18\x0f \x01(\x05R\bmaxRetry\"\xa3\x03\n" +
 	"\x11ReportExecRequest\x12-\n" +
 	"\x03ctx\x18\x01 \x01(\v2\x1b.fusion.cron.v1.CallContextR\x03ctx\x12\x19\n" +
 	"\basynq_id\x18\x02 \x01(\tR\aasynqId\x12\x14\n" +
@@ -525,10 +533,13 @@ const file_cron_task_registry_proto_rawDesc = "" +
 	"\x0fworker_instance\x18\t \x01(\tR\x0eworkerInstance\x12\x1f\n" +
 	"\voutput_json\x18\n" +
 	" \x01(\fR\n" +
-	"outputJsonB\n" +
+	"outputJson\x12$\n" +
+	"\vretry_count\x18\v \x01(\x05H\x02R\n" +
+	"retryCount\x88\x01\x01B\n" +
 	"\n" +
 	"\b_successB\x0e\n" +
-	"\f_duration_ms\"p\n" +
+	"\f_duration_msB\x0e\n" +
+	"\f_retry_count\"p\n" +
 	"\x11UpsertTaskRequest\x12-\n" +
 	"\x03ctx\x18\x01 \x01(\v2\x1b.fusion.cron.v1.CallContextR\x03ctx\x12,\n" +
 	"\x04task\x18\x02 \x01(\v2\x18.fusion.cron.v1.TaskSpecR\x04task\"=\n" +

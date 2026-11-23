@@ -78,7 +78,7 @@ public final class TaskRegistryProto extends com.google.protobuf.GeneratedFile {
       "g_json\030\014 \001(\014R\016backoffCfgJson\022$\n\016delay_cf" +
       "g_json\030\r \001(\014R\014delayCfgJson\022\037\n\013timeout_se" +
       "c\030\016 \001(\005R\ntimeoutSec\022\033\n\tmax_retry\030\017 \001(\005R\010" +
-      "maxRetry\"\355\002\n\021ReportExecRequest\022-\n\003ctx\030\001 " +
+      "maxRetry\"\243\003\n\021ReportExecRequest\022-\n\003ctx\030\001 " +
       "\001(\0132\033.fusion.cron.v1.CallContextR\003ctx\022\031\n" +
       "\010asynq_id\030\002 \001(\tR\007asynqId\022\024\n\005phase\030\003 \001(\tR" +
       "\005phase\022\035\n\007success\030\004 \001(\010H\000R\007success\210\001\001\022$\n" +
@@ -86,22 +86,23 @@ public final class TaskRegistryProto extends com.google.protobuf.GeneratedFile {
       "rror_msg\030\006 \001(\tR\010errorMsg\022\031\n\010start_at\030\007 \001" +
       "(\tR\007startAt\022\025\n\006end_at\030\010 \001(\tR\005endAt\022\'\n\017wo" +
       "rker_instance\030\t \001(\tR\016workerInstance\022\037\n\013o" +
-      "utput_json\030\n \001(\014R\noutputJsonB\n\n\010_success" +
-      "B\016\n\014_duration_ms\"p\n\021UpsertTaskRequest\022-\n" +
-      "\003ctx\030\001 \001(\0132\033.fusion.cron.v1.CallContextR" +
-      "\003ctx\022,\n\004task\030\002 \001(\0132\030.fusion.cron.v1.Task" +
-      "SpecR\004task\"=\n\022UpsertTaskResponse\022\016\n\002id\030\001" +
-      " \001(\tR\002id\022\027\n\007job_key\030\002 \001(\tR\006jobKey\"\007\n\005Emp" +
-      "ty2_\n\014TaskRegistry\022O\n\006Upsert\022!.fusion.cr" +
-      "on.v1.UpsertTaskRequest\032\".fusion.cron.v1" +
-      ".UpsertTaskResponse2V\n\014ExecReporter\022F\n\nR" +
-      "eportExec\022!.fusion.cron.v1.ReportExecReq" +
-      "uest\032\025.fusion.cron.v1.EmptyB\265\001\n\022com.fusi" +
-      "on.cron.v1B\021TaskRegistryProtoP\001Z2github." +
-      "com/elecnova/fusion-rpc-grpc/go/cron;cro" +
-      "npb\242\002\003FCX\252\002\016Fusion.Cron.V1\312\002\016Fusion\\Cron" +
-      "\\V1\342\002\032Fusion\\Cron\\V1\\GPBMetadata\352\002\020Fusio" +
-      "n::Cron::V1b\006proto3"
+      "utput_json\030\n \001(\014R\noutputJson\022$\n\013retry_co" +
+      "unt\030\013 \001(\005H\002R\nretryCount\210\001\001B\n\n\010_successB\016" +
+      "\n\014_duration_msB\016\n\014_retry_count\"p\n\021Upsert" +
+      "TaskRequest\022-\n\003ctx\030\001 \001(\0132\033.fusion.cron.v" +
+      "1.CallContextR\003ctx\022,\n\004task\030\002 \001(\0132\030.fusio" +
+      "n.cron.v1.TaskSpecR\004task\"=\n\022UpsertTaskRe" +
+      "sponse\022\016\n\002id\030\001 \001(\tR\002id\022\027\n\007job_key\030\002 \001(\tR" +
+      "\006jobKey\"\007\n\005Empty2_\n\014TaskRegistry\022O\n\006Upse" +
+      "rt\022!.fusion.cron.v1.UpsertTaskRequest\032\"." +
+      "fusion.cron.v1.UpsertTaskResponse2V\n\014Exe" +
+      "cReporter\022F\n\nReportExec\022!.fusion.cron.v1" +
+      ".ReportExecRequest\032\025.fusion.cron.v1.Empt" +
+      "yB\265\001\n\022com.fusion.cron.v1B\021TaskRegistryPr" +
+      "otoP\001Z2github.com/elecnova/fusion-rpc-gr" +
+      "pc/go/cron;cronpb\242\002\003FCX\252\002\016Fusion.Cron.V1" +
+      "\312\002\016Fusion\\Cron\\V1\342\002\032Fusion\\Cron\\V1\\GPBMe" +
+      "tadata\352\002\020Fusion::Cron::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -124,7 +125,7 @@ public final class TaskRegistryProto extends com.google.protobuf.GeneratedFile {
     internal_static_fusion_cron_v1_ReportExecRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_fusion_cron_v1_ReportExecRequest_descriptor,
-        new java.lang.String[] { "Ctx", "AsynqId", "Phase", "Success", "DurationMs", "ErrorMsg", "StartAt", "EndAt", "WorkerInstance", "OutputJson", });
+        new java.lang.String[] { "Ctx", "AsynqId", "Phase", "Success", "DurationMs", "ErrorMsg", "StartAt", "EndAt", "WorkerInstance", "OutputJson", "RetryCount", });
     internal_static_fusion_cron_v1_UpsertTaskRequest_descriptor =
       getDescriptor().getMessageType(3);
     internal_static_fusion_cron_v1_UpsertTaskRequest_fieldAccessorTable = new
