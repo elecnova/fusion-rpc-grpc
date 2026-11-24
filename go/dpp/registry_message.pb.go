@@ -145,7 +145,9 @@ type CreatePassportRequest_Data struct {
 	// 电池簇生产批次号
 	Batch *string `protobuf:"bytes,5,opt,name=batch,proto3,oneof" json:"batch,omitempty"`
 	// 电池簇生产日期
-	Date          *string `protobuf:"bytes,6,opt,name=date,proto3,oneof" json:"date,omitempty"`
+	Date *string `protobuf:"bytes,6,opt,name=date,proto3,oneof" json:"date,omitempty"`
+	// 经济运营商
+	Operator      string `protobuf:"bytes,7,opt,name=operator,proto3" json:"operator,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -222,6 +224,13 @@ func (x *CreatePassportRequest_Data) GetDate() string {
 	return ""
 }
 
+func (x *CreatePassportRequest_Data) GetOperator() string {
+	if x != nil {
+		return x.Operator
+	}
+	return ""
+}
+
 type CreatePassportResponse_Data struct {
 	state protoimpl.MessageState `protogen:"open.v1"`
 	// 电池簇sn
@@ -289,17 +298,18 @@ var File_dpp_registry_message_proto protoreflect.FileDescriptor
 
 const file_dpp_registry_message_proto_rawDesc = "" +
 	"\n" +
-	"\x1adpp/registry_message.proto\x12\x14fusion.rpc.proto.dpp\x1a\x1bbuf/validate/validate.proto\"\xe7\x02\n" +
+	"\x1adpp/registry_message.proto\x12\x14fusion.rpc.proto.dpp\x1a\x1bbuf/validate/validate.proto\"\x8e\x03\n" +
 	"\x15CreatePassportRequest\x12D\n" +
 	"\x04data\x18\x01 \x03(\v20.fusion.rpc.proto.dpp.CreatePassportRequest.DataR\x04data\x12\x18\n" +
-	"\auser_id\x18\x02 \x01(\tR\auser_id\x1a\xed\x01\n" +
+	"\auser_id\x18\x02 \x01(\tR\auser_id\x1a\x94\x02\n" +
 	"\x04Data\x12\x19\n" +
 	"\x02sn\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x02sn\x12!\n" +
 	"\x06cab_sn\x18\x02 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x06cab_sn\x12'\n" +
 	"\tcab_model\x18\x03 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\tcab_model\x12%\n" +
 	"\bcab_code\x18\x04 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\bcab_code\x12\"\n" +
 	"\x05batch\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x18dH\x00R\x05batch\x88\x01\x01\x12 \n" +
-	"\x04date\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x18dH\x01R\x04date\x88\x01\x01B\b\n" +
+	"\x04date\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x18dH\x01R\x04date\x88\x01\x01\x12%\n" +
+	"\boperator\x18\a \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18(R\boperatorB\b\n" +
 	"\x06_batchB\a\n" +
 	"\x05_date\"\x99\x01\n" +
 	"\x16CreatePassportResponse\x12E\n" +

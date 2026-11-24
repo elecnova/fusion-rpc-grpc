@@ -195,6 +195,26 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getDateBytes();
+
+    /**
+     * <pre>
+     * 经济运营商
+     * </pre>
+     *
+     * <code>string operator = 7 [json_name = "operator", (.buf.validate.field) = { ... }</code>
+     * @return The operator.
+     */
+    java.lang.String getOperator();
+    /**
+     * <pre>
+     * 经济运营商
+     * </pre>
+     *
+     * <code>string operator = 7 [json_name = "operator", (.buf.validate.field) = { ... }</code>
+     * @return The bytes for operator.
+     */
+    com.google.protobuf.ByteString
+        getOperatorBytes();
   }
   /**
    * Protobuf type {@code fusion.rpc.proto.dpp.CreatePassportRequest.Data}
@@ -224,6 +244,7 @@ private static final long serialVersionUID = 0L;
       cabCode_ = "";
       batch_ = "";
       date_ = "";
+      operator_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -551,6 +572,53 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    public static final int OPERATOR_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object operator_ = "";
+    /**
+     * <pre>
+     * 经济运营商
+     * </pre>
+     *
+     * <code>string operator = 7 [json_name = "operator", (.buf.validate.field) = { ... }</code>
+     * @return The operator.
+     */
+    @java.lang.Override
+    public java.lang.String getOperator() {
+      java.lang.Object ref = operator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        operator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 经济运营商
+     * </pre>
+     *
+     * <code>string operator = 7 [json_name = "operator", (.buf.validate.field) = { ... }</code>
+     * @return The bytes for operator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOperatorBytes() {
+      java.lang.Object ref = operator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        operator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -583,6 +651,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 6, date_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(operator_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, operator_);
+      }
       getUnknownFields().writeTo(output);
     }
     private int computeSerializedSize_0() {
@@ -604,6 +675,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(6, date_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(operator_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, operator_);
       }
       return size;
     }
@@ -647,6 +721,8 @@ private static final long serialVersionUID = 0L;
         if (!getDate()
             .equals(other.getDate())) return false;
       }
+      if (!getOperator()
+          .equals(other.getOperator())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -674,6 +750,8 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + DATE_FIELD_NUMBER;
         hash = (53 * hash) + getDate().hashCode();
       }
+      hash = (37 * hash) + OPERATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getOperator().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -811,6 +889,7 @@ private static final long serialVersionUID = 0L;
         cabCode_ = "";
         batch_ = "";
         date_ = "";
+        operator_ = "";
         return this;
       }
 
@@ -865,6 +944,9 @@ private static final long serialVersionUID = 0L;
           result.date_ = date_;
           to_bitField0_ |= 0x00000002;
         }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.operator_ = operator_;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -908,6 +990,11 @@ private static final long serialVersionUID = 0L;
         if (other.hasDate()) {
           date_ = other.date_;
           bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getOperator().isEmpty()) {
+          operator_ = other.operator_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -964,6 +1051,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000020;
                 break;
               } // case 50
+              case 58: {
+                operator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1551,6 +1643,98 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         date_ = value;
         bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object operator_ = "";
+      /**
+       * <pre>
+       * 经济运营商
+       * </pre>
+       *
+       * <code>string operator = 7 [json_name = "operator", (.buf.validate.field) = { ... }</code>
+       * @return The operator.
+       */
+      public java.lang.String getOperator() {
+        java.lang.Object ref = operator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          operator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 经济运营商
+       * </pre>
+       *
+       * <code>string operator = 7 [json_name = "operator", (.buf.validate.field) = { ... }</code>
+       * @return The bytes for operator.
+       */
+      public com.google.protobuf.ByteString
+          getOperatorBytes() {
+        java.lang.Object ref = operator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          operator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 经济运营商
+       * </pre>
+       *
+       * <code>string operator = 7 [json_name = "operator", (.buf.validate.field) = { ... }</code>
+       * @param value The operator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperator(
+          java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        operator_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 经济运营商
+       * </pre>
+       *
+       * <code>string operator = 7 [json_name = "operator", (.buf.validate.field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperator() {
+        operator_ = getDefaultInstance().getOperator();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 经济运营商
+       * </pre>
+       *
+       * <code>string operator = 7 [json_name = "operator", (.buf.validate.field) = { ... }</code>
+       * @param value The bytes for operator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorBytes(
+          com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        checkByteStringIsUtf8(value);
+        operator_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }

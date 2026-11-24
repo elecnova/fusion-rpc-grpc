@@ -57,25 +57,26 @@ public final class RegistryMessageProto extends com.google.protobuf.GeneratedFil
     java.lang.String[] descriptorData = {
       "\n\032dpp/registry_message.proto\022\024fusion.rpc" +
       ".proto.dpp\032\033buf/validate/validate.proto\"" +
-      "\347\002\n\025CreatePassportRequest\022D\n\004data\030\001 \003(\0132" +
+      "\216\003\n\025CreatePassportRequest\022D\n\004data\030\001 \003(\0132" +
       "0.fusion.rpc.proto.dpp.CreatePassportReq" +
       "uest.DataR\004data\022\030\n\007user_id\030\002 \001(\tR\007user_i" +
-      "d\032\355\001\n\004Data\022\031\n\002sn\030\001 \001(\tB\t\272H\006r\004\020\001\030dR\002sn\022!\n" +
+      "d\032\224\002\n\004Data\022\031\n\002sn\030\001 \001(\tB\t\272H\006r\004\020\001\030dR\002sn\022!\n" +
       "\006cab_sn\030\002 \001(\tB\t\272H\006r\004\020\001\030dR\006cab_sn\022\'\n\tcab_" +
       "model\030\003 \001(\tB\t\272H\006r\004\020\001\030dR\tcab_model\022%\n\010cab" +
       "_code\030\004 \001(\tB\t\272H\006r\004\020\001\030dR\010cab_code\022\"\n\005batc" +
       "h\030\005 \001(\tB\007\272H\004r\002\030dH\000R\005batch\210\001\001\022 \n\004date\030\006 \001" +
-      "(\tB\007\272H\004r\002\030dH\001R\004date\210\001\001B\010\n\006_batchB\007\n\005_dat" +
-      "e\"\231\001\n\026CreatePassportResponse\022E\n\004data\030\001 \003" +
-      "(\01321.fusion.rpc.proto.dpp.CreatePassport" +
-      "Response.DataR\004data\0328\n\004Data\022\016\n\002sn\030\001 \001(\tR" +
-      "\002sn\022\016\n\002id\030\002 \001(\tR\002id\022\020\n\003upi\030\003 \001(\tR\003upiB\324\001" +
-      "\n\030com.fusion.rpc.proto.dppB\024RegistryMess" +
-      "ageProtoP\001Z.github.com/elecnova/fusion-r" +
-      "pc-grpc/go/dpp;dpp\242\002\004FRPD\252\002\024Fusion.Rpc.P" +
-      "roto.Dpp\312\002\024Fusion\\Rpc\\Proto\\Dpp\342\002 Fusion" +
-      "\\Rpc\\Proto\\Dpp\\GPBMetadata\352\002\027Fusion::Rpc" +
-      "::Proto::Dppb\006proto3"
+      "(\tB\007\272H\004r\002\030dH\001R\004date\210\001\001\022%\n\010operator\030\007 \001(\t" +
+      "B\t\272H\006r\004\020\001\030(R\010operatorB\010\n\006_batchB\007\n\005_date" +
+      "\"\231\001\n\026CreatePassportResponse\022E\n\004data\030\001 \003(" +
+      "\01321.fusion.rpc.proto.dpp.CreatePassportR" +
+      "esponse.DataR\004data\0328\n\004Data\022\016\n\002sn\030\001 \001(\tR\002" +
+      "sn\022\016\n\002id\030\002 \001(\tR\002id\022\020\n\003upi\030\003 \001(\tR\003upiB\324\001\n" +
+      "\030com.fusion.rpc.proto.dppB\024RegistryMessa" +
+      "geProtoP\001Z.github.com/elecnova/fusion-rp" +
+      "c-grpc/go/dpp;dpp\242\002\004FRPD\252\002\024Fusion.Rpc.Pr" +
+      "oto.Dpp\312\002\024Fusion\\Rpc\\Proto\\Dpp\342\002 Fusion\\" +
+      "Rpc\\Proto\\Dpp\\GPBMetadata\352\002\027Fusion::Rpc:" +
+      ":Proto::Dppb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -93,7 +94,7 @@ public final class RegistryMessageProto extends com.google.protobuf.GeneratedFil
     internal_static_fusion_rpc_proto_dpp_CreatePassportRequest_Data_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_fusion_rpc_proto_dpp_CreatePassportRequest_Data_descriptor,
-        new java.lang.String[] { "Sn", "CabSn", "CabModel", "CabCode", "Batch", "Date", });
+        new java.lang.String[] { "Sn", "CabSn", "CabModel", "CabCode", "Batch", "Date", "Operator", });
     internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_descriptor =
       getDescriptor().getMessageType(1);
     internal_static_fusion_rpc_proto_dpp_CreatePassportResponse_fieldAccessorTable = new

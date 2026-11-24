@@ -50,6 +50,12 @@ class Data extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional string date = 6 [json_name = "date", (.buf.validate.field) = {</code>
      */
     protected $date = null;
+    /**
+     * 经济运营商
+     *
+     * Generated from protobuf field <code>string operator = 7 [json_name = "operator", (.buf.validate.field) = {</code>
+     */
+    protected $operator = '';
 
     /**
      * Constructor.
@@ -69,6 +75,8 @@ class Data extends \Google\Protobuf\Internal\Message
      *           电池簇生产批次号
      *     @type string $date
      *           电池簇生产日期
+     *     @type string $operator
+     *           经济运营商
      * }
      */
     public function __construct($data = null)
@@ -249,6 +257,32 @@ class Data extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, true);
         $this->date = $var;
+
+        return $this;
+    }
+
+    /**
+     * 经济运营商
+     *
+     * Generated from protobuf field <code>string operator = 7 [json_name = "operator", (.buf.validate.field) = {</code>
+     * @return string
+     */
+    public function getOperator()
+    {
+        return $this->operator;
+    }
+
+    /**
+     * 经济运营商
+     *
+     * Generated from protobuf field <code>string operator = 7 [json_name = "operator", (.buf.validate.field) = {</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setOperator(string $var)
+    {
+        GPBUtil::checkString($var, true);
+        $this->operator = $var;
 
         return $this;
     }

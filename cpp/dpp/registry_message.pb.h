@@ -494,6 +494,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CreatePassportRequest_Data final : 
     kCabCodeFieldNumber = 4,
     kBatchFieldNumber = 5,
     kDateFieldNumber = 6,
+    kOperatorFieldNumber = 7,
   };
   // string sn = 1 [json_name = "sn", (.buf.validate.field) = {
   void clear_sn() ;
@@ -587,12 +588,27 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CreatePassportRequest_Data final : 
   ::std::string* PROTOBUF_NONNULL _internal_mutable_date();
 
   public:
+  // string operator = 7 [json_name = "operator", (.buf.validate.field) = {
+  void clear_operator_() ;
+  [[nodiscard]] const ::std::string& operator_() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_operator_(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_operator_();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_operator_();
+  void set_allocated_operator_(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_operator_() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_operator_(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_operator_();
+
+  public:
   // @@protoc_insertion_point(class_scope:fusion.rpc.proto.dpp.CreatePassportRequest.Data)
  private:
   class _Internal;
   using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<3, 6,
-                          0, 90,
+      ::google::protobuf::internal::TcParseTable<3, 7,
+                          0, 98,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
       const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
@@ -626,6 +642,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CreatePassportRequest_Data final : 
     ::google::protobuf::internal::ArenaStringPtr cab_code_;
     ::google::protobuf::internal::ArenaStringPtr batch_;
     ::google::protobuf::internal::ArenaStringPtr date_;
+    ::google::protobuf::internal::ArenaStringPtr operator__;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -1479,6 +1496,70 @@ inline void CreatePassportRequest_Data::set_allocated_date(::std::string* PROTOB
     _impl_.date_.Set("", GetArena());
   }
   // @@protoc_insertion_point(field_set_allocated:fusion.rpc.proto.dpp.CreatePassportRequest.Data.date)
+}
+
+// string operator = 7 [json_name = "operator", (.buf.validate.field) = {
+inline void CreatePassportRequest_Data::clear_operator_() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.operator__.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000040U);
+}
+inline const ::std::string& CreatePassportRequest_Data::operator_() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:fusion.rpc.proto.dpp.CreatePassportRequest.Data.operator)
+  return _internal_operator_();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void CreatePassportRequest_Data::set_operator_(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000040U);
+  _impl_.operator__.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:fusion.rpc.proto.dpp.CreatePassportRequest.Data.operator)
+}
+inline ::std::string* PROTOBUF_NONNULL CreatePassportRequest_Data::mutable_operator_()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000040U);
+  ::std::string* _s = _internal_mutable_operator_();
+  // @@protoc_insertion_point(field_mutable:fusion.rpc.proto.dpp.CreatePassportRequest.Data.operator)
+  return _s;
+}
+inline const ::std::string& CreatePassportRequest_Data::_internal_operator_() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.operator__.Get();
+}
+inline void CreatePassportRequest_Data::_internal_set_operator_(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.operator__.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL CreatePassportRequest_Data::_internal_mutable_operator_() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.operator__.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE CreatePassportRequest_Data::release_operator_() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:fusion.rpc.proto.dpp.CreatePassportRequest.Data.operator)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000040U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000040U);
+  auto* released = _impl_.operator__.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.operator__.Set("", GetArena());
+  }
+  return released;
+}
+inline void CreatePassportRequest_Data::set_allocated_operator_(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000040U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000040U);
+  }
+  _impl_.operator__.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.operator__.IsDefault()) {
+    _impl_.operator__.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:fusion.rpc.proto.dpp.CreatePassportRequest.Data.operator)
 }
 
 // -------------------------------------------------------------------
