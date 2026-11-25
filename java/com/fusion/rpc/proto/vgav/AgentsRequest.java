@@ -6,6 +6,10 @@
 package com.fusion.rpc.proto.vgav;
 
 /**
+ * <pre>
+ * 请求
+ * </pre>
+ *
  * Protobuf type {@code fusion.rpc.proto.vgav.AgentsRequest}
  */
 @com.google.protobuf.Generated
@@ -293,6 +297,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * 请求
+   * </pre>
+   *
    * Protobuf type {@code fusion.rpc.proto.vgav.AgentsRequest}
    */
   public static final class Builder extends

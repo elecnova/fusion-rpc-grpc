@@ -67,6 +67,7 @@ func (x *KillAgentRequest) GetId() string {
 	return ""
 }
 
+// 请求
 type AgentsRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Page          int32                  `protobuf:"varint,1,opt,name=page,proto3" json:"page,omitempty"`

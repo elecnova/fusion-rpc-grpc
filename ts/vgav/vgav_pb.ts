@@ -34,6 +34,8 @@ export const KillAgentRequestSchema: GenMessage<KillAgentRequest> = /*@__PURE__*
   messageDesc(file_vgav_vgav, 0);
 
 /**
+ * 请求
+ *
  * @generated from message fusion.rpc.proto.vgav.AgentsRequest
  */
 export type AgentsRequest = Message<"fusion.rpc.proto.vgav.AgentsRequest"> & {

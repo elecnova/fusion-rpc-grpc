@@ -10,6 +10,8 @@ use Google\Protobuf\Internal\GPBUtil;
 use Google\Protobuf\RepeatedField;
 
 /**
+ * 请求
+ *
  * Generated from protobuf message <code>fusion.rpc.proto.vgav.AgentsRequest</code>
  */
 class AgentsRequest extends \Google\Protobuf\Internal\Message
